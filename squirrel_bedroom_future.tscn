@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://ckfrpcwuevmq"]
+[gd_scene format=3 uid="uid://di3q3x5gg215s"]
 
-[ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="3_hcmq2"]
-[ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="4_17hk7"]
-[ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="6_dvf40"]
-[ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_hcmq2"]
-[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_1dmds"]
-[ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_17hk7"]
-[ext_resource type="Script" uid="uid://be8t4dapgs6xv" path="res://to_squirrel.gd" id="8_17hk7"]
-[ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="8_y1ubb"]
+[ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="1_40pui"]
+[ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="2_ytm2t"]
+[ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="3_m1feq"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="4_cd48p"]
+[ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="5_2v8ij"]
+[ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_n8k7j"]
+[ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_36ym5"]
+[ext_resource type="Texture2D" uid="uid://dp510swl55d50" path="res://assets/furniture/present_rug.png" id="8_ytm2t"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
@@ -15,7 +15,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 582.2651, 1391, 583.2638, 1386, 630, 1475, 716, 1826, 737, 1876, 738, 1872, 936, -3, 955)])
 agent_radius = 30.0
 
-[node name="MagpieLoungeFuture" type="Node2D" unique_id=294624938]
+[node name="SquirrelBedroomFuture" type="Node2D" unique_id=294624938]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1534004411]
 position = Vector2(3, 16)
@@ -30,7 +30,7 @@ polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
 z_index = -4
 y_sort_enabled = true
-texture = ExtResource("3_hcmq2")
+texture = ExtResource("1_40pui")
 centered = false
 
 [node name="Tree" type="TextureRect" parent="." unique_id=44253081]
@@ -47,14 +47,14 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.7891448, 1.7891448)
 pivot_offset_ratio = Vector2(0.5, 1)
-texture = ExtResource("4_17hk7")
-script = ExtResource("6_dvf40")
-gives = Array[ExtResource("7_1dmds")]([ExtResource("8_y1ubb")])
+texture = ExtResource("2_ytm2t")
+script = ExtResource("3_m1feq")
+gives = Array[ExtResource("4_cd48p")]([ExtResource("5_2v8ij")])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Tv" type="Sprite2D" parent="." unique_id=1305802874]
 position = Vector2(1532, 227)
-texture = ExtResource("6_hcmq2")
+texture = ExtResource("6_n8k7j")
 
 [node name="Furniture" type="TextureRect" parent="." unique_id=673681475]
 offset_left = 1125.0
@@ -62,17 +62,10 @@ offset_top = 569.0
 offset_right = 1888.0
 offset_bottom = 1051.0
 scale = Vector2(1.1689372, 1.1689372)
-texture = ExtResource("7_17hk7")
-script = ExtResource("6_dvf40")
+texture = ExtResource("7_36ym5")
+script = ExtResource("3_m1feq")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="Button" type="Button" parent="." unique_id=1767197143]
-offset_left = 89.0
-offset_top = 29.00003
-offset_right = 188.0
-offset_bottom = 60.00003
-scale = Vector2(7.9207006, 8.634393)
-text = "To Squirrel"
-script = ExtResource("8_17hk7")
-
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="PresentRug" type="Sprite2D" parent="." unique_id=1771224099]
+position = Vector2(375, 758)
+texture = ExtResource("8_ytm2t")

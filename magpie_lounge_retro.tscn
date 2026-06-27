@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dn4bdxcy5awm3" path="res://assets/furniture/table.png" id="1_avk6x"]
 [ext_resource type="Texture2D" uid="uid://twn8bjec7o0s" path="res://assets/furniture/tabouret.png" id="2_i7bxq"]
-[ext_resource type="Texture2D" uid="uid://dhyo80hwbndai" path="res://assets/retro_backgound.png" id="3_3ylqn"]
+[ext_resource type="Texture2D" uid="uid://7wyv3ci1q0lo" path="res://assets/magpie_lounge_retro.png" id="3_avk6x"]
 [ext_resource type="Texture2D" uid="uid://cn26q8qv60uib" path="res://assets/furniture/tapis.png" id="4_b1uor"]
 [ext_resource type="Texture2D" uid="uid://beqentmv27ok" path="res://assets/furniture/arbre.png" id="5_jexw7"]
 [ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="6_324kn"]
@@ -42,7 +42,7 @@ texture = ExtResource("2_i7bxq")
 [node name="Background" type="Sprite2D" parent="." unique_id=768375489]
 z_index = -4
 y_sort_enabled = true
-texture = ExtResource("3_3ylqn")
+texture = ExtResource("3_avk6x")
 centered = false
 
 [node name="Tapis" type="Sprite2D" parent="." unique_id=1599519552]

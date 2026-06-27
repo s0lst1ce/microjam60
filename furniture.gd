@@ -24,3 +24,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("click") and get_rect().has_point(get_global_mouse_position()):
 		ItemExchange.can_give.emit(self)
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
