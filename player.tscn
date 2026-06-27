@@ -9,16 +9,18 @@ height = 190.0
 
 [node name="Player" type="CharacterBody2D" unique_id=665237645]
 y_sort_enabled = true
+position = Vector2(0, -1)
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2007459054]
-position = Vector2(-2, 50)
+position = Vector2(-8, -85)
 shape = SubResource("CapsuleShape2D_ct8o0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=562831065]
-position = Vector2(3.5582657, 13.929741)
+position = Vector2(0, -65.00001)
 scale = Vector2(0.20890787, 0.2089078)
 texture = ExtResource("2_i3pqv")
+offset = Vector2(0, -260)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1382074011]
 debug_enabled = true

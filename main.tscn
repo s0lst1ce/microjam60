@@ -17,6 +17,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-2, 537, 1400, 516, 138
 agent_radius = 30.0
 
 [node name="Main" type="Node2D" unique_id=393918813]
+y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=993663128]
 position = Vector2(2, 1)
@@ -24,28 +25,41 @@ scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
 
 [node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" unique_id=2131262010]
+visible = false
 position = Vector2(61, 3.9949577)
 polygon = PackedVector2Array(683, 734, 648, 933, 785, 980, 992, 984, 1109, 866, 1049, 737, 879, 674)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=266014042]
+z_index = -4
+y_sort_enabled = true
 texture = ExtResource("1_h2yge")
 centered = false
 
 [node name="Tapis" type="Sprite2D" parent="." unique_id=21231797]
+z_index = -1
+y_sort_enabled = true
 position = Vector2(423, 790)
 texture = ExtResource("2_272bh")
 
 [node name="Arbre" type="Sprite2D" parent="." unique_id=1008022547]
 y_sort_enabled = true
-position = Vector2(940, 523.00006)
+position = Vector2(957.00006, 953.00006)
 scale = Vector2(2.1286173, 2.1286173)
 texture = ExtResource("13_ycdy4")
+offset = Vector2(0, -200)
 
 [node name="Furniture" type="TextureRect" parent="." unique_id=942454403]
-offset_left = 1420.0
-offset_top = 219.0
-offset_right = 1834.0
-offset_bottom = 716.0
+y_sort_enabled = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1462.0
+offset_top = 227.0
+offset_right = 1876.0
+offset_bottom = 724.0
+grow_horizontal = 2
+grow_vertical = 0
 texture = ExtResource("3_1bvp3")
 script = ExtResource("4_efxa6")
 interacts_with = Array[String](["tabouret"])
