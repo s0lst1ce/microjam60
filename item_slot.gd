@@ -14,7 +14,7 @@ func update_ui():
 		tooltip_text = item.name
 
 
-func _get_drag_data(at_position: Vector2) -> Variant:
+func _get_drag_data(_at_position: Vector2) -> Variant:
 	if not item:
 		return
 		
@@ -31,10 +31,10 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	icon.hide()
 	return self
 	
-func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	return true
 	
-func _drop_data(at_position: Vector2, data: Variant) -> void:
+func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var tmp = item
 	item = data.item
 	data.item=tmp

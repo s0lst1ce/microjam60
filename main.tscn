@@ -3,12 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://dhyo80hwbndai" path="res://assets/retro_backgound.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cn26q8qv60uib" path="res://assets/furniture/tapis.png" id="2_272bh"]
 [ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="3_1bvp3"]
-[ext_resource type="Script" uid="uid://btwi0kibysswv" path="res://armoire.gd" id="4_efxa6"]
 [ext_resource type="PackedScene" uid="uid://ddwd8jbhsxnli" path="res://player.tscn" id="5_dg77c"]
 [ext_resource type="Texture2D" uid="uid://twn8bjec7o0s" path="res://assets/furniture/tabouret.png" id="6_4c57u"]
 [ext_resource type="PackedScene" uid="uid://1dqe7cr127ry" path="res://gui.tscn" id="6_272bh"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="6_kek77"]
 [ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="7_4c57u"]
+[ext_resource type="Script" uid="uid://bho5k2mts73f7" path="res://shelf.gd" id="9_dg77c"]
+[ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="9_kek77"]
 [ext_resource type="Texture2D" uid="uid://dn4bdxcy5awm3" path="res://assets/furniture/table.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://beqentmv27ok" path="res://assets/furniture/arbre.png" id="13_ycdy4"]
 
@@ -44,29 +45,12 @@ position = Vector2(423, 790)
 texture = ExtResource("2_272bh")
 
 [node name="Arbre" type="Sprite2D" parent="." unique_id=1008022547]
+visible = false
 y_sort_enabled = true
 position = Vector2(964, 826)
 scale = Vector2(1.8087593, 1.8087593)
 texture = ExtResource("13_ycdy4")
 offset = Vector2(0, -200)
-
-[node name="Furniture" type="TextureRect" parent="." unique_id=942454403]
-y_sort_enabled = true
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1462.0
-offset_top = 227.0
-offset_right = 1876.0
-offset_bottom = 724.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("3_1bvp3")
-script = ExtResource("4_efxa6")
-interacts_with = Array[String](["tabouret"])
-gives = Array[ExtResource("6_kek77")]([ExtResource("7_4c57u"), ExtResource("7_4c57u")])
-metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=665237645 instance=ExtResource("5_dg77c")]
 position = Vector2(581, 770)
@@ -82,3 +66,31 @@ texture = ExtResource("10_efxa6")
 position = Vector2(1761.9999, 967.00006)
 scale = Vector2(1.4782709, 1.3436931)
 texture = ExtResource("6_4c57u")
+
+[node name="Shelf" type="TextureRect" parent="." unique_id=4865340]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 1457.0
+offset_top = 216.0
+offset_right = 1871.0
+offset_bottom = 713.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_1bvp3")
+script = ExtResource("9_dg77c")
+interacts_with = Array[String](["branch"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Tree" type="TextureRect" parent="." unique_id=2013929466]
+offset_left = 672.0
+offset_top = 1.0
+offset_right = 983.0
+offset_bottom = 497.0
+scale = Vector2(1.7891448, 1.7891448)
+texture = ExtResource("13_ycdy4")
+script = ExtResource("9_kek77")
+gives = Array[ExtResource("6_kek77")]([ExtResource("7_4c57u")])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
