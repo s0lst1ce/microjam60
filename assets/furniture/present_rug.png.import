@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhyo80hwbndai"
-path="res://.godot/imported/backgound.png-e334795c9f424a602d583c70e65a8c3c.ctex"
+uid="uid://dp510swl55d50"
+path="res://.godot/imported/present_rug.png-e6d0a910dc9eb289781b65f5e9c9eb12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgound.png"
-dest_files=["res://.godot/imported/backgound.png-e334795c9f424a602d583c70e65a8c3c.ctex"]
+source_file="res://assets/furniture/present_rug.png"
+dest_files=["res://.godot/imported/present_rug.png-e6d0a910dc9eb289781b65f5e9c9eb12.ctex"]
 
 [params]
 
