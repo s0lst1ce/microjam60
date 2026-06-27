@@ -17,5 +17,6 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		print("can drop ", data.item.name)
 		#TODO wether or not this opeation the item
 		data.item = null
+		inventory.add_item(load("res://branch.tres"))
 		data.update_ui()
 		

@@ -1,7 +1,10 @@
 extends Panel
 
+@onready var grid_container: GridContainer = $"./MarginContainer/GridContainer"
+
 const HAND_CLOSED = preload("res://assets/cursors/hand_closed.svg")
 const HAND_POINT = preload("res://assets/cursors/hand_point.svg")
+
 
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(HAND_POINT, Input.CURSOR_ARROW)
@@ -21,3 +24,8 @@ func _notification(what: int) -> void:
 		if data_bk:
 			data_bk.icon.show()
 			data_bk = null
+
+func add_item(item: ItemData):
+	for slot in grid_container.get_children():
+		if slot.item == null:
+			slot.item = item

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjhjoqfra1cc"]
 
 [ext_resource type="Script" uid="uid://cfwceqmjtm6qy" path="res://character_body_2d.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://dhyo80hwbndai" path="res://assets/backgound.png" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dhyo80hwbndai" path="res://assets/retro_backgound.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cn26q8qv60uib" path="res://assets/furniture/tapis.png" id="2_272bh"]
 [ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://btwi0kibysswv" path="res://armoire.gd" id="4_efxa6"]
@@ -126,6 +126,7 @@ expand_mode = 3
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("6_efxa6")
+item = ExtResource("7_dg77c")
 
 [node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot2" unique_id=1391270082]
 layout_mode = 1
