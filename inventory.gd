@@ -11,6 +11,8 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(HAND_CLOSED, Input.CURSOR_FORBIDDEN)
 	Input.set_custom_mouse_cursor(HAND_CLOSED, Input.CURSOR_CAN_DROP)
 	Input.set_custom_mouse_cursor(HAND_CLOSED, Input.CURSOR_DRAG)
+	
+	ItemExchange.add_item.connect(_on_add_item)
 
 #func _process(delta: float) -> void:
 #	if Input.get_current_cursor_shape() == CURSOR_FORBIDDEN:
@@ -25,7 +27,7 @@ func _notification(what: int) -> void:
 			data_bk.icon.show()
 			data_bk = null
 
-func add_item(item: ItemData):
+func _on_add_item(item: ItemData):
 	for slot in grid_container.get_children():
 		if slot.item == null:
 			slot.item = item
