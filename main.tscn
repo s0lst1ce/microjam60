@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bjhjoqfra1cc"]
+
+[ext_resource type="Script" uid="uid://cfwceqmjtm6qy" path="res://character_body_2d.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dhyo80hwbndai" path="res://assets/backgound.png" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cn26q8qv60uib" path="res://assets/furniture/tapis.png" id="2_272bh"]
+[ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dlqaylfmvromr" path="res://assets/radish.png" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://h6gfqlgtchkn" path="res://assets/ui/retro_button.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://csq0cnxwx1d2l" path="res://assets/ui/present_button.png" id="5_lquwl"]
+[ext_resource type="BitMap" uid="uid://cg1nio33e4lch" path="res://assets/ui/button_mask.png" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://dmeoimeb5rraq" path="res://texture_button.gd" id="8_5vw27"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
+vertices = PackedVector2Array(27.921875, 566.4922, 1131.2891, 547.5781, 1119.9531, 646.4531, 27.070313, 924.6797, 1638.2891, 540.89844, 1884.7813, 540.09375, 1882.2031, 905.2969, 1633.2891, 750.0703, 1187.8594, 748.96094)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(7, 6, 3, 8), PackedInt32Array(8, 3, 2)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-2, 537, 1165, 517, 1151, 639, 1204, 719, 1604, 720, 1609, 511, 1915, 510, 1912, 935, -3, 955)])
+agent_radius = 30.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct8o0"]
+radius = 83.0
+height = 190.0
+
+[node name="Main" type="Node2D" unique_id=393918813]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=993663128]
+position = Vector2(2, 1)
+navigation_polygon = SubResource("NavigationPolygon_lquwl")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=266014042]
+texture = ExtResource("1_h2yge")
+centered = false
+
+[node name="Tapis" type="Sprite2D" parent="." unique_id=21231797]
+position = Vector2(522, 850)
+texture = ExtResource("2_272bh")
+
+[node name="Armoire" type="Sprite2D" parent="." unique_id=979650538]
+position = Vector2(1376, 476)
+texture = ExtResource("3_1bvp3")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=699699921]
+position = Vector2(581, 770)
+script = ExtResource("1_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1412633527]
+position = Vector2(-2, 50)
+shape = SubResource("CapsuleShape2D_ct8o0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1632730483]
+position = Vector2(3.5582657, 13.929741)
+scale = Vector2(0.20890787, 0.2089078)
+texture = ExtResource("4_lquwl")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Player" unique_id=1449574240]
+debug_enabled = true
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=805175087]
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=514597956]
+offset_left = 1740.0
+offset_top = 1.0
+offset_right = 1919.0
+offset_bottom = 86.0
+texture_normal = ExtResource("5_7mycd")
+texture_pressed = ExtResource("5_lquwl")
+texture_click_mask = ExtResource("6_7mycd")
+script = ExtResource("8_5vw27")
