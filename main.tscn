@@ -4,16 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://dhyo80hwbndai" path="res://assets/backgound.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cn26q8qv60uib" path="res://assets/furniture/tapis.png" id="2_272bh"]
 [ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://btwi0kibysswv" path="res://armoire.gd" id="4_efxa6"]
 [ext_resource type="Texture2D" uid="uid://dlqaylfmvromr" path="res://assets/radish.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://h6gfqlgtchkn" path="res://assets/ui/retro_button.png" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://csq0cnxwx1d2l" path="res://assets/ui/present_button.png" id="5_lquwl"]
 [ext_resource type="BitMap" uid="uid://cg1nio33e4lch" path="res://assets/ui/button_mask.png" id="6_7mycd"]
-[ext_resource type="Script" uid="uid://dmeoimeb5rraq" path="res://texture_button.gd" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://byxc7o3xrfctq" path="res://item_slot.gd" id="6_efxa6"]
+[ext_resource type="Resource" uid="uid://dvempd13drk1d" path="res://tabouret.tres" id="7_dg77c"]
+[ext_resource type="Script" uid="uid://br1vdsqomcig" path="res://inventory.gd" id="7_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://beqentmv27ok" path="res://assets/furniture/arbre.png" id="13_ycdy4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
-vertices = PackedVector2Array(27.921875, 566.4922, 1131.2891, 547.5781, 1119.9531, 646.4531, 27.070313, 924.6797, 1638.2891, 540.89844, 1884.7813, 540.09375, 1882.2031, 905.2969, 1633.2891, 750.0703, 1187.8594, 748.96094)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(7, 6, 3, 8), PackedInt32Array(8, 3, 2)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-2, 537, 1165, 517, 1151, 639, 1204, 719, 1604, 720, 1609, 511, 1915, 510, 1912, 935, -3, 955)])
+vertices = PackedVector2Array(1845.3984, 767.3906, 1842.5938, 906.28906, 1103.8594, 913.78125, 1145.0078, 872.28906, 1824.7969, 766.97656, 27.921875, 566.5469, 1366.0234, 546.5078, 1354.3984, 641.1797, 879.9219, 642.35156, 1462.1328, 745.28125, 1071, 713.15625, 620.0469, 918.6797, 27.070313, 924.6875, 656.6406, 710.7031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 4, 3), PackedInt32Array(7, 9, 3, 10), PackedInt32Array(11, 12, 5, 13), PackedInt32Array(7, 10, 8), PackedInt32Array(5, 8, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-2, 537, 1400, 516, 1386, 630, 1475, 716, 1826, 737, 1876, 738, 1872, 936, -3, 955)])
 agent_radius = 30.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct8o0"]
@@ -26,19 +30,28 @@ height = 190.0
 position = Vector2(2, 1)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
 
+[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" unique_id=2131262010]
+polygon = PackedVector2Array(683, 734, 648, 933, 785, 980, 992, 984, 1109, 866, 1049, 737, 879, 674)
+
 [node name="Background" type="Sprite2D" parent="." unique_id=266014042]
 texture = ExtResource("1_h2yge")
 centered = false
 
 [node name="Tapis" type="Sprite2D" parent="." unique_id=21231797]
-position = Vector2(522, 850)
+position = Vector2(423, 790)
 texture = ExtResource("2_272bh")
 
-[node name="Armoire" type="Sprite2D" parent="." unique_id=979650538]
-position = Vector2(1376, 476)
+[node name="Furniture" type="TextureRect" parent="." unique_id=942454403]
+offset_left = 1420.0
+offset_top = 219.0
+offset_right = 1834.0
+offset_bottom = 716.0
 texture = ExtResource("3_1bvp3")
+script = ExtResource("4_efxa6")
+interacts_with = Array[String](["tabouret"])
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=699699921]
+y_sort_enabled = true
 position = Vector2(581, 770)
 script = ExtResource("1_0xm2m")
 
@@ -56,7 +69,7 @@ debug_enabled = true
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=805175087]
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=514597956]
+[node name="TextureButton" type="TextureButton" parent="GUI" unique_id=514597956]
 offset_left = 1740.0
 offset_top = 1.0
 offset_right = 1919.0
@@ -64,4 +77,151 @@ offset_bottom = 86.0
 texture_normal = ExtResource("5_7mycd")
 texture_pressed = ExtResource("5_lquwl")
 texture_click_mask = ExtResource("6_7mycd")
-script = ExtResource("8_5vw27")
+
+[node name="Inventory" type="Panel" parent="GUI" unique_id=459549957]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 224.0
+offset_top = -540.0
+offset_right = 669.0
+offset_bottom = -479.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_ycdy4")
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/Inventory" unique_id=72195463]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="GUI/Inventory/MarginContainer" unique_id=272845120]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 8
+
+[node name="ItemSlot" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=481710720]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+item = ExtResource("7_dg77c")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot" unique_id=3676038]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="ItemSlot2" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=46865976]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot2" unique_id=1391270082]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="ItemSlot3" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=601570367]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot3" unique_id=364381371]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="ItemSlot4" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=1650425355]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot4" unique_id=1128973445]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="ItemSlot5" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=1955295168]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot5" unique_id=671231203]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="ItemSlot6" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=1605386852]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot6" unique_id=724732066]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="ItemSlot7" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=1160617990]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot7" unique_id=1923104073]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="ItemSlot8" type="Panel" parent="GUI/Inventory/MarginContainer/GridContainer" unique_id=1607921600]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("6_efxa6")
+
+[node name="Icon" type="TextureRect" parent="GUI/Inventory/MarginContainer/GridContainer/ItemSlot8" unique_id=1643170348]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+expand_mode = 3
+
+[node name="Arbre" type="Sprite2D" parent="." unique_id=1008022547]
+y_sort_enabled = true
+position = Vector2(871, 526.91315)
+scale = Vector2(2.1286173, 2.1286173)
+texture = ExtResource("13_ycdy4")

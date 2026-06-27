@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dvempd13drk1d"]
+
+[ext_resource type="Texture2D" uid="uid://twn8bjec7o0s" path="res://assets/furniture/tabouret.png" id="1_p3ark"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_yog4p"]
+
+[resource]
+script = ExtResource("1_yog4p")
+name = "tabouret"
+icon = ExtResource("1_p3ark")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"
