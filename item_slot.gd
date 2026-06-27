@@ -41,5 +41,6 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	data.icon.show()
 	update_ui()
 	data.update_ui()
+	print("Dropped ", item, data.item)
 	
 	

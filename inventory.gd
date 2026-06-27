@@ -29,3 +29,6 @@ func add_item(item: ItemData):
 	for slot in grid_container.get_children():
 		if slot.item == null:
 			slot.item = item
+			slot.update_ui()
+			return
+	assert(false)
