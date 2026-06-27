@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dxcn845iyxhhx"]
+
+[ext_resource type="Texture2D" uid="uid://dn4bdxcy5awm3" path="res://assets/furniture/table.png" id="1_avk6x"]
+[ext_resource type="Texture2D" uid="uid://twn8bjec7o0s" path="res://assets/furniture/tabouret.png" id="2_i7bxq"]
+[ext_resource type="Texture2D" uid="uid://dhyo80hwbndai" path="res://assets/retro_backgound.png" id="3_3ylqn"]
+[ext_resource type="Texture2D" uid="uid://cn26q8qv60uib" path="res://assets/furniture/tapis.png" id="4_b1uor"]
+[ext_resource type="Texture2D" uid="uid://beqentmv27ok" path="res://assets/furniture/arbre.png" id="5_jexw7"]
+[ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="6_324kn"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_8xf7p"]
+[ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="8_fwmni"]
+[ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="9_q64ew"]
+[ext_resource type="Script" uid="uid://bho5k2mts73f7" path="res://shelf.gd" id="10_ycws2"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
+vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 1, 0), PackedInt32Array(6, 5, 0, 7), PackedInt32Array(8, 9, 6, 10), PackedInt32Array(11, 4, 3), PackedInt32Array(6, 7, 10), PackedInt32Array(8, 10, 12), PackedInt32Array(8, 12, 13), PackedInt32Array(8, 13, 14, 15), PackedInt32Array(15, 14, 16), PackedInt32Array(15, 16, 17), PackedInt32Array(3, 15, 17), PackedInt32Array(3, 17, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 582.2651, 1391, 583.2638, 1386, 630, 1475, 716, 1826, 737, 1876, 738, 1872, 936, -3, 955)])
+agent_radius = 30.0
+
+[node name="MagpieLoungeRetro" type="Node2D" unique_id=89442096]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1519467667]
+position = Vector2(3, 16)
+scale = Vector2(1, 1.0012622)
+navigation_polygon = SubResource("NavigationPolygon_lquwl")
+
+[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" unique_id=103090952]
+visible = false
+position = Vector2(63, -50.935707)
+polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 904.8579, 804, 922.8352, 1015, 916.8428, 1064, 891.87427, 1079, 825.9575, 1031, 743.06213, 885, 720.0911)
+
+[node name="Table" type="Sprite2D" parent="." unique_id=267225295]
+position = Vector2(1515, 882)
+scale = Vector2(1.8217716, 1.8217716)
+texture = ExtResource("1_avk6x")
+
+[node name="Tabouret" type="Sprite2D" parent="." unique_id=1781395764]
+position = Vector2(1761.9999, 967.00006)
+scale = Vector2(1.4782709, 1.3436931)
+texture = ExtResource("2_i7bxq")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=768375489]
+z_index = -4
+y_sort_enabled = true
+texture = ExtResource("3_3ylqn")
+centered = false
+
+[node name="Tapis" type="Sprite2D" parent="." unique_id=1599519552]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(423, 790)
+texture = ExtResource("4_b1uor")
+
+[node name="Tree" type="TextureRect" parent="." unique_id=1795858068]
+y_sort_enabled = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 793.0
+offset_top = 382.0
+offset_right = 1104.0
+offset_bottom = 878.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.7891448, 1.7891448)
+pivot_offset_ratio = Vector2(0.5, 1)
+texture = ExtResource("5_jexw7")
+script = ExtResource("6_324kn")
+gives = Array[ExtResource("7_8xf7p")]([ExtResource("8_fwmni")])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Shelf" type="TextureRect" parent="." unique_id=1150966161]
+y_sort_enabled = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 1457.0
+offset_top = 216.0
+offset_right = 1871.0
+offset_bottom = 713.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("9_q64ew")
+script = ExtResource("10_ycws2")
+interacts_with = Array[String](["branch"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"

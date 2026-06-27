@@ -3,13 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://h6gfqlgtchkn" path="res://assets/ui/retro_button.png" id="1_jf511"]
 [ext_resource type="Texture2D" uid="uid://csq0cnxwx1d2l" path="res://assets/ui/present_button.png" id="2_0wv8u"]
 [ext_resource type="BitMap" uid="uid://cg1nio33e4lch" path="res://assets/ui/button_mask.png" id="3_67jta"]
+[ext_resource type="Script" uid="uid://d3xb16pwhmsb6" path="res://timeshift_button.gd" id="4_0wv8u"]
 [ext_resource type="Script" uid="uid://br1vdsqomcig" path="res://inventory.gd" id="4_p8208"]
 [ext_resource type="Script" uid="uid://byxc7o3xrfctq" path="res://item_slot.gd" id="5_axmix"]
 [ext_resource type="Resource" uid="uid://dvempd13drk1d" path="res://tabouret.tres" id="6_7u6ry"]
 
 [node name="GUI" type="CanvasLayer" unique_id=1497885613]
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1171487050]
+[node name="PeriodButton" type="TextureButton" parent="." unique_id=1171487050]
 offset_left = 1740.0
 offset_top = 1.0
 offset_right = 1919.0
@@ -17,6 +18,7 @@ offset_bottom = 86.0
 texture_normal = ExtResource("1_jf511")
 texture_pressed = ExtResource("2_0wv8u")
 texture_click_mask = ExtResource("3_67jta")
+script = ExtResource("4_0wv8u")
 
 [node name="Inventory" type="Panel" parent="." unique_id=1081666084]
 anchors_preset = 8
@@ -160,3 +162,5 @@ anchor_top = 0.1
 anchor_right = 0.9
 anchor_bottom = 0.9
 expand_mode = 3
+
+[connection signal="pressed" from="PeriodButton" to="PeriodButton" method="_on_pressed"]
