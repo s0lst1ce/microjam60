@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhyo80hwbndai"
-path="res://.godot/imported/retro_backgound.png-805fac36699fded155745b5030f1eaad.ctex"
+uid="uid://b7x02tjambmpm"
+path="res://.godot/imported/bed.png-1b60b8683dc184ddc0435bf5d8aff8bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/retro_backgound.png"
-dest_files=["res://.godot/imported/retro_backgound.png-805fac36699fded155745b5030f1eaad.ctex"]
+source_file="res://assets/furniture/bed.png"
+dest_files=["res://.godot/imported/bed.png-1b60b8683dc184ddc0435bf5d8aff8bc.ctex"]
 
 [params]
 
