@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://bacu4n548akdg" path="res://assets/furniture/shirt_button_orange.png" id="24_nc0it"]
 [ext_resource type="Texture2D" uid="uid://bur6p04eyfws6" path="res://assets/furniture/shirt_button_purple.png" id="25_jvbvo"]
 [ext_resource type="Texture2D" uid="uid://dt2cbmmvkyqgx" path="res://assets/lights/round_diffuse.webp" id="26_nc0it"]
+[ext_resource type="Texture2D" uid="uid://b7txyt08fluqp" path="res://assets/furniture/squirrel/stain_purple.png" id="29_vr1ws"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(864.3906, 901.9922, 1039.4922, 897.0078, 1035.8906, 901.60156, 29.710938, 1070.4063, 1385.1016, 750.52344, 1465.4297, 842.96094, 1459.8203, 843.53125, 1403.8281, 783.1719, 1333.3672, 743.28906, 1255.9922, 724.96094, 1197.3516, 738.6875, 1168.3672, 760.7031, 1112.7891, 664.71875, 1251.1875, 607.3828, 1037.6563, 1063.8125, 764.5625, 881.59375, 700.65625, 820.8125, 25.289063, 612.14844, 732.3906, 753.1094, 779.89844, 671.27344, 947.4531, 638.7031)
@@ -255,3 +256,8 @@ texture = ExtResource("26_nc0it")
 position = Vector2(44, 53)
 scale = Vector2(0.08008706, 0.08008706)
 texture = ExtResource("26_nc0it")
+
+[node name="StainPurple" type="Sprite2D" parent="." unique_id=832598802]
+z_index = -1
+position = Vector2(1754, 515)
+texture = ExtResource("29_vr1ws")

@@ -29,6 +29,8 @@
 [ext_resource type="Script" uid="uid://pbonm6v5f2h5" path="res://branch.gd" id="27_o03v2"]
 [ext_resource type="Texture2D" uid="uid://bf6jfeqo1svte" path="res://assets/furniture/feather_2.png" id="28_grk56"]
 [ext_resource type="Texture2D" uid="uid://obw18h87kffn" path="res://assets/furniture/feather_1.png" id="29_cfwg4"]
+[ext_resource type="Texture2D" uid="uid://b7txyt08fluqp" path="res://assets/furniture/squirrel/stain_purple.png" id="30_eufp3"]
+[ext_resource type="Texture2D" uid="uid://dbvmjjmhamol4" path="res://assets/furniture/squirrel/stain_orange.png" id="31_5bv0w"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(1585.0703, 889.5, 1565.7188, 958.46875, 1560.2266, 945.1328, 1846.1016, 742.2422, 1854.2109, 1054.6797, 1759.5781, 978.2031, 1706.7813, 885.9375, 1173.8672, 770.1797, 1566.2422, 692.9375, 1822.3672, 651.35156, 1524.2109, 875.8594, 1367.4609, 875.8594, 1153.1406, 861.28906, 138.35938, 939.0625, 72.65625, 971.8594, 77.57031, 630.28125, 1586.3672, 1008.5469, 1582.1484, 998.3203, 1662.6484, 1001.52344, 71.42969, 1057.5781, 72.046875, 1014.6875, 139.42188, 1034.8672, 1501.3281, 1041.8594, 218.75781, 1014.28125, 1402.0938, 1039.5781, 1318.8281, 1001.2031, 1085.6016, 895.71094, 765.3281, 631.2422, 221.14844, 970.4922, 700.65625, 820.8125, 732.3906, 753.1094, 864.3906, 901.9922, 764.5625, 881.59375, 779.89844, 671.27344, 933.1797, 627.27344, 947.4531, 638.7031, 1112.7891, 664.71875, 1079.7109, 638.96875, 1224.4531, 668.6875, 1403.0313, 699.2578, 1627.9531, 668.6875)
@@ -253,3 +255,14 @@ texture = ExtResource("29_cfwg4")
 position = Vector2(99, 739.00006)
 rotation = 1.9072378
 texture = ExtResource("28_grk56")
+
+[node name="StainPurple" type="Sprite2D" parent="." unique_id=853231956]
+z_index = -1
+position = Vector2(1405, 131)
+texture = ExtResource("30_eufp3")
+
+[node name="StainOrange" type="Sprite2D" parent="." unique_id=1767403990]
+z_index = -1
+position = Vector2(735, 334)
+scale = Vector2(0.6165855, 0.6165855)
+texture = ExtResource("31_5bv0w")
