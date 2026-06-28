@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://di3q3x5gg215s"]
 
-[ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="1_40pui"]
-[ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="2_ytm2t"]
+[ext_resource type="Texture2D" uid="uid://b3d8uaen5us5p" path="res://assets/squirrel_bedroom_future.png" id="1_cxose"]
 [ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="3_m1feq"]
-[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="4_cd48p"]
-[ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="5_2v8ij"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_n8k7j"]
 [ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_36ym5"]
 [ext_resource type="Texture2D" uid="uid://dp510swl55d50" path="res://assets/furniture/present_rug.png" id="8_ytm2t"]
@@ -30,27 +27,8 @@ polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
 z_index = -4
 y_sort_enabled = true
-texture = ExtResource("1_40pui")
+texture = ExtResource("1_cxose")
 centered = false
-
-[node name="Tree" type="TextureRect" parent="." unique_id=44253081]
-y_sort_enabled = true
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 793.0
-offset_top = 382.0
-offset_right = 1104.0
-offset_bottom = 878.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(1.7891448, 1.7891448)
-pivot_offset_ratio = Vector2(0.5, 1)
-texture = ExtResource("2_ytm2t")
-script = ExtResource("3_m1feq")
-gives = Array[ExtResource("4_cd48p")]([ExtResource("5_2v8ij")])
-metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Tv" type="Sprite2D" parent="." unique_id=1305802874]
 position = Vector2(1532, 227)

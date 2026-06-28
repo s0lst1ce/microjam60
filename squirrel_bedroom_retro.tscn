@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://cf01lqrd760pu"]
 
-[ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="1_6kaat"]
-[ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="2_p12ah"]
+[ext_resource type="Texture2D" uid="uid://iymyfc3c5g7t" path="res://assets/squirrel_bedroom_retro.png" id="1_sk41q"]
 [ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="3_b1ugs"]
-[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="4_eacw4"]
-[ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="5_016ah"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_rf8m7"]
 [ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_ikruc"]
 [ext_resource type="Texture2D" uid="uid://dp510swl55d50" path="res://assets/furniture/present_rug.png" id="8_qyr4s"]
@@ -24,34 +21,14 @@ scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
 
 [node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" unique_id=1976332460]
-visible = false
 position = Vector2(63, -50.935707)
 polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 904.8579, 804, 922.8352, 1015, 916.8428, 1064, 891.87427, 1079, 825.9575, 1031, 743.06213, 885, 720.0911)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
 z_index = -4
 y_sort_enabled = true
-texture = ExtResource("1_6kaat")
+texture = ExtResource("1_sk41q")
 centered = false
-
-[node name="Tree" type="TextureRect" parent="." unique_id=44253081]
-y_sort_enabled = true
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 793.0
-offset_top = 382.0
-offset_right = 1104.0
-offset_bottom = 878.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(1.7891448, 1.7891448)
-pivot_offset_ratio = Vector2(0.5, 1)
-texture = ExtResource("2_p12ah")
-script = ExtResource("3_b1ugs")
-gives = Array[ExtResource("4_eacw4")]([ExtResource("5_016ah")])
-metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Tv" type="Sprite2D" parent="." unique_id=1305802874]
 position = Vector2(1532, 227)

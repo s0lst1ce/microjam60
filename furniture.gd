@@ -17,9 +17,9 @@ func _interact_with(item: ItemData) -> void:
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	if data.item.name in interacts_with:
+		_interact_with(data.item)
 		data.item = null
 		data.update_ui()
-		_interact_with(data.item)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("click") and get_rect().has_point(get_global_mouse_position()):
