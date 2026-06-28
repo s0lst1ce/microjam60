@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddwd8jbhsxnli"]
 
 [ext_resource type="Script" uid="uid://cfwceqmjtm6qy" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://dhj3p7cycsot4" path="res://assets/radish/walk/spritesheet.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://yir2yo5cf6cw" path="res://assets/radish/spritesheet.png" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct8o0"]
 radius = 83.0
@@ -25,7 +25,20 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_onrkg"]
 resource_name = "idle"
 length = 0.42858573344498874
+loop_mode = 1
 step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [8, 9, 10]
+}
 
 [sub_resource type="Animation" id="Animation_hqtel"]
 resource_name = "walk"
@@ -66,8 +79,8 @@ shape = SubResource("CapsuleShape2D_ct8o0")
 position = Vector2(-4, 19)
 texture = ExtResource("2_onrkg")
 offset = Vector2(0, -120)
-hframes = 8
-frame = 1
+hframes = 11
+frame = 8
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1382074011]
 radius = 50.0
