@@ -215,7 +215,6 @@ metadata/_custom_type_script = "uid://cg47jubodtsch"
 position = Vector2(673, 696)
 
 [node name="Feather2" type="Sprite2D" parent="." unique_id=1940080450]
-z_index = 1
 position = Vector2(1812, 662)
 rotation = 1.678433
 scale = Vector2(0.44227856, 0.44227856)

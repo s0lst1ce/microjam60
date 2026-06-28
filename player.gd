@@ -6,7 +6,9 @@ var furniture_target_position: Vector2
 var target_furniture
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var player = $AnimationPlayer
+@onready var animation = $AnimationPlayer
+@onready var sprite = $Sprite2D
+
 
 func _ready():
 	# These values need to be adjusted for the actor's speed
@@ -17,7 +19,7 @@ func _ready():
 	movement_target_position = position
 	# Make sure to not await during _ready.
 	actor_setup.call_deferred()
-	player.play("walk")
+	animation.play("walk")
 	
 	ItemExchange.can_give.connect(_on_can_give)
 
@@ -29,6 +31,7 @@ func actor_setup():
 	set_movement_target(movement_target_position)
 
 func set_movement_target(movement_target: Vector2):
+	animation.play("walk")
 	movement_target_position = movement_target
 	navigation_agent.target_position = movement_target
 
@@ -63,14 +66,17 @@ func _on_navigation_agent_2d_navigation_finished() -> void:
 	if furniture_target_position != movement_target_position:
 		print("actually didn't go for ", target_furniture)
 		target_furniture = null
-		return
-
 	elif target_furniture != null and len(target_furniture.gives) > 0:
 		print("taking item")
 		for i in range(len(target_furniture.gives)):
 			ItemExchange.add_item.emit(target_furniture.gives.pop_front())
+	animation.play("idle")
 
 
 func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
+	if safe_velocity.x < 0:
+		sprite.flip_h = true
+	elif safe_velocity.x > 0:
+		sprite.flip_h = false
 	velocity = safe_velocity * movement_speed
 	move_and_slide()
