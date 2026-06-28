@@ -73,6 +73,7 @@ script = ExtResource("10_2v8ij")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Furnitures" type="Node2D" parent="." unique_id=386312926]
+y_sort_enabled = true
 
 [node name="HolographicDesk" type="Sprite2D" parent="Furnitures" unique_id=1897365161]
 z_index = -1

@@ -79,7 +79,7 @@ script = ExtResource("4_amelh")
 [node name="Table" type="Sprite2D" parent="." unique_id=1189978962]
 z_index = -1
 y_sort_enabled = true
-position = Vector2(1286, 891)
+position = Vector2(1265.0001, 907)
 scale = Vector2(1.485431, 1.485431)
 texture = ExtResource("9_jmdqa")
 offset = Vector2(0, -45)
@@ -181,9 +181,9 @@ script = ExtResource("18_o4wqt")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
 [node name="TvColoredButton2" type="TextureRect" parent="." unique_id=1052362826]
-offset_left = 1506.0
+offset_left = 1339.0
 offset_top = 280.5
-offset_right = 1556.0
+offset_right = 1389.0
 offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
@@ -201,9 +201,9 @@ order = 2
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
 [node name="TvColoredButton4" type="TextureRect" parent="." unique_id=368298179]
-offset_left = 1337.0
+offset_left = 1510.0
 offset_top = 280.5
-offset_right = 1387.0
+offset_right = 1560.0
 offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
