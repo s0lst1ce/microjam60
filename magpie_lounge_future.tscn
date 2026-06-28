@@ -111,7 +111,7 @@ z_index = -1
 position = Vector2(341, 816)
 texture = ExtResource("9_5ngnd")
 
-[node name="Key" type="TextureRect" parent="." unique_id=993454454]
+[node name="Key" type="TextureRect" parent="." unique_id=973562741]
 y_sort_enabled = true
 offset_left = 1813.0
 offset_top = 649.0

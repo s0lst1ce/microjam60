@@ -29,6 +29,7 @@ func actor_setup():
 	set_movement_target(movement_target_position)
 
 func set_movement_target(movement_target: Vector2):
+	movement_target_position = movement_target
 	navigation_agent.target_position = movement_target
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -58,12 +59,13 @@ func _on_can_give(furniture):
 
 func _on_navigation_agent_2d_navigation_finished() -> void:
 	print("finished nav")
+	print(target_furniture, movement_target_position, furniture_target_position)
 	if furniture_target_position != movement_target_position:
 		print("actually didn't go for ", target_furniture)
 		target_furniture = null
 		return
 
-	if target_furniture != null and len(target_furniture.gives) > 0:
+	elif target_furniture != null and len(target_furniture.gives) > 0:
 		print("taking item")
 		for i in range(len(target_furniture.gives)):
 			ItemExchange.add_item.emit(target_furniture.gives.pop_front())

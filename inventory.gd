@@ -28,6 +28,7 @@ func _notification(what: int) -> void:
 			data_bk = null
 
 func _on_add_item(item: ItemData):
+	print("adding ", item)
 	for slot in grid_container.get_children():
 		if slot.item == null:
 			slot.item = item
