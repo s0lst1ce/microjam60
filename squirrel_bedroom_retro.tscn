@@ -110,6 +110,14 @@ scale = Vector2(0.86432153, 0.86432153)
 texture = ExtResource("10_b1ugs")
 script = ExtResource("11_qs5bg")
 
+[node name="Screen" type="PointLight2D" parent="CathodicTv" unique_id=1390483301]
+visible = false
+position = Vector2(-46.279083, 698.814)
+rotation = 1.2224964
+color = Color(0.2627451, 0.7294118, 0.23137255, 1)
+energy = 0.4
+texture = ExtResource("20_ogail")
+
 [node name="Stool" type="Sprite2D" parent="." unique_id=989851258]
 y_sort_enabled = true
 position = Vector2(913, 657)
@@ -155,5 +163,9 @@ position = Vector2(877.0001, 1026)
 rotation = 1.3478426
 scale = Vector2(1.0956095, 1.0956095)
 color = Color(0.9626574, 0.46423626, 5.7756904e-07, 1)
-energy = 0.9
+energy = 0.6
 texture = ExtResource("20_ogail")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1110593988]
+color = Color(0.99999815, 0.49083668, 0.27095154, 1)
+energy = 0.1

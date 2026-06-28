@@ -8,8 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://drbbqo4aey3h5" path="res://assets/furniture/squirrel/nightstand.png" id="5_40pui"]
 [ext_resource type="Texture2D" uid="uid://bnj5m7keemlr8" path="res://assets/furniture/squirrel/blue_acorn.png" id="6_vg34b"]
 [ext_resource type="Texture2D" uid="uid://qkeedr50ngpg" path="res://assets/furniture/squirrel/glass_desk.png" id="7_40pui"]
+[ext_resource type="Texture2D" uid="uid://b0bip0bkycj34" path="res://assets/furniture/squirrel/neon_shell.png" id="7_rrkqb"]
+[ext_resource type="Texture2D" uid="uid://d3d75d7vaaqpc" path="res://assets/lights/neon_bulb.png" id="8_irql5"]
 [ext_resource type="Texture2D" uid="uid://bnketuitjv1ne" path="res://assets/furniture/squirrel/lever_on.png" id="9_cd48p"]
-[ext_resource type="Texture2D" uid="uid://dt2cbmmvkyqgx" path="res://assets/lights/round_diffuse.webp" id="9_m1feq"]
+[ext_resource type="Texture2D" uid="uid://cmw2u7nlbu7pu" path="res://assets/lights/small_cone_grayscale.png" id="9_sv1cm"]
 [ext_resource type="Script" uid="uid://sjmmg4jpr0pa" path="res://computer_screen.gd" id="9_wdasx"]
 [ext_resource type="Script" uid="uid://chl3aln5tlkjq" path="res://lever.gd" id="10_2v8ij"]
 [ext_resource type="Texture2D" uid="uid://d2bnjv87jofr5" path="res://assets/furniture/squirrel/acorn_chest.png" id="14_igwac"]
@@ -72,6 +74,25 @@ texture = ExtResource("9_cd48p")
 script = ExtResource("10_2v8ij")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
+[node name="Neon" type="Sprite2D" parent="." unique_id=952678197]
+position = Vector2(607.00006, 109)
+rotation = 2.0943952
+texture = ExtResource("7_rrkqb")
+
+[node name="Bulb" type="PointLight2D" parent="Neon" unique_id=2033272569]
+position = Vector2(-0.92818606, 14.392336)
+scale = Vector2(0.5692912, 0.5692912)
+energy = 5.63
+texture = ExtResource("8_irql5")
+
+[node name="Ray" type="PointLight2D" parent="Neon" unique_id=927794730]
+position = Vector2(236.96767, -1769.5598)
+rotation = -1.7572502
+scale = Vector2(3.9811406, 3.9811406)
+skew = 1.0454522
+energy = 0.1
+texture = ExtResource("9_sv1cm")
+
 [node name="Furnitures" type="Node2D" parent="." unique_id=386312926]
 y_sort_enabled = true
 
@@ -82,13 +103,12 @@ texture = ExtResource("2_cxose")
 
 [node name="Screen" type="PointLight2D" parent="Furnitures/HolographicDesk" unique_id=798300559]
 z_index = -1
-position = Vector2(46.999878, 10.9999695)
-scale = Vector2(37.49994, 32.031235)
-enabled = false
-color = Color(0.06988806, 0.66929185, 0.7498597, 1)
-energy = 2.0
-blend_mode = 2
-texture = ExtResource("9_m1feq")
+position = Vector2(107, 462)
+rotation = 1.1086016
+scale = Vector2(70.96497, 60.615982)
+color = Color(0, 0.5411765, 0.8901961, 1)
+energy = 0.54
+texture = ExtResource("9_sv1cm")
 texture_scale = 0.01
 script = ExtResource("9_wdasx")
 
@@ -122,7 +142,6 @@ metadata/_custom_type_script = "uid://cg47jubodtsch"
 y_sort_enabled = true
 
 [node name="Button" type="TextureRect" parent="Furnitures" unique_id=1879860397]
-visible = false
 z_index = -1
 offset_left = 507.0
 offset_top = 792.99994
