@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cftowlxhsjy16"]
+
+[ext_resource type="Texture2D" uid="uid://bur6p04eyfws6" path="res://assets/furniture/shirt_button_purple.png" id="1_6jt70"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="2_vfj62"]
+
+[resource]
+script = ExtResource("2_vfj62")
+name = "shirt_button_purple"
+icon = ExtResource("1_6jt70")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"
