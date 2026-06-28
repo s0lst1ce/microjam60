@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bye0mw6ln3wrw"]
+
+[ext_resource type="Texture2D" uid="uid://dxijnpmiw2e61" path="res://assets/furniture/glass.png" id="1_2dsai"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_mrxgi"]
+
+[resource]
+script = ExtResource("1_mrxgi")
+name = "glass"
+icon = ExtResource("1_2dsai")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"

@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://d3xb16pwhmsb6" path="res://timeshift_button.gd" id="4_0wv8u"]
 [ext_resource type="Script" uid="uid://br1vdsqomcig" path="res://inventory.gd" id="4_p8208"]
 [ext_resource type="Script" uid="uid://byxc7o3xrfctq" path="res://item_slot.gd" id="5_axmix"]
-[ext_resource type="Resource" uid="uid://dvempd13drk1d" path="res://tabouret.tres" id="6_7u6ry"]
 
 [node name="GUI" type="CanvasLayer" unique_id=1497885613]
 
@@ -26,10 +25,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 224.0
-offset_top = -540.0
-offset_right = 669.0
-offset_bottom = -479.5
+offset_left = -176.0
+offset_top = 475.0
+offset_right = 269.0
+offset_bottom = 535.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_p8208")
@@ -53,7 +52,6 @@ columns = 8
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("5_axmix")
-item = ExtResource("6_7u6ry")
 
 [node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot" unique_id=1674530426]
 layout_mode = 1
@@ -68,7 +66,6 @@ expand_mode = 3
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("5_axmix")
-item = ExtResource("6_7u6ry")
 
 [node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot2" unique_id=1717392673]
 layout_mode = 1

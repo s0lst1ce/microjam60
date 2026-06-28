@@ -6,6 +6,7 @@ var furniture_target_position: Vector2
 var target_furniture
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
+@onready var player = $AnimationPlayer
 
 func _ready():
 	# These values need to be adjusted for the actor's speed
@@ -15,6 +16,7 @@ func _ready():
 
 	# Make sure to not await during _ready.
 	actor_setup.call_deferred()
+	player.play("walk")
 	
 	ItemExchange.can_give.connect(_on_can_give)
 

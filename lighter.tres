@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://brushnoor8fa6"]
+
+[ext_resource type="Texture2D" uid="uid://ddmvijyghlpkl" path="res://assets/furniture/lighter.png" id="1_83fld"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_cw5sb"]
+
+[resource]
+script = ExtResource("1_cw5sb")
+name = "lighter"
+icon = ExtResource("1_83fld")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"

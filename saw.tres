@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://s741po07krje"]
+
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_bai8a"]
+[ext_resource type="Texture2D" uid="uid://ddedb5iujluc" path="res://assets/furniture/saw.png" id="1_dx856"]
+
+[resource]
+script = ExtResource("1_bai8a")
+name = "saw"
+icon = ExtResource("1_dx856")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"

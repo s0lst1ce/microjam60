@@ -1,8 +1,5 @@
 extends Furniture
 
-@onready var glass = $EmptyGlass
-
 func _process(delta: float) -> void:
 	if len(gives) == 0:
-		self.remove_child(glass)
-		
+		queue_free()

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bybmq0vbev3j0"]
+
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_od5qm"]
+[ext_resource type="Texture2D" uid="uid://do4ox4a10pg02" path="res://assets/furniture/record_player.png" id="1_pl6k3"]
+
+[resource]
+script = ExtResource("1_od5qm")
+name = "record_player"
+icon = ExtResource("1_pl6k3")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"
