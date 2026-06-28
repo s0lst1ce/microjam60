@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://beqentmv27ok" path="res://assets/furniture/arbre.png" id="5_jexw7"]
 [ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="6_324kn"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_8xf7p"]
-[ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="8_fwmni"]
 [ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="9_q64ew"]
 [ext_resource type="Script" uid="uid://bho5k2mts73f7" path="res://shelf.gd" id="10_ycws2"]
 [ext_resource type="Resource" uid="uid://bye0mw6ln3wrw" path="res://glass.tres" id="11_12yyj"]
@@ -24,14 +23,17 @@
 [ext_resource type="Texture2D" uid="uid://dixotr15cler0" path="res://assets/furniture/mirror.png" id="21_4g5ik"]
 [ext_resource type="Texture2D" uid="uid://n1x81pje1l4b" path="res://assets/furniture/large_disco.png" id="22_e6id1"]
 [ext_resource type="Texture2D" uid="uid://b70o5tkgr1vrr" path="res://assets/furniture/small_disco.png" id="23_ffxr0"]
+[ext_resource type="Texture2D" uid="uid://da8hfmr7k13w1" path="res://assets/furniture/trapdoor.png" id="25_ttcr3"]
+[ext_resource type="Script" uid="uid://dwg0ldq7smngb" path="res://trapdoor.gd" id="26_aaei6"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
-vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 1, 0), PackedInt32Array(6, 5, 0, 7), PackedInt32Array(8, 9, 6, 10), PackedInt32Array(11, 4, 3), PackedInt32Array(6, 7, 10), PackedInt32Array(8, 10, 12), PackedInt32Array(8, 12, 13), PackedInt32Array(8, 13, 14, 15), PackedInt32Array(15, 14, 16), PackedInt32Array(15, 16, 17), PackedInt32Array(3, 15, 17), PackedInt32Array(3, 17, 11)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 582.2651, 1391, 583.2638, 1386, 630, 1475, 716, 1826, 737, 1876, 738, 1872, 936, -3, 955)])
+vertices = PackedVector2Array(1585.0703, 889.5, 1565.7188, 958.46875, 1560.2266, 945.1328, 1846.1016, 742.2422, 1854.2109, 1054.6797, 1759.5781, 978.2031, 1706.7813, 885.9375, 1173.8672, 770.1797, 1566.2422, 692.9375, 1822.3672, 651.35156, 1524.2109, 875.8594, 1367.4609, 875.8594, 1153.1406, 861.28906, 138.35938, 939.0625, 72.65625, 971.8594, 77.57031, 630.28125, 1586.3672, 1008.5469, 1582.1484, 998.3203, 1662.6484, 1001.52344, 71.42969, 1057.5781, 72.046875, 1014.6875, 139.42188, 1034.8672, 1501.3281, 1041.8594, 218.75781, 1014.28125, 1402.0938, 1039.5781, 1318.8281, 1001.2031, 1085.6016, 895.71094, 765.3281, 631.2422, 221.14844, 970.4922, 700.65625, 820.8125, 732.3906, 753.1094, 864.3906, 901.9922, 764.5625, 881.59375, 779.89844, 671.27344, 933.1797, 627.27344, 947.4531, 638.7031, 1112.7891, 664.71875, 1079.7109, 638.96875, 1224.4531, 668.6875, 1403.0313, 699.2578, 1627.9531, 668.6875)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(7, 8, 9, 3, 6, 0, 10), PackedInt32Array(0, 2, 10), PackedInt32Array(7, 10, 11, 12), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 18, 4), PackedInt32Array(19, 20, 21), PackedInt32Array(22, 4, 19, 21, 23, 24), PackedInt32Array(12, 11, 25, 26), PackedInt32Array(13, 15, 27, 28), PackedInt32Array(29, 23, 28, 27, 30), PackedInt32Array(18, 5, 4), PackedInt32Array(23, 31, 26, 25, 24), PackedInt32Array(22, 16, 4), PackedInt32Array(32, 31, 23), PackedInt32Array(29, 32, 23), PackedInt32Array(33, 30, 27), PackedInt32Array(33, 27, 34, 35), PackedInt32Array(36, 35, 34, 37, 38), PackedInt32Array(7, 36, 38, 39), PackedInt32Array(8, 40, 9), PackedInt32Array(7, 39, 8)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(48, 600.2424, 765, 601.2411, 934, 597.24615, 1084, 609.231, 1230, 639.1932, 1405, 669.1554, 1560, 663.16296, 1621, 639.1932, 1845, 619.2184, 1876, 738, 1885, 1084.631, 41, 1087.6272)])
 agent_radius = 30.0
 
 [node name="MagpieLoungeRetro" type="Node2D" unique_id=89442096]
+y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1519467667]
 visible = false
@@ -39,17 +41,32 @@ position = Vector2(3, 16)
 scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
 
-[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" unique_id=103090952]
+[node name="Tree" type="Polygon2D" parent="NavigationRegion2D" unique_id=103090952]
 position = Vector2(63, -50.935707)
 polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 904.8579, 804, 922.8352, 1015, 916.8428, 1064, 891.87427, 1079, 825.9575, 1031, 743.06213, 885, 720.0911)
 
+[node name="Table" type="Polygon2D" parent="NavigationRegion2D" unique_id=593768659]
+position = Vector2(-6, 2.9962182)
+polygon = PackedVector2Array(1394, 902.8604, 1363, 982.7596, 1415, 1006.7293, 1502, 1008.7268, 1553, 988.752, 1539, 954.79486, 1512, 902.8604)
+
+[node name="Stool" type="Polygon2D" parent="NavigationRegion2D" unique_id=905431192]
+position = Vector2(-9.32019, -1.3973452)
+polygon = PackedVector2Array(1617.3202, 920.2376, 1603.3202, 970.1746, 1669, 972.77216, 1723, 959.7886, 1699, 917.8415)
+
+[node name="Tube" type="Polygon2D" parent="NavigationRegion2D" unique_id=802644985]
+y_sort_enabled = true
+polygon = PackedVector2Array(100, 991.7482, 140, 1003.7331, 190, 990.74945, 140, 971.77344)
+
 [node name="Table" type="Sprite2D" parent="." unique_id=267225295]
-position = Vector2(1463.8396, 902)
+y_sort_enabled = true
+position = Vector2(1463.8396, 1010)
 scale = Vector2(1.4725732, 1.4725732)
 texture = ExtResource("1_avk6x")
+offset = Vector2(0, -70)
 
 [node name="Tabouret" type="Sprite2D" parent="." unique_id=1781395764]
-position = Vector2(1671.8396, 945.00006)
+y_sort_enabled = true
+position = Vector2(1662.5194, 943.60095)
 scale = Vector2(1.1509542, 1.0461744)
 texture = ExtResource("2_i7bxq")
 
@@ -66,25 +83,13 @@ position = Vector2(401, 784)
 scale = Vector2(0.90387946, 0.90387946)
 texture = ExtResource("4_b1uor")
 
-[node name="Tree" type="TextureRect" parent="." unique_id=1795858068]
+[node name="Tree" type="Sprite2D" parent="." unique_id=811371068]
 clip_children = 2
 y_sort_enabled = true
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 809.0
-offset_top = 443.0
-offset_right = 1120.0
-offset_bottom = 939.0
-grow_horizontal = 2
-grow_vertical = 0
+position = Vector2(966, 848)
 scale = Vector2(1.9, 1.9)
-pivot_offset_ratio = Vector2(0.5, 1)
 texture = ExtResource("5_jexw7")
-script = ExtResource("6_324kn")
-gives = Array[ExtResource("7_8xf7p")]([ExtResource("8_fwmni")])
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+offset = Vector2(0, -200)
 
 [node name="Shelf" type="TextureRect" parent="." unique_id=1150966161]
 y_sort_enabled = true
@@ -132,11 +137,12 @@ gives = Array[ExtResource("7_8xf7p")]([ExtResource("16_oyog5")])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Candle" type="TextureRect" parent="." unique_id=1435767971]
+z_index = 1
 y_sort_enabled = true
-offset_left = 1406.0
-offset_top = 705.0
-offset_right = 1551.0
-offset_bottom = 870.0
+offset_left = 1407.0
+offset_top = 723.0
+offset_right = 1552.0
+offset_bottom = 888.0
 scale = Vector2(0.78384566, 0.78384566)
 texture = ExtResource("14_324kn")
 script = ExtResource("13_324kn")
@@ -154,11 +160,11 @@ interacts_with = Array[String](["glass_water"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Mirror" type="TextureRect" parent="." unique_id=1438350389]
-offset_left = 537.0
-offset_top = 245.0
-offset_right = 692.0
-offset_bottom = 439.0
-scale = Vector2(1.3406267, 1.3406267)
+offset_left = 560.0
+offset_top = 155.0
+offset_right = 715.0
+offset_bottom = 349.0
+scale = Vector2(1.4683394, 1.4683394)
 texture = ExtResource("21_4g5ik")
 script = ExtResource("6_324kn")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
@@ -172,3 +178,14 @@ texture = ExtResource("22_e6id1")
 position = Vector2(628, 38)
 scale = Vector2(1.4457209, 1.4457209)
 texture = ExtResource("23_ffxr0")
+
+[node name="Trapdoor" type="TextureRect" parent="." unique_id=667290529]
+offset_left = 587.0
+offset_top = 503.0
+offset_right = 859.0
+offset_bottom = 669.0
+scale = Vector2(0.74370515, 0.74370515)
+texture = ExtResource("25_ttcr3")
+script = ExtResource("26_aaei6")
+interacts_with = Array[String](["screwdriver"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"

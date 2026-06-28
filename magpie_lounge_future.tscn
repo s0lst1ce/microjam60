@@ -4,10 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="4_17hk7"]
 [ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="6_dvf40"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_hcmq2"]
-[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_1dmds"]
 [ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_17hk7"]
 [ext_resource type="Script" uid="uid://be8t4dapgs6xv" path="res://to_squirrel.gd" id="8_17hk7"]
-[ext_resource type="Resource" uid="uid://dblio4fyqcpvq" path="res://branch.tres" id="8_y1ubb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
@@ -33,24 +31,12 @@ y_sort_enabled = true
 texture = ExtResource("3_hcmq2")
 centered = false
 
-[node name="Tree" type="TextureRect" parent="." unique_id=44253081]
+[node name="Tree" type="Sprite2D" parent="." unique_id=1759840946]
 y_sort_enabled = true
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 793.0
-offset_top = 382.0
-offset_right = 1104.0
-offset_bottom = 878.0
-grow_horizontal = 2
-grow_vertical = 0
+position = Vector2(899, 798)
 scale = Vector2(1.7891448, 1.7891448)
-pivot_offset_ratio = Vector2(0.5, 1)
 texture = ExtResource("4_17hk7")
-script = ExtResource("6_dvf40")
-gives = Array[ExtResource("7_1dmds")]([ExtResource("8_y1ubb")])
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+offset = Vector2(0, -215)
 
 [node name="Tv" type="Sprite2D" parent="." unique_id=1305802874]
 position = Vector2(1532, 227)
@@ -67,6 +53,7 @@ script = ExtResource("6_dvf40")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Button" type="Button" parent="." unique_id=1767197143]
+visible = false
 offset_left = 89.0
 offset_top = 29.00003
 offset_right = 188.0
