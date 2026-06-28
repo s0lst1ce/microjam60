@@ -52,10 +52,10 @@ centered = false
 
 [node name="Tree" type="Sprite2D" parent="." unique_id=1759840946]
 y_sort_enabled = true
-position = Vector2(899, 848)
+position = Vector2(899, 724)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("4_17hk7")
-offset = Vector2(0, -215)
+offset = Vector2(0, -150)
 
 [node name="Table" type="Sprite2D" parent="." unique_id=1189978962]
 y_sort_enabled = true
@@ -108,7 +108,6 @@ gives = Array[ExtResource("7_1dmds")]([ExtResource("12_cgbd6")])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="TreeLock" type="TextureRect" parent="." unique_id=504355687]
-z_index = 2
 offset_left = 847.99994
 offset_top = 728.0
 offset_right = 1061.0
@@ -119,11 +118,11 @@ script = ExtResource("15_1dmds")
 interacts_with = Array[String](["candle_key"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="B" type="TextureRect" parent="." unique_id=1194697213]
-z_index = 1
-offset_left = 849.0
+[node name="B1" type="TextureRect" parent="." unique_id=1194697213]
+y_sort_enabled = true
+offset_left = 854.0
 offset_top = 752.0
-offset_right = 923.0
+offset_right = 928.0
 offset_bottom = 824.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
@@ -131,10 +130,11 @@ metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
 [node name="B2" type="TextureRect" parent="." unique_id=1446656405]
 z_index = 1
-offset_left = 900.0
-offset_top = 751.0
-offset_right = 974.0
-offset_bottom = 823.0
+y_sort_enabled = true
+offset_left = 905.0
+offset_top = 750.0
+offset_right = 979.0
+offset_bottom = 822.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 1
@@ -142,10 +142,11 @@ metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
 [node name="B3" type="TextureRect" parent="." unique_id=1272023520]
 z_index = 1
-offset_left = 957.0
-offset_top = 747.0
-offset_right = 1031.0
-offset_bottom = 819.0
+y_sort_enabled = true
+offset_left = 960.0
+offset_top = 741.0
+offset_right = 1034.0
+offset_bottom = 813.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 2
