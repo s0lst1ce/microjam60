@@ -24,6 +24,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_onrkg"]
 resource_name = "idle"
+length = 0.42858573344498874
+step = 0.14285715
 
 [sub_resource type="Animation" id="Animation_hqtel"]
 resource_name = "walk"
@@ -65,7 +67,7 @@ position = Vector2(-4, 19)
 texture = ExtResource("2_onrkg")
 offset = Vector2(0, -120)
 hframes = 8
-frame = 6
+frame = 1
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1382074011]
 radius = 50.0

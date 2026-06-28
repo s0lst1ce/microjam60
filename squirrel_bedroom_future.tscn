@@ -49,12 +49,12 @@ start_position = Vector2(1476, 906)
 end_position = Vector2(1287, 980)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
-visible = false
 z_index = -4
 texture = ExtResource("1_07pv5")
 centered = false
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=347276214]
+visible = false
 z_index = -4
 y_sort_enabled = true
 texture = ExtResource("1_cxose")
