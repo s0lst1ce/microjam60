@@ -20,7 +20,7 @@
 [ext_resource type="Resource" uid="uid://bybmq0vbev3j0" path="res://record_player.tres" id="16_oyog5"]
 [ext_resource type="Texture2D" uid="uid://di3cwnx82pd1b" path="res://assets/furniture/empty_tube.png" id="18_q64ew"]
 [ext_resource type="Script" uid="uid://s0phie3iq8yg" path="res://tube.gd" id="19_ycws2"]
-[ext_resource type="Texture2D" uid="uid://bm0r1ah6j8yge" path="res://assets/furniture/squirrel/mirror_broken.png" id="21_o03v2"]
+[ext_resource type="Texture2D" uid="uid://dixotr15cler0" path="res://assets/furniture/mirror.png" id="21_4g5ik"]
 [ext_resource type="Texture2D" uid="uid://n1x81pje1l4b" path="res://assets/furniture/large_disco.png" id="22_e6id1"]
 [ext_resource type="Script" uid="uid://cy0aogxmcnb50" path="res://mirror.gd" id="22_o03v2"]
 [ext_resource type="Texture2D" uid="uid://b70o5tkgr1vrr" path="res://assets/furniture/small_disco.png" id="23_ffxr0"]
@@ -35,6 +35,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(48, 600.2424, 765, 601.
 agent_radius = 30.0
 
 [node name="MagpieLoungeRetro" type="Node2D" unique_id=419400981 node_paths=PackedStringArray("spawn_point")]
+y_sort_enabled = true
 script = ExtResource("1_o03v2")
 spawn_point = NodePath("Spawn")
 metadata/_custom_type_script = "uid://b16ied5hj8xf"
@@ -153,9 +154,9 @@ affect_navigation_mesh = true
 z_index = 1
 y_sort_enabled = true
 offset_left = 1407.0
-offset_top = 723.0
+offset_top = 718.0
 offset_right = 1552.0
-offset_bottom = 888.0
+offset_bottom = 883.0
 scale = Vector2(0.78384566, 0.78384566)
 texture = ExtResource("14_324kn")
 script = ExtResource("13_324kn")
@@ -179,7 +180,7 @@ offset_top = 71.99999
 offset_right = 715.0
 offset_bottom = 266.0
 scale = Vector2(1.4683394, 1.4683394)
-texture = ExtResource("21_o03v2")
+texture = ExtResource("21_4g5ik")
 script = ExtResource("22_o03v2")
 interacts_with = Array[String](["boiling_water", "record_player"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"

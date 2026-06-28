@@ -29,6 +29,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(
 outlines = Array[PackedVector2Array]([PackedVector2Array(555, 1089, 749, 1092, 1327, 1099, 1333, 849, 1457, 816, 1415, 762, 1414, 651, 1319, 675, 1271, 717, 1182, 736, 1118, 714, 1063, 673, 949, 675, 890, 638, 865, 675, 851, 773, 954, 777, 985, 798, 982, 823, 960, 841, 838, 831, 748, 979, 700, 1015, 609, 1011)])
 
 [node name="SquirrelBedroomFuture" type="Node2D" unique_id=1870911276 node_paths=PackedStringArray("spawn_point")]
+y_sort_enabled = true
 script = ExtResource("1_36ym5")
 spawn_point = NodePath("Spawn")
 metadata/_custom_type_script = "uid://b16ied5hj8xf"
@@ -58,6 +59,16 @@ texture = ExtResource("1_cxose")
 centered = false
 
 [node name="SquirrelTrapdoor" parent="." unique_id=1509096163 instance=ExtResource("4_erogm")]
+
+[node name="Lever" type="TextureRect" parent="." unique_id=1201292298]
+offset_left = 1214.0
+offset_top = 442.0
+offset_right = 1426.0
+offset_bottom = 609.0
+scale = Vector2(0.52848595, 0.52848595)
+texture = ExtResource("9_cd48p")
+script = ExtResource("10_2v8ij")
+metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Furnitures" type="Node2D" parent="." unique_id=386312926]
 
@@ -89,16 +100,6 @@ texture = ExtResource("6_vg34b")
 [node name="GlassDesk" type="Sprite2D" parent="Furnitures" unique_id=1400482044]
 position = Vector2(1634, 773)
 texture = ExtResource("7_40pui")
-
-[node name="Lever" type="TextureRect" parent="Furnitures" unique_id=1201292298]
-offset_left = 1214.0
-offset_top = 442.0
-offset_right = 1426.0
-offset_bottom = 609.0
-scale = Vector2(0.52848595, 0.52848595)
-texture = ExtResource("9_cd48p")
-script = ExtResource("10_2v8ij")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="AcornChest" type="TextureRect" parent="Furnitures" unique_id=378522646]
 z_index = -1

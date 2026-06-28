@@ -41,6 +41,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1710, 643, 1875, 772, 1873, 639)])
 
 [node name="MagpieLoungeFuture" type="Node2D" unique_id=643645692 node_paths=PackedStringArray("spawn_point")]
+y_sort_enabled = true
 script = ExtResource("1_jvbvo")
 spawn_point = NodePath("Spawn")
 metadata/_custom_type_script = "uid://b16ied5hj8xf"

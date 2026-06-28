@@ -88,6 +88,7 @@ interacts_with = Array[String](["scissors"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Scale" type="TextureRect" parent="." unique_id=1203327726]
+z_index = 1
 y_sort_enabled = true
 offset_left = 1627.0001
 offset_top = 884.0

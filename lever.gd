@@ -6,5 +6,3 @@ func _on_click() -> void:
 	if texture != on_texture:
 		texture = on_texture
 		Enigmas.tv_on = true
-		#TODO remove
-		Enigmas.bedroom_flushed=true
