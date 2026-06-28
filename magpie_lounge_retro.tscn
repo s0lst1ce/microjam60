@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="9_q64ew"]
 [ext_resource type="Script" uid="uid://bho5k2mts73f7" path="res://shelf.gd" id="10_ycws2"]
 [ext_resource type="Resource" uid="uid://bye0mw6ln3wrw" path="res://glass.tres" id="11_12yyj"]
-[ext_resource type="Texture2D" uid="uid://y3ss08tbkq4x" path="res://assets/furniture/coffre.png" id="11_i7bxq"]
+[ext_resource type="Texture2D" uid="uid://ct17g0se4kk86" path="res://assets/furniture/opened_chest.png" id="11_aaei6"]
 [ext_resource type="Texture2D" uid="uid://do4ox4a10pg02" path="res://assets/furniture/record_player.png" id="12_3ylqn"]
 [ext_resource type="Texture2D" uid="uid://dxijnpmiw2e61" path="res://assets/furniture/glass.png" id="12_ffxr0"]
 [ext_resource type="Script" uid="uid://cylv4nsrycvdl" path="res://candle.gd" id="13_324kn"]
@@ -122,7 +122,7 @@ offset_left = 1079.0
 offset_top = 444.0
 offset_right = 1596.0
 offset_bottom = 687.0
-texture = ExtResource("11_i7bxq")
+texture = ExtResource("11_aaei6")
 script = ExtResource("13_e6id1")
 interacts_with = Array[String](["key"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
