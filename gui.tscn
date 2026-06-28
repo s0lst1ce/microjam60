@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d3xb16pwhmsb6" path="res://timeshift_button.gd" id="4_0wv8u"]
 [ext_resource type="Script" uid="uid://br1vdsqomcig" path="res://inventory.gd" id="4_p8208"]
 [ext_resource type="Script" uid="uid://byxc7o3xrfctq" path="res://item_slot.gd" id="5_axmix"]
-[ext_resource type="Resource" uid="uid://cdoi800n0h6lj" path="res://shirt_button_blue.tres" id="7_0wv8u"]
+[ext_resource type="Resource" uid="uid://bsenmdx4k5167" path="res://screwdriver.tres" id="7_0wv8u"]
 
 [node name="GUI" type="CanvasLayer" unique_id=1497885613]
 

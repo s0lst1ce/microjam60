@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s8vtngi8huht"
-path="res://.godot/imported/typewriter.png-31078108eece20a224163e7fd16419ef.ctex"
+uid="uid://dkeywjf87fdhy"
+path="res://.godot/imported/submerged_background.png-1c149b4334c57561afef4b50a6362c26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/typewriter.png"
-dest_files=["res://.godot/imported/typewriter.png-31078108eece20a224163e7fd16419ef.ctex"]
+source_file="res://assets/submerged_background.png"
+dest_files=["res://.godot/imported/submerged_background.png-1c149b4334c57561afef4b50a6362c26.ctex"]
 
 [params]
 

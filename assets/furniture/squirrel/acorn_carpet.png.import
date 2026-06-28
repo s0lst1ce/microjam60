@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3jjjtn2w7qow"
-path="res://.godot/imported/shelf.png-101f014a9fa53b4a0b19034ce362fc1c.ctex"
+uid="uid://cfwtjxru3awsf"
+path="res://.godot/imported/acorn_carpet.png-4aee8db7ec8868dc82b5591e7f4c0d45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/shelf.png"
-dest_files=["res://.godot/imported/shelf.png-101f014a9fa53b4a0b19034ce362fc1c.ctex"]
+source_file="res://assets/furniture/squirrel/acorn_carpet.png"
+dest_files=["res://.godot/imported/acorn_carpet.png-4aee8db7ec8868dc82b5591e7f4c0d45.ctex"]
 
 [params]
 

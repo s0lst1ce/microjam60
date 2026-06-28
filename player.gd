@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var movement_speed: float = 250
-var movement_target_position: Vector2 = Vector2(250.0,25.0)
+var movement_target_position: Vector2
 var furniture_target_position: Vector2
 var target_furniture
 
@@ -14,6 +14,7 @@ func _ready():
 	navigation_agent.path_desired_distance = 4.0
 	navigation_agent.target_desired_distance = 4.0
 
+	movement_target_position = position
 	# Make sure to not await during _ready.
 	actor_setup.call_deferred()
 	player.play("walk")
@@ -33,10 +34,9 @@ func set_movement_target(movement_target: Vector2):
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("click"):
 		var mouse = get_global_mouse_position()
-		navigation_agent.target_position = mouse
-		movement_target_position = mouse
+		set_movement_target(mouse)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if navigation_agent.is_navigation_finished():
 		return
 

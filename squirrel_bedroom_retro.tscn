@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cf01lqrd760pu"]
 
+[ext_resource type="Script" uid="uid://b16ied5hj8xf" path="res://room.gd" id="1_5dnle"]
 [ext_resource type="Texture2D" uid="uid://iymyfc3c5g7t" path="res://assets/squirrel_bedroom_retro.png" id="1_sk41q"]
 [ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="3_b1ugs"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_rf8m7"]
 [ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_ikruc"]
 [ext_resource type="Texture2D" uid="uid://dp510swl55d50" path="res://assets/furniture/present_rug.png" id="8_qyr4s"]
-[ext_resource type="Texture2D" uid="uid://b7x02tjambmpm" path="res://assets/furniture/bed.png" id="9_p12ah"]
+[ext_resource type="Texture2D" uid="uid://b7x02tjambmpm" path="res://assets/furniture/squirrel/bed.png" id="9_p12ah"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
@@ -13,7 +14,10 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 582.2651, 1391, 583.2638, 1386, 630, 1475, 716, 1826, 737, 1876, 738, 1872, 936, -3, 955)])
 agent_radius = 30.0
 
-[node name="SquirrelBedroomRetro" type="Node2D" unique_id=294624938]
+[node name="SquirrelBedroomRetro" type="Node2D" unique_id=878593051 node_paths=PackedStringArray("spawn_point")]
+script = ExtResource("1_5dnle")
+spawn_point = NodePath("Marker2D")
+metadata/_custom_type_script = "uid://b16ied5hj8xf"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1534004411]
 position = Vector2(3, 16)
@@ -51,3 +55,6 @@ texture = ExtResource("8_qyr4s")
 [node name="Bed" type="Sprite2D" parent="." unique_id=1745079463]
 position = Vector2(708, 761)
 texture = ExtResource("9_p12ah")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1381039150]
+position = Vector2(307, 1002)

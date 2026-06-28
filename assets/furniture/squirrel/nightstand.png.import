@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfwtjxru3awsf"
-path="res://.godot/imported/acorn_carpet.png-764a256b4da58b93b42bb0d6e45de0d8.ctex"
+uid="uid://drbbqo4aey3h5"
+path="res://.godot/imported/nightstand.png-fe6361e3328f8ccd003f26db91d654f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/acorn_carpet.png"
-dest_files=["res://.godot/imported/acorn_carpet.png-764a256b4da58b93b42bb0d6e45de0d8.ctex"]
+source_file="res://assets/furniture/squirrel/nightstand.png"
+dest_files=["res://.godot/imported/nightstand.png-fe6361e3328f8ccd003f26db91d654f4.ctex"]
 
 [params]
 

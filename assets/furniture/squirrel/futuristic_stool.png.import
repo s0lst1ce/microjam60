@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxcjc5qqpqwrv"
-path="res://.godot/imported/holographic_desk.png-2dab2ca1fc9a7ff17c8b87a25c920033.ctex"
+uid="uid://cf6umxcs3m43v"
+path="res://.godot/imported/futuristic_stool.png-40d8eaf2c7d9011574dbe732063a0a52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/holographic_desk.png"
-dest_files=["res://.godot/imported/holographic_desk.png-2dab2ca1fc9a7ff17c8b87a25c920033.ctex"]
+source_file="res://assets/furniture/squirrel/futuristic_stool.png"
+dest_files=["res://.godot/imported/futuristic_stool.png-40d8eaf2c7d9011574dbe732063a0a52.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7x02tjambmpm"
-path="res://.godot/imported/bed.png-1b60b8683dc184ddc0435bf5d8aff8bc.ctex"
+uid="uid://o4nff3faqgi"
+path="res://.godot/imported/tablet.png-c71cff8c5cc443010cf33c88400c184b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/bed.png"
-dest_files=["res://.godot/imported/bed.png-1b60b8683dc184ddc0435bf5d8aff8bc.ctex"]
+source_file="res://assets/furniture/squirrel/tablet.png"
+dest_files=["res://.godot/imported/tablet.png-c71cff8c5cc443010cf33c88400c184b.ctex"]
 
 [params]
 

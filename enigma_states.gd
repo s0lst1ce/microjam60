@@ -29,3 +29,4 @@ func _process(delta: float) -> void:
 
 
 var tv_on = false
+var bedroom_flushed = false

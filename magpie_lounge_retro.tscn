@@ -33,8 +33,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(
 outlines = Array[PackedVector2Array]([PackedVector2Array(48, 600.2424, 765, 601.2411, 934, 597.24615, 1084, 609.231, 1230, 639.1932, 1405, 669.1554, 1560, 663.16296, 1621, 639.1932, 1845, 619.2184, 1876, 738, 1885, 1084.631, 41, 1087.6272)])
 agent_radius = 30.0
 
-[node name="MagpieLoungeRetro" type="Node2D" unique_id=89442096]
-y_sort_enabled = true
+[node name="MagpieLoungeRetro" type="Node2D" unique_id=1509059423]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1519467667]
 visible = false
@@ -93,16 +92,17 @@ texture = ExtResource("5_jexw7")
 offset = Vector2(0, -200)
 
 [node name="Shelf" type="TextureRect" parent="." unique_id=1150966161]
+z_index = -2
 y_sort_enabled = true
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 1518.0001
-offset_top = 191.0
-offset_right = 1949.0001
-offset_bottom = 724.0
+offset_left = 1524.0
+offset_top = 191.99988
+offset_right = 1955.0
+offset_bottom = 724.9999
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.93560576, 0.93560576)
@@ -118,6 +118,7 @@ scale = Vector2(0.15067384, 0.15067384)
 texture = ExtResource("12_ffxr0")
 
 [node name="Chest" type="TextureRect" parent="." unique_id=1288371296]
+z_index = -1
 offset_left = 1079.0
 offset_top = 444.0
 offset_right = 1596.0
@@ -128,6 +129,7 @@ interacts_with = Array[String](["key"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="RecordPlayer" type="TextureRect" parent="." unique_id=1891958161]
+y_sort_enabled = true
 offset_left = 369.00003
 offset_top = 691.00006
 offset_right = 746.0
@@ -157,6 +159,7 @@ interacts_with = Array[String](["lighter"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Tube" type="TextureRect" parent="." unique_id=869724473]
+y_sort_enabled = true
 offset_left = 79.0
 offset_top = 802.0
 offset_right = 208.0
@@ -199,3 +202,6 @@ texture = ExtResource("26_o03v2")
 script = ExtResource("27_o03v2")
 interacts_with = Array[String](["saw"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=1865211093]
+position = Vector2(673, 696)

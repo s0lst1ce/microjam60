@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dwg0ldq7smngb" path="res://trapdoor.gd" id="2_rb8u0"]
 
 [node name="Trapdoor" type="TextureRect" unique_id=1185460373]
+z_index = -1
 offset_left = 587.0
 offset_top = 503.0
 offset_right = 859.0

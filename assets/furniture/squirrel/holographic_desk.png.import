@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duj52pgb0k2dg"
-path="res://.godot/imported/trame.png-58bd4a4cb43daf5f7ec1888ed31e9cc2.ctex"
+uid="uid://dxcjc5qqpqwrv"
+path="res://.godot/imported/holographic_desk.png-383b8e71d362a320ee12854d5e1a89dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/trame.png"
-dest_files=["res://.godot/imported/trame.png-58bd4a4cb43daf5f7ec1888ed31e9cc2.ctex"]
+source_file="res://assets/furniture/squirrel/holographic_desk.png"
+dest_files=["res://.godot/imported/holographic_desk.png-383b8e71d362a320ee12854d5e1a89dc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnj5m7keemlr8"
-path="res://.godot/imported/blue_acorn.png-527cc2a806d842fe0df6dbea4fa19146.ctex"
+uid="uid://b7x02tjambmpm"
+path="res://.godot/imported/bed.png-2cc5c3bee360f04926c3dc26f0a8a17e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/blue_acorn.png"
-dest_files=["res://.godot/imported/blue_acorn.png-527cc2a806d842fe0df6dbea4fa19146.ctex"]
+source_file="res://assets/furniture/squirrel/bed.png"
+dest_files=["res://.godot/imported/bed.png-2cc5c3bee360f04926c3dc26f0a8a17e.ctex"]
 
 [params]
 

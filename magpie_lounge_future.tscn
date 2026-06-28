@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ckfrpcwuevmq"]
 
+[ext_resource type="Script" uid="uid://b16ied5hj8xf" path="res://room.gd" id="1_jvbvo"]
 [ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="3_hcmq2"]
 [ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="4_17hk7"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_hcmq2"]
@@ -25,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dgqagp30lhwdi" path="res://assets/furniture/shirt_button_blue.png" id="23_uukn5"]
 [ext_resource type="Texture2D" uid="uid://bacu4n548akdg" path="res://assets/furniture/shirt_button_orange.png" id="24_nc0it"]
 [ext_resource type="Texture2D" uid="uid://bur6p04eyfws6" path="res://assets/furniture/shirt_button_purple.png" id="25_jvbvo"]
+[ext_resource type="Texture2D" uid="uid://dt2cbmmvkyqgx" path="res://assets/lights/round_diffuse.webp" id="26_nc0it"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(864.3906, 901.9922, 1039.4922, 897.0078, 1035.8906, 901.60156, 29.710938, 1070.4063, 1385.1016, 750.52344, 1465.4297, 842.96094, 1459.8203, 843.53125, 1403.8281, 783.1719, 1333.3672, 743.28906, 1255.9922, 724.96094, 1197.3516, 738.6875, 1168.3672, 760.7031, 1112.7891, 664.71875, 1251.1875, 607.3828, 1037.6563, 1063.8125, 764.5625, 881.59375, 700.65625, 820.8125, 25.289063, 612.14844, 732.3906, 753.1094, 779.89844, 671.27344, 947.4531, 638.7031)
@@ -37,8 +39,13 @@ vertices = PackedVector2Array(1864.6797, 751.22656, 1738.1484, 652.3125, 1863.14
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1710, 643, 1875, 772, 1873, 639)])
 
-[node name="MagpieLoungeFuture" type="Node2D" unique_id=294624938]
-y_sort_enabled = true
+[node name="MagpieLoungeFuture" type="Node2D" unique_id=643645692 node_paths=PackedStringArray("spawn_point")]
+script = ExtResource("1_jvbvo")
+spawn_point = NodePath("Spawn")
+metadata/_custom_type_script = "uid://b16ied5hj8xf"
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=1091299714]
+position = Vector2(690, 670)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1534004411]
 position = Vector2(3, 16)
@@ -46,6 +53,7 @@ scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
 
 [node name="Tree" type="Polygon2D" parent="NavigationRegion2D" unique_id=1976332460]
+visible = false
 position = Vector2(63, -50.935707)
 polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 904.8579, 804, 922.8352, 1015, 916.8428, 1064, 891.87427, 1079, 825.9575, 1031, 743.06213, 885, 720.0911)
 
@@ -200,6 +208,7 @@ metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 [node name="Trapdoor" parent="." unique_id=1185460373 instance=ExtResource("20_vfokk")]
 
 [node name="ShirtButtonLock" type="TextureRect" parent="." unique_id=1221835761]
+z_index = -1
 offset_left = 534.0
 offset_top = 344.0
 offset_right = 617.0
@@ -226,3 +235,18 @@ visible = false
 position = Vector2(50, 102)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("25_jvbvo")
+
+[node name="Orange" type="PointLight2D" parent="ShirtButtonLock" unique_id=756557496]
+position = Vector2(48, 77)
+scale = Vector2(0.08752347, 0.08752347)
+texture = ExtResource("26_nc0it")
+
+[node name="Purple" type="PointLight2D" parent="ShirtButtonLock" unique_id=2146437649]
+position = Vector2(49, 100)
+scale = Vector2(0.092451975, 0.092451975)
+texture = ExtResource("26_nc0it")
+
+[node name="Blue" type="PointLight2D" parent="ShirtButtonLock" unique_id=2067759356]
+position = Vector2(44, 53)
+scale = Vector2(0.08008706, 0.08008706)
+texture = ExtResource("26_nc0it")

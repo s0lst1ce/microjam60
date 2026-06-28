@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gjwna8kwrx64"
-path="res://.godot/imported/cathodic_tv.png-a5af61b5e978c42712d231cd32b580c7.ctex"
+uid="uid://qkeedr50ngpg"
+path="res://.godot/imported/glass_desk.png-69b5c6fc9379eda3537f565da44cfca5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/cathodic_tv.png"
-dest_files=["res://.godot/imported/cathodic_tv.png-a5af61b5e978c42712d231cd32b580c7.ctex"]
+source_file="res://assets/furniture/squirrel/glass_desk.png"
+dest_files=["res://.godot/imported/glass_desk.png-69b5c6fc9379eda3537f565da44cfca5.ctex"]
 
 [params]
 

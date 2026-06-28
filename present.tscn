@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cnxxs32cn35bw"]
-
-[ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="1_svm2c"]
-
-[node name="Present" type="Node2D" unique_id=1335316929]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1330248991]
-texture = ExtResource("1_svm2c")
-centered = false
