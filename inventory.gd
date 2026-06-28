@@ -17,7 +17,7 @@ func _ready() -> void:
 #func _process(delta: float) -> void:
 #	if Input.get_current_cursor_shape() == CURSOR_FORBIDDEN:
 #		DisplayServer.cursor_set_shape(DisplayServer.CURSOR_ARROW)
-		
+
 var data_bk
 func _notification(what: int) -> void:
 	if what == Node.NOTIFICATION_DRAG_BEGIN:

@@ -46,9 +46,7 @@ func _physics_process(delta):
 
 
 func _on_can_give(furniture):
-	print("going for ", furniture)
 	target_furniture = furniture
-	print(get_global_mouse_position(), movement_target_position)
 	furniture_target_position = get_global_mouse_position()
 
 func _on_navigation_agent_2d_navigation_finished() -> void:
@@ -60,4 +58,5 @@ func _on_navigation_agent_2d_navigation_finished() -> void:
 
 	if target_furniture != null and len(target_furniture.gives) > 0:
 		print("taking item")
-		ItemExchange.add_item.emit(target_furniture.gives.pop_front())
+		for i in range(len(target_furniture.gives)):
+			ItemExchange.add_item.emit(target_furniture.gives.pop_front())
