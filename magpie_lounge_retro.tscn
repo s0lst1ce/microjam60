@@ -266,3 +266,7 @@ z_index = -1
 position = Vector2(735, 334)
 scale = Vector2(0.6165855, 0.6165855)
 texture = ExtResource("31_5bv0w")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1163871503]
+color = Color(0.9118422, 0.31129938, 0, 1)
+energy = 0.1

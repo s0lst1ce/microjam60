@@ -124,10 +124,10 @@ y_sort_enabled = true
 [node name="Button" type="TextureRect" parent="Furnitures" unique_id=1879860397]
 visible = false
 z_index = -1
-offset_left = 464.0
-offset_top = 823.0
-offset_right = 776.0
-offset_bottom = 1131.0
+offset_left = 507.0
+offset_top = 792.99994
+offset_right = 819.0
+offset_bottom = 1105.0
 scale = Vector2(0.13322893, 0.13322893)
 texture = ExtResource("16_fm0vc")
 script = ExtResource("19_fm0vc")
