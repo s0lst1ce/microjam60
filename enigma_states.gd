@@ -1,0 +1,20 @@
+extends Node
+
+enum ColorState {RED, GREEN, ORANGE, PURPLE}
+
+var metal_buttons = [ColorState.RED, ColorState.RED, ColorState.RED]
+
+func next_color(color: ColorState) -> ColorState:
+	return (color+1)%4
+
+func is_metal_tree_valid() -> bool:
+	if metal_buttons[0] == ColorState.ORANGE and metal_buttons[1] == ColorState.GREEN and metal_buttons[2] == ColorState.PURPLE:
+		return true
+	else:
+		return false
+
+
+func _process(delta: float) -> void:
+	if is_metal_tree_valid():
+		ItemExchange.add_item.emit("wrench")
+		ItemExchange.add_item.emit("wrench")

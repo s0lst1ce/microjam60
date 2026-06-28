@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://b70o5tkgr1vrr" path="res://assets/furniture/small_disco.png" id="23_ffxr0"]
 [ext_resource type="Texture2D" uid="uid://da8hfmr7k13w1" path="res://assets/furniture/trapdoor.png" id="25_ttcr3"]
 [ext_resource type="Script" uid="uid://dwg0ldq7smngb" path="res://trapdoor.gd" id="26_aaei6"]
+[ext_resource type="Texture2D" uid="uid://dfro3fqmxr3ih" path="res://assets/furniture/branch.png" id="26_o03v2"]
+[ext_resource type="Script" uid="uid://pbonm6v5f2h5" path="res://branch.gd" id="27_o03v2"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(1585.0703, 889.5, 1565.7188, 958.46875, 1560.2266, 945.1328, 1846.1016, 742.2422, 1854.2109, 1054.6797, 1759.5781, 978.2031, 1706.7813, 885.9375, 1173.8672, 770.1797, 1566.2422, 692.9375, 1822.3672, 651.35156, 1524.2109, 875.8594, 1367.4609, 875.8594, 1153.1406, 861.28906, 138.35938, 939.0625, 72.65625, 971.8594, 77.57031, 630.28125, 1586.3672, 1008.5469, 1582.1484, 998.3203, 1662.6484, 1001.52344, 71.42969, 1057.5781, 72.046875, 1014.6875, 139.42188, 1034.8672, 1501.3281, 1041.8594, 218.75781, 1014.28125, 1402.0938, 1039.5781, 1318.8281, 1001.2031, 1085.6016, 895.71094, 765.3281, 631.2422, 221.14844, 970.4922, 700.65625, 820.8125, 732.3906, 753.1094, 864.3906, 901.9922, 764.5625, 881.59375, 779.89844, 671.27344, 933.1797, 627.27344, 947.4531, 638.7031, 1112.7891, 664.71875, 1079.7109, 638.96875, 1224.4531, 668.6875, 1403.0313, 699.2578, 1627.9531, 668.6875)
@@ -36,7 +38,6 @@ agent_radius = 30.0
 y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1519467667]
-visible = false
 position = Vector2(3, 16)
 scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
@@ -86,7 +87,7 @@ texture = ExtResource("4_b1uor")
 [node name="Tree" type="Sprite2D" parent="." unique_id=811371068]
 clip_children = 2
 y_sort_enabled = true
-position = Vector2(966, 848)
+position = Vector2(921.00006, 807)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("5_jexw7")
 offset = Vector2(0, -200)
@@ -135,6 +136,11 @@ texture = ExtResource("12_3ylqn")
 script = ExtResource("16_4g5ik")
 gives = Array[ExtResource("7_8xf7p")]([ExtResource("16_oyog5")])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="RecordPlayer" type="NavigationObstacle2D" parent="RecordPlayer" unique_id=1085676417]
+position = Vector2(160.01654, 392.12842)
+radius = 68.34
+affect_navigation_mesh = true
 
 [node name="Candle" type="TextureRect" parent="." unique_id=1435767971]
 z_index = 1
@@ -188,4 +194,16 @@ scale = Vector2(0.74370515, 0.74370515)
 texture = ExtResource("25_ttcr3")
 script = ExtResource("26_aaei6")
 interacts_with = Array[String](["screwdriver"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Branch" type="TextureRect" parent="." unique_id=303296348]
+z_index = -1
+offset_left = 1001.00006
+offset_top = 212.0
+offset_right = 1146.0
+offset_bottom = 324.0
+scale = Vector2(1.8393967, 1.8393967)
+texture = ExtResource("26_o03v2")
+script = ExtResource("27_o03v2")
+interacts_with = Array[String](["saw"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"

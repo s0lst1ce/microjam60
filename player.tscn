@@ -49,6 +49,7 @@ _data = {
 [node name="Player" type="CharacterBody2D" unique_id=665237645]
 y_sort_enabled = true
 script = ExtResource("1_onrkg")
+movement_speed = 200.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2007459054]
 visible = false
@@ -62,9 +63,17 @@ offset = Vector2(0, -120)
 hframes = 8
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1382074011]
+radius = 50.0
+debug_enabled = true
+
+[node name="NavigationAgent2D2" type="NavigationAgent2D" parent="." unique_id=1591077272]
+radius = 50.0
 debug_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=971405586]
 libraries/ = SubResource("AnimationLibrary_sweqy")
 
 [connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="navigation_finished" from="NavigationAgent2D2" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="velocity_computed" from="NavigationAgent2D2" to="." method="_on_navigation_agent_2d_velocity_computed"]

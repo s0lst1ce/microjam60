@@ -23,5 +23,13 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("click") and get_rect().has_point(get_global_mouse_position()):
-		print("yep from ", self)
-		ItemExchange.can_give.emit(self)
+		print("clicked on ", self)
+		if len(gives) != 0:
+			print("giving items")
+			ItemExchange.can_give.emit(self)
+		else:
+			print("empty-hand interaction")
+			_on_click()
+
+func _on_click() -> void:
+	pass

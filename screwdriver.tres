@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bsenmdx4k5167"]
+
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_jsyj7"]
+[ext_resource type="Texture2D" uid="uid://cf3hkm1xytres" path="res://assets/furniture/screwdriver.png" id="1_ndchd"]
+
+[resource]
+script = ExtResource("1_jsyj7")
+name = "screwdriver"
+icon = ExtResource("1_ndchd")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"

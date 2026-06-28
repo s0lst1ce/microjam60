@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var movement_speed: float = 250.0
+@export var movement_speed: float = 250
 var movement_target_position: Vector2 = Vector2(250.0,25.0)
 var furniture_target_position: Vector2
 var target_furniture
@@ -42,9 +42,14 @@ func _physics_process(delta):
 
 	var current_agent_position: Vector2 = global_position
 	var next_path_position: Vector2 = navigation_agent.get_next_path_position()
+	var new_velocity : Vector2 = (next_path_position - current_agent_position).normalized()
 
-	velocity = current_agent_position.direction_to(next_path_position) * movement_speed
-	move_and_slide()
+	if navigation_agent.avoidance_enabled:
+		navigation_agent.set_velocity(new_velocity)
+	else:
+		_on_navigation_agent_2d_velocity_computed(new_velocity)
+
+	#velocity = current_agent_position.direction_to(next_path_position) * movement_speed
 
 
 func _on_can_give(furniture):
@@ -62,3 +67,8 @@ func _on_navigation_agent_2d_navigation_finished() -> void:
 		print("taking item")
 		for i in range(len(target_furniture.gives)):
 			ItemExchange.add_item.emit(target_furniture.gives.pop_front())
+
+
+func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
+	velocity = safe_velocity * movement_speed
+	move_and_slide()

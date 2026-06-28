@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 ItemExchange="*uid://cdfmrali60s6m"
 SceneSwitching="*uid://ci3rb5yptt6sl"
+Enigmas="*uid://b744l67ag3ipn"
 
 [display]
 

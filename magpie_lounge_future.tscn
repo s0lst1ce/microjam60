@@ -4,26 +4,45 @@
 [ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="4_17hk7"]
 [ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="6_dvf40"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_hcmq2"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_1dmds"]
 [ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_17hk7"]
-[ext_resource type="Script" uid="uid://be8t4dapgs6xv" path="res://to_squirrel.gd" id="8_17hk7"]
+[ext_resource type="Texture2D" uid="uid://cqa2lbni5ng6h" path="res://assets/furniture/box.png" id="7_hcmq2"]
+[ext_resource type="Script" uid="uid://bret236evd1y6" path="res://box.gd" id="8_jmdqa"]
+[ext_resource type="Texture2D" uid="uid://dp510swl55d50" path="res://assets/furniture/present_rug.png" id="9_5ngnd"]
+[ext_resource type="Texture2D" uid="uid://fi2csnoo0eng" path="res://assets/furniture/magpie_table_future.png" id="9_jmdqa"]
+[ext_resource type="Texture2D" uid="uid://bkirao7fvj7l4" path="res://assets/furniture/key.png" id="10_ixet0"]
+[ext_resource type="Script" uid="uid://cs6kjeh82cpsd" path="res://chest_key.gd" id="11_cgbd6"]
+[ext_resource type="Resource" uid="uid://b4hlccneogkfp" path="res://key.tres" id="12_cgbd6"]
+[ext_resource type="Texture2D" uid="uid://bfrmwpfk2yl3x" path="res://assets/furniture/tree_lock.png" id="14_3lhys"]
+[ext_resource type="Script" uid="uid://bibb1wvfe3sci" path="res://tree_lock.gd" id="15_1dmds"]
+[ext_resource type="Texture2D" uid="uid://byb71awr2abmg" path="res://assets/furniture/red_button.png" id="16_y1ubb"]
+[ext_resource type="Script" uid="uid://pmaepj25cj4p" path="res://colored_button.gd" id="17_y1ubb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
-vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 1, 0), PackedInt32Array(6, 5, 0, 7), PackedInt32Array(8, 9, 6, 10), PackedInt32Array(11, 4, 3), PackedInt32Array(6, 7, 10), PackedInt32Array(8, 10, 12), PackedInt32Array(8, 12, 13), PackedInt32Array(8, 13, 14, 15), PackedInt32Array(15, 14, 16), PackedInt32Array(15, 16, 17), PackedInt32Array(3, 15, 17), PackedInt32Array(3, 17, 11)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 582.2651, 1391, 583.2638, 1386, 630, 1475, 716, 1826, 737, 1876, 738, 1872, 936, -3, 955)])
+vertices = PackedVector2Array(864.3906, 901.9922, 1039.4922, 897.0078, 1035.8906, 901.60156, 29.710938, 1070.4063, 1385.1016, 750.52344, 1465.4297, 842.96094, 1459.8203, 843.53125, 1403.8281, 783.1719, 1333.3672, 743.28906, 1255.9922, 724.96094, 1197.3516, 738.6875, 1168.3672, 760.7031, 1112.7891, 664.71875, 1251.1875, 607.3828, 1037.6563, 1063.8125, 764.5625, 881.59375, 700.65625, 820.8125, 25.289063, 612.14844, 732.3906, 753.1094, 779.89844, 671.27344, 947.4531, 638.7031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(4, 7, 8), PackedInt32Array(9, 4, 8), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(2, 14, 3), PackedInt32Array(15, 0, 3), PackedInt32Array(16, 15, 3, 17), PackedInt32Array(18, 16, 17), PackedInt32Array(13, 9, 10), PackedInt32Array(19, 18, 17), PackedInt32Array(13, 12, 20), PackedInt32Array(17, 13, 20), PackedInt32Array(17, 20, 19)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 582.2651, 1280, 577.27136, 1285, 700.11633, 1401, 723.08734, 1526, 866.90576, 1448, 874.8957, 1385, 806.98145, 1325, 773.0243, 1207, 769.0293, 1136, 822.96124, 1066, 911.84906, 1068, 1093.6196, 0, 1100.6108)])
 agent_radius = 30.0
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3bft5"]
+vertices = PackedVector2Array(1864.6797, 751.22656, 1738.1484, 652.3125, 1863.1484, 649.2422)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1710, 643, 1875, 772, 1873, 639)])
+
 [node name="MagpieLoungeFuture" type="Node2D" unique_id=294624938]
+y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1534004411]
 position = Vector2(3, 16)
 scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
 
-[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" unique_id=1976332460]
-visible = false
+[node name="Tree" type="Polygon2D" parent="NavigationRegion2D" unique_id=1976332460]
 position = Vector2(63, -50.935707)
 polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 904.8579, 804, 922.8352, 1015, 916.8428, 1064, 891.87427, 1079, 825.9575, 1031, 743.06213, 885, 720.0911)
+
+[node name="Corner" type="NavigationRegion2D" parent="." unique_id=1114467395]
+navigation_polygon = SubResource("NavigationPolygon_3bft5")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
 z_index = -4
@@ -33,33 +52,101 @@ centered = false
 
 [node name="Tree" type="Sprite2D" parent="." unique_id=1759840946]
 y_sort_enabled = true
-position = Vector2(899, 798)
-scale = Vector2(1.7891448, 1.7891448)
+position = Vector2(899, 848)
+scale = Vector2(1.9, 1.9)
 texture = ExtResource("4_17hk7")
 offset = Vector2(0, -215)
 
-[node name="Tv" type="Sprite2D" parent="." unique_id=1305802874]
-position = Vector2(1532, 227)
-texture = ExtResource("6_hcmq2")
+[node name="Table" type="Sprite2D" parent="." unique_id=1189978962]
+y_sort_enabled = true
+position = Vector2(1286, 891)
+scale = Vector2(1.485431, 1.485431)
+texture = ExtResource("9_jmdqa")
+offset = Vector2(0, -45)
 
-[node name="Furniture" type="TextureRect" parent="." unique_id=673681475]
-offset_left = 1125.0
-offset_top = 569.0
-offset_right = 1888.0
-offset_bottom = 1051.0
-scale = Vector2(1.1689372, 1.1689372)
+[node name="Sofa" type="Sprite2D" parent="." unique_id=2002283161]
+y_sort_enabled = true
+position = Vector2(1524, 1064)
+scale = Vector2(1.2012599, 1.2012599)
 texture = ExtResource("7_17hk7")
+offset = Vector2(0, -170)
+
+[node name="TV" type="TextureRect" parent="." unique_id=2031486260]
+offset_left = 1175.0
+offset_top = 34.0
+offset_right = 1660.0
+offset_bottom = 339.0
+texture = ExtResource("6_hcmq2")
 script = ExtResource("6_dvf40")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="Button" type="Button" parent="." unique_id=1767197143]
-visible = false
-offset_left = 89.0
-offset_top = 29.00003
-offset_right = 188.0
-offset_bottom = 60.00003
-scale = Vector2(7.9207006, 8.634393)
-text = "To Squirrel"
-script = ExtResource("8_17hk7")
+[node name="Box" type="TextureRect" parent="." unique_id=139562569]
+offset_left = 1680.0
+offset_top = 276.0
+offset_right = 1812.0
+offset_bottom = 365.0
+scale = Vector2(1.4630883, 1.4630883)
+texture = ExtResource("7_hcmq2")
+script = ExtResource("8_jmdqa")
+interacts_with = Array[String](["hammer"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Rug" type="Sprite2D" parent="." unique_id=219231531]
+z_index = -1
+position = Vector2(341, 816)
+texture = ExtResource("9_5ngnd")
+
+[node name="Key" type="TextureRect" parent="." unique_id=993454454]
+y_sort_enabled = true
+offset_left = 1813.0
+offset_top = 649.0
+offset_right = 1868.0
+offset_bottom = 697.0
+texture = ExtResource("10_ixet0")
+script = ExtResource("11_cgbd6")
+gives = Array[ExtResource("7_1dmds")]([ExtResource("12_cgbd6")])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="TreeLock" type="TextureRect" parent="." unique_id=504355687]
+z_index = 2
+offset_left = 847.99994
+offset_top = 728.0
+offset_right = 1061.0
+offset_bottom = 814.0
+scale = Vector2(1.179058, 1.179058)
+texture = ExtResource("14_3lhys")
+script = ExtResource("15_1dmds")
+interacts_with = Array[String](["candle_key"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="B" type="TextureRect" parent="." unique_id=1194697213]
+z_index = 1
+offset_left = 849.0
+offset_top = 752.0
+offset_right = 923.0
+offset_bottom = 824.0
+texture = ExtResource("16_y1ubb")
+script = ExtResource("17_y1ubb")
+metadata/_custom_type_script = "uid://pmaepj25cj4p"
+
+[node name="B2" type="TextureRect" parent="." unique_id=1446656405]
+z_index = 1
+offset_left = 900.0
+offset_top = 751.0
+offset_right = 974.0
+offset_bottom = 823.0
+texture = ExtResource("16_y1ubb")
+script = ExtResource("17_y1ubb")
+order = 1
+metadata/_custom_type_script = "uid://pmaepj25cj4p"
+
+[node name="B3" type="TextureRect" parent="." unique_id=1272023520]
+z_index = 1
+offset_left = 957.0
+offset_top = 747.0
+offset_right = 1031.0
+offset_bottom = 819.0
+texture = ExtResource("16_y1ubb")
+script = ExtResource("17_y1ubb")
+order = 2
+metadata/_custom_type_script = "uid://pmaepj25cj4p"

@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://di3q3x5gg215s"]
 
 [ext_resource type="Texture2D" uid="uid://b3d8uaen5us5p" path="res://assets/squirrel_bedroom_future.png" id="1_cxose"]
-[ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="3_m1feq"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_n8k7j"]
-[ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_36ym5"]
-[ext_resource type="Texture2D" uid="uid://dp510swl55d50" path="res://assets/furniture/present_rug.png" id="8_ytm2t"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
@@ -33,17 +30,3 @@ centered = false
 [node name="Tv" type="Sprite2D" parent="." unique_id=1305802874]
 position = Vector2(1532, 227)
 texture = ExtResource("6_n8k7j")
-
-[node name="Furniture" type="TextureRect" parent="." unique_id=673681475]
-offset_left = 1125.0
-offset_top = 569.0
-offset_right = 1888.0
-offset_bottom = 1051.0
-scale = Vector2(1.1689372, 1.1689372)
-texture = ExtResource("7_36ym5")
-script = ExtResource("3_m1feq")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
-
-[node name="PresentRug" type="Sprite2D" parent="." unique_id=1771224099]
-position = Vector2(375, 758)
-texture = ExtResource("8_ytm2t")
