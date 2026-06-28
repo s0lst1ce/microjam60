@@ -23,8 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dixotr15cler0" path="res://assets/furniture/mirror.png" id="21_4g5ik"]
 [ext_resource type="Texture2D" uid="uid://n1x81pje1l4b" path="res://assets/furniture/large_disco.png" id="22_e6id1"]
 [ext_resource type="Texture2D" uid="uid://b70o5tkgr1vrr" path="res://assets/furniture/small_disco.png" id="23_ffxr0"]
-[ext_resource type="Texture2D" uid="uid://da8hfmr7k13w1" path="res://assets/furniture/trapdoor.png" id="25_ttcr3"]
-[ext_resource type="Script" uid="uid://dwg0ldq7smngb" path="res://trapdoor.gd" id="26_aaei6"]
+[ext_resource type="PackedScene" uid="uid://lv1oos2wy5qw" path="res://trapdoor.tscn" id="24_aaei6"]
 [ext_resource type="Texture2D" uid="uid://dfro3fqmxr3ih" path="res://assets/furniture/branch.png" id="26_o03v2"]
 [ext_resource type="Script" uid="uid://pbonm6v5f2h5" path="res://branch.gd" id="27_o03v2"]
 
@@ -187,16 +186,7 @@ position = Vector2(628, 38)
 scale = Vector2(1.4457209, 1.4457209)
 texture = ExtResource("23_ffxr0")
 
-[node name="Trapdoor" type="TextureRect" parent="." unique_id=667290529]
-offset_left = 587.0
-offset_top = 503.0
-offset_right = 859.0
-offset_bottom = 669.0
-scale = Vector2(0.74370515, 0.74370515)
-texture = ExtResource("25_ttcr3")
-script = ExtResource("26_aaei6")
-interacts_with = Array[String](["screwdriver"])
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+[node name="Trapdoor" parent="." unique_id=1185460373 instance=ExtResource("24_aaei6")]
 
 [node name="Branch" type="TextureRect" parent="." unique_id=303296348]
 z_index = -1

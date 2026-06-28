@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="3_hcmq2"]
 [ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="4_17hk7"]
-[ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="6_dvf40"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_hcmq2"]
+[ext_resource type="Script" uid="uid://dya346yy6b1xx" path="res://tv.gd" id="6_y1ubb"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_1dmds"]
 [ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_17hk7"]
 [ext_resource type="Texture2D" uid="uid://cqa2lbni5ng6h" path="res://assets/furniture/box.png" id="7_hcmq2"]
@@ -16,7 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://bfrmwpfk2yl3x" path="res://assets/furniture/tree_lock.png" id="14_3lhys"]
 [ext_resource type="Script" uid="uid://bibb1wvfe3sci" path="res://tree_lock.gd" id="15_1dmds"]
 [ext_resource type="Texture2D" uid="uid://byb71awr2abmg" path="res://assets/furniture/red_button.png" id="16_y1ubb"]
-[ext_resource type="Script" uid="uid://pmaepj25cj4p" path="res://colored_button.gd" id="17_y1ubb"]
+[ext_resource type="Script" uid="uid://pmaepj25cj4p" path="res://metal_colored_button.gd" id="17_y1ubb"]
+[ext_resource type="Texture2D" uid="uid://delhydami2h1l" path="res://assets/furniture/pillow_button_red.png" id="18_aai37"]
+[ext_resource type="Script" uid="uid://bkm1dmqxvno4w" path="res://tv_colored_button.gd" id="18_o4wqt"]
+[ext_resource type="PackedScene" uid="uid://lv1oos2wy5qw" path="res://trapdoor.tscn" id="20_vfokk"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(864.3906, 901.9922, 1039.4922, 897.0078, 1035.8906, 901.60156, 29.710938, 1070.4063, 1385.1016, 750.52344, 1465.4297, 842.96094, 1459.8203, 843.53125, 1403.8281, 783.1719, 1333.3672, 743.28906, 1255.9922, 724.96094, 1197.3516, 738.6875, 1168.3672, 760.7031, 1112.7891, 664.71875, 1251.1875, 607.3828, 1037.6563, 1063.8125, 764.5625, 881.59375, 700.65625, 820.8125, 25.289063, 612.14844, 732.3906, 753.1094, 779.89844, 671.27344, 947.4531, 638.7031)
@@ -71,14 +74,11 @@ scale = Vector2(1.2012599, 1.2012599)
 texture = ExtResource("7_17hk7")
 offset = Vector2(0, -170)
 
-[node name="TV" type="TextureRect" parent="." unique_id=2031486260]
-offset_left = 1175.0
-offset_top = 34.0
-offset_right = 1660.0
-offset_bottom = 339.0
+[node name="TV" type="Sprite2D" parent="." unique_id=1179546216]
+z_index = -1
+position = Vector2(1404, 176)
 texture = ExtResource("6_hcmq2")
-script = ExtResource("6_dvf40")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+script = ExtResource("6_y1ubb")
 
 [node name="Box" type="TextureRect" parent="." unique_id=139562569]
 offset_left = 1680.0
@@ -152,3 +152,44 @@ texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 2
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
+
+[node name="TvColoredButton1" type="TextureRect" parent="." unique_id=935330415]
+offset_left = 1252.0
+offset_top = 210.0
+offset_right = 1302.0
+offset_bottom = 260.0
+texture = ExtResource("18_aai37")
+script = ExtResource("18_o4wqt")
+metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
+
+[node name="TvColoredButton2" type="TextureRect" parent="." unique_id=1052362826]
+offset_left = 1506.0
+offset_top = 210.0
+offset_right = 1556.0
+offset_bottom = 260.0
+texture = ExtResource("18_aai37")
+script = ExtResource("18_o4wqt")
+order = 1
+metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
+
+[node name="TvColoredButton3" type="TextureRect" parent="." unique_id=370414999]
+offset_left = 1424.0
+offset_top = 210.0
+offset_right = 1474.0
+offset_bottom = 260.0
+texture = ExtResource("18_aai37")
+script = ExtResource("18_o4wqt")
+order = 2
+metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
+
+[node name="TvColoredButton4" type="TextureRect" parent="." unique_id=368298179]
+offset_left = 1337.0
+offset_top = 210.0
+offset_right = 1387.0
+offset_bottom = 260.0
+texture = ExtResource("18_aai37")
+script = ExtResource("18_o4wqt")
+order = 3
+metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
+
+[node name="Trapdoor" parent="." unique_id=1185460373 instance=ExtResource("20_vfokk")]
