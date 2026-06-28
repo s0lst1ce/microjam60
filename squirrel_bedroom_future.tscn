@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dkeywjf87fdhy" path="res://assets/submerged_background.png" id="1_07pv5"]
 [ext_resource type="Script" uid="uid://cmf5yu1u43ksh" path="res://squirrel_bedroom_future.gd" id="1_36ym5"]
+[ext_resource type="Texture2D" uid="uid://b3d8uaen5us5p" path="res://assets/squirrel_bedroom_future.png" id="1_cxose"]
 [ext_resource type="Texture2D" uid="uid://dxcjc5qqpqwrv" path="res://assets/furniture/squirrel/holographic_desk.png" id="2_cxose"]
 [ext_resource type="Texture2D" uid="uid://drbbqo4aey3h5" path="res://assets/furniture/squirrel/nightstand.png" id="5_40pui"]
 [ext_resource type="Texture2D" uid="uid://bnj5m7keemlr8" path="res://assets/furniture/squirrel/blue_acorn.png" id="6_vg34b"]
@@ -12,6 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://dt2cbmmvkyqgx" path="res://assets/lights/round_diffuse.webp" id="9_m1feq"]
 [ext_resource type="Script" uid="uid://chl3aln5tlkjq" path="res://lever.gd" id="10_2v8ij"]
 [ext_resource type="Script" uid="uid://dlq74oo45tuq" path="res://squirrel_trapdoor.gd" id="10_n8k7j"]
+[ext_resource type="Texture2D" uid="uid://d2bnjv87jofr5" path="res://assets/furniture/squirrel/acorn_chest.png" id="14_igwac"]
+[ext_resource type="Script" uid="uid://by4ek3qcvj5kb" path="res://acorn_chest.gd" id="15_mvwnw"]
+[ext_resource type="Texture2D" uid="uid://cpujq4jaxhau" path="res://assets/furniture/squirrel/adult_plant.png" id="16_erogm"]
+[ext_resource type="Texture2D" uid="uid://bacu4n548akdg" path="res://assets/furniture/shirt_button_orange.png" id="16_fm0vc"]
+[ext_resource type="Script" uid="uid://6copxbsauhu3" path="res://plant_future.gd" id="17_wdasx"]
+[ext_resource type="Script" uid="uid://d08mwmmp77dgk" path="res://plant_button.gd" id="19_fm0vc"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_n8k7j"]
 vertices = PackedVector2Array(1858.3516, 1083.75, 1416.5469, 1067.0313, 1427.5391, 873.2031, 1639.25, 830.90625)
@@ -19,9 +26,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1418, 864.9083, 1406, 1076.6411, 1881, 1094.6184, 1643, 819.965)])
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_36ym5"]
-vertices = PackedVector2Array(1323.7813, 684.1094, 1410.1406, 662.28906, 1506.1719, 784.75, 1323.1797, 841.5781, 1275.6328, 726.2422, 946.2031, 685.0469, 957.2422, 767.1172, 862.46094, 763.4375, 874.5703, 678.7031, 892.8672, 651.60156, 1317.2266, 1088.8828, 749.03906, 1082, 1181.3672, 746.3594, 1113.2734, 722.9531, 991.4531, 828.1875, 995.65625, 793.1406, 1059.75, 683.0469, 755.53906, 985.84375, 843.3281, 841.46875, 963.21094, 851.2969, 62.523438, 1084.8906, 200.35156, 956.46875, 357.07813, 1012.9375, 703.1797, 1025.1172)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(4, 3, 10, 11, 12), PackedInt32Array(13, 12, 11, 14), PackedInt32Array(15, 6, 5, 16, 13), PackedInt32Array(17, 18, 19, 11), PackedInt32Array(20, 21, 22), PackedInt32Array(11, 20, 22, 23), PackedInt32Array(11, 23, 17), PackedInt32Array(14, 15, 13), PackedInt32Array(14, 11, 19)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(198, 945, 37, 1095, 749, 1092, 1327, 1099, 1333, 849, 1523, 790, 1414, 651, 1319, 675, 1271, 717, 1182, 736, 1118, 714, 1063, 673, 949, 675, 890, 638, 865, 675, 851, 773, 954, 777, 985, 798, 982, 823, 960, 841, 838, 831, 748, 979, 700, 1015, 359, 1003)])
+vertices = PackedVector2Array(1317.2266, 1088.8828, 749.1406, 1082, 749.14844, 1082, 573.8828, 1079.2813, 614.0703, 1021.22656, 703.1406, 1025.1484, 1323.7813, 684.1094, 1405.0313, 765.46875, 1439.8281, 810.21875, 1323.1797, 841.2578, 1275.6328, 726.2422, 1404.1094, 663.8125, 946.2031, 685.0469, 957.2422, 767.1172, 862.46094, 763.4375, 874.5703, 678.7031, 892.8672, 651.60156, 755.53906, 985.84375, 843.3281, 841.46875, 963.21094, 851.2969, 991.4531, 828.1875, 1181.3672, 746.3594, 1113.2734, 722.9531, 995.65625, 793.1406, 1059.75, 683.0469)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(6, 11, 7), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(2, 5, 17, 0), PackedInt32Array(0, 17, 18, 19), PackedInt32Array(10, 9, 0, 19, 20, 21), PackedInt32Array(22, 21, 20, 23), PackedInt32Array(12, 24, 22, 23, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(555, 1089, 749, 1092, 1327, 1099, 1333, 849, 1457, 816, 1415, 762, 1414, 651, 1319, 675, 1271, 717, 1182, 736, 1118, 714, 1063, 673, 949, 675, 890, 638, 865, 675, 851, 773, 954, 777, 985, 798, 982, 823, 960, 841, 838, 831, 748, 979, 700, 1015, 609, 1011)])
 
 [node name="SquirrelBedroomFuture" type="Node2D" unique_id=1870911276 node_paths=PackedStringArray("spawn_point")]
 script = ExtResource("1_36ym5")
@@ -41,15 +48,15 @@ start_position = Vector2(1476, 906)
 end_position = Vector2(1287, 980)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
+visible = false
 z_index = -4
 texture = ExtResource("1_07pv5")
 centered = false
 
-[node name="FloodedBackground" type="Sprite2D" parent="." unique_id=347276214]
-visible = false
+[node name="Background2" type="Sprite2D" parent="." unique_id=347276214]
 z_index = -4
 y_sort_enabled = true
-texture = ExtResource("1_07pv5")
+texture = ExtResource("1_cxose")
 centered = false
 
 [node name="SquirrelTrapdoor" type="TextureButton" parent="." unique_id=2086972353]
@@ -62,9 +69,6 @@ texture_click_mask = ExtResource("9_2v8ij")
 script = ExtResource("10_n8k7j")
 
 [node name="Furnitures" type="Node2D" parent="." unique_id=386312926]
-
-[node name="Desk" type="Sprite2D" parent="Furnitures" unique_id=2090828546]
-y_sort_enabled = true
 
 [node name="HolographicDesk" type="Sprite2D" parent="Furnitures" unique_id=1897365161]
 z_index = -1
@@ -104,6 +108,39 @@ scale = Vector2(0.52848595, 0.52848595)
 texture = ExtResource("9_cd48p")
 script = ExtResource("10_2v8ij")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="AcornChest" type="TextureRect" parent="Furnitures" unique_id=378522646]
+z_index = -1
+offset_left = 1433.9999
+offset_top = 651.0
+offset_right = 1704.9999
+offset_bottom = 946.0
+scale = Vector2(0.5545847, 0.5545847)
+texture = ExtResource("14_igwac")
+script = ExtResource("15_mvwnw")
+interacts_with = Array[String](["tube_key"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Desk" type="Sprite2D" parent="Furnitures" unique_id=2090828546]
+y_sort_enabled = true
+
+[node name="Button" type="TextureRect" parent="Furnitures" unique_id=1879860397]
+z_index = -1
+offset_left = 464.0
+offset_top = 823.0
+offset_right = 776.0
+offset_bottom = 1131.0
+scale = Vector2(0.13322893, 0.13322893)
+texture = ExtResource("16_fm0vc")
+script = ExtResource("19_fm0vc")
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Plant" type="Sprite2D" parent="Furnitures" unique_id=916053684]
+position = Vector2(476, 1047)
+texture = ExtResource("16_erogm")
+offset = Vector2(0, -200)
+flip_h = true
+script = ExtResource("17_wdasx")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=864111957]
 position = Vector2(1662, 887)
