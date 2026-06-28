@@ -1,6 +1,6 @@
 extends Furniture
 
-@onready var repaired = preload("res://faucet.gd")
+@onready var repaired = preload("res://assets/furniture/faucet.png")
 
 
 func _interact_with(item: ItemData) -> void:

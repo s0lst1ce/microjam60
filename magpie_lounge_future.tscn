@@ -70,7 +70,7 @@ centered = false
 
 [node name="Tree" type="Sprite2D" parent="." unique_id=1759840946]
 y_sort_enabled = true
-position = Vector2(899, 724)
+position = Vector2(899, 719)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("4_17hk7")
 offset = Vector2(0, -150)
@@ -84,6 +84,7 @@ texture = ExtResource("9_jmdqa")
 offset = Vector2(0, -45)
 
 [node name="Sofa" type="Sprite2D" parent="." unique_id=2002283161]
+z_index = -1
 y_sort_enabled = true
 position = Vector2(1524, 1064)
 scale = Vector2(1.2012599, 1.2012599)

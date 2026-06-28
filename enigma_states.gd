@@ -5,6 +5,7 @@ enum ColorState {RED, GREEN, ORANGE, PURPLE}
 var metal_buttons = [ColorState.RED, ColorState.RED, ColorState.RED]
 var metal_tree_reward_taken = false
 var tv_buttons = [ColorState.RED, ColorState.RED, ColorState.RED, ColorState.RED]
+var tv_reward_taken = false
 
 func next_color(color: ColorState) -> ColorState:
 	return (color+1)%4

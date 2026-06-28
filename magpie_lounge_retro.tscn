@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="9_q64ew"]
 [ext_resource type="Script" uid="uid://bho5k2mts73f7" path="res://shelf.gd" id="10_ycws2"]
 [ext_resource type="Resource" uid="uid://bye0mw6ln3wrw" path="res://glass.tres" id="11_12yyj"]
-[ext_resource type="Texture2D" uid="uid://ct17g0se4kk86" path="res://assets/furniture/opened_chest.png" id="11_aaei6"]
 [ext_resource type="Texture2D" uid="uid://do4ox4a10pg02" path="res://assets/furniture/record_player.png" id="12_3ylqn"]
 [ext_resource type="Texture2D" uid="uid://dxijnpmiw2e61" path="res://assets/furniture/glass.png" id="12_ffxr0"]
+[ext_resource type="Texture2D" uid="uid://db4ees5moetp5" path="res://assets/furniture/chest.png" id="12_grk56"]
 [ext_resource type="Script" uid="uid://cylv4nsrycvdl" path="res://candle.gd" id="13_324kn"]
 [ext_resource type="Script" uid="uid://ccwvgx7sl24nk" path="res://chest.gd" id="13_e6id1"]
 [ext_resource type="Texture2D" uid="uid://cfcd7sd1av0jm" path="res://assets/furniture/candle.png" id="14_324kn"]
@@ -127,10 +127,10 @@ texture = ExtResource("12_ffxr0")
 [node name="Chest" type="TextureRect" parent="." unique_id=1288371296]
 z_index = -1
 offset_left = 1079.0
-offset_top = 444.0
+offset_top = 417.0
 offset_right = 1596.0
-offset_bottom = 687.0
-texture = ExtResource("11_aaei6")
+offset_bottom = 685.0
+texture = ExtResource("12_grk56")
 script = ExtResource("13_e6id1")
 interacts_with = Array[String](["key"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
@@ -228,6 +228,12 @@ rotation = 1.3647901
 scale = Vector2(0.46177897, 0.46177897)
 texture = ExtResource("29_cfwg4")
 
+[node name="Feather7" type="Sprite2D" parent="." unique_id=1583588549]
+position = Vector2(354, 1010.99994)
+rotation = 1.6704621
+scale = Vector2(0.46177897, 0.46177897)
+texture = ExtResource("29_cfwg4")
+
 [node name="Feather3" type="Sprite2D" parent="." unique_id=1612718038]
 position = Vector2(240, 214)
 rotation = 0.44630608
@@ -238,3 +244,13 @@ position = Vector2(432.00003, 208.00003)
 rotation = -0.744131
 texture = ExtResource("28_grk56")
 flip_h = true
+
+[node name="Feather5" type="Sprite2D" parent="." unique_id=1652833582]
+position = Vector2(1696, 1040)
+rotation = 1.5328133
+texture = ExtResource("29_cfwg4")
+
+[node name="Feather6" type="Sprite2D" parent="." unique_id=87781948]
+position = Vector2(99, 739.00006)
+rotation = 1.9072378
+texture = ExtResource("28_grk56")

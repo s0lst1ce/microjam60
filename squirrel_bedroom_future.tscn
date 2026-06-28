@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qkeedr50ngpg" path="res://assets/furniture/squirrel/glass_desk.png" id="7_40pui"]
 [ext_resource type="Texture2D" uid="uid://bnketuitjv1ne" path="res://assets/furniture/squirrel/lever_on.png" id="9_cd48p"]
 [ext_resource type="Texture2D" uid="uid://dt2cbmmvkyqgx" path="res://assets/lights/round_diffuse.webp" id="9_m1feq"]
+[ext_resource type="Script" uid="uid://sjmmg4jpr0pa" path="res://computer_screen.gd" id="9_wdasx"]
 [ext_resource type="Script" uid="uid://chl3aln5tlkjq" path="res://lever.gd" id="10_2v8ij"]
 [ext_resource type="Texture2D" uid="uid://d2bnjv87jofr5" path="res://assets/furniture/squirrel/acorn_chest.png" id="14_igwac"]
 [ext_resource type="Script" uid="uid://by4ek3qcvj5kb" path="res://acorn_chest.gd" id="15_mvwnw"]
@@ -81,11 +82,13 @@ texture = ExtResource("2_cxose")
 z_index = -1
 position = Vector2(46.999878, 10.9999695)
 scale = Vector2(37.49994, 32.031235)
+enabled = false
 color = Color(0.06988806, 0.66929185, 0.7498597, 1)
 energy = 2.0
 blend_mode = 2
 texture = ExtResource("9_m1feq")
 texture_scale = 0.01
+script = ExtResource("9_wdasx")
 
 [node name="NightStand" type="Sprite2D" parent="Furnitures" unique_id=1713698586]
 y_sort_enabled = true

@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b7x02tjambmpm" path="res://assets/furniture/squirrel/bed.png" id="9_p12ah"]
 [ext_resource type="Texture2D" uid="uid://gjwna8kwrx64" path="res://assets/furniture/squirrel/cathodic_tv.png" id="10_b1ugs"]
 [ext_resource type="Texture2D" uid="uid://xcv732cmgdba" path="res://assets/furniture/squirrel/stool.png" id="11_eacw4"]
+[ext_resource type="Script" uid="uid://cxnnlggh3ypsl" path="res://cathodic_tv.gd" id="11_qs5bg"]
 [ext_resource type="Texture2D" uid="uid://3jjjtn2w7qow" path="res://assets/furniture/squirrel/shelf.png" id="12_016ah"]
 [ext_resource type="Texture2D" uid="uid://dij2qtyya66x6" path="res://assets/furniture/squirrel/desk.png" id="13_rf8m7"]
 [ext_resource type="Texture2D" uid="uid://cfwtjxru3awsf" path="res://assets/furniture/squirrel/acorn_carpet.png" id="14_ikruc"]
@@ -105,6 +106,7 @@ y_sort_enabled = true
 position = Vector2(1079, 578)
 scale = Vector2(0.86432153, 0.86432153)
 texture = ExtResource("10_b1ugs")
+script = ExtResource("11_qs5bg")
 
 [node name="Stool" type="Sprite2D" parent="." unique_id=989851258]
 y_sort_enabled = true
