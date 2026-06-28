@@ -4,4 +4,4 @@ extends Furniture
 
 func _interact_with(item: ItemData) -> void:
 	texture = opened
-	ItemExchange.add_item.emit("res://wrong_button.tres")
+	ItemExchange.add_item.emit(preload("res://wrong_button.tres"))
