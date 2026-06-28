@@ -137,3 +137,5 @@ script = ExtResource("17_wdasx")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=864111957]
 position = Vector2(1662, 887)
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

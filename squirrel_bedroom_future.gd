@@ -19,3 +19,10 @@ func unflood() -> void:
 	furnitures.show()
 	link.enabled=true
 	background.texture = normal_room
+
+
+func _on_tree_entered() -> void:
+	if !Enigmas.bedroom_flushed:
+		var player = get_tree().root.get_node("Main/Player")
+		player.position = spawn_point.position
+		player.set_movement_target(spawn_point.position)
