@@ -125,6 +125,7 @@ offset_right = 1596.0
 offset_bottom = 687.0
 texture = ExtResource("11_i7bxq")
 script = ExtResource("13_e6id1")
+interacts_with = Array[String](["key"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="RecordPlayer" type="TextureRect" parent="." unique_id=1891958161]

@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var current_room: String = "magpie"
-@onready var current_period: int = 0
+@onready var current_period: int = 1
 @onready var period_button = $GUI/PeriodButton
 
 @onready var scenes = {
