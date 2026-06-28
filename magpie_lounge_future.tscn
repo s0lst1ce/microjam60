@@ -102,6 +102,7 @@ offset_left = 1813.0
 offset_top = 649.0
 offset_right = 1868.0
 offset_bottom = 697.0
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("10_ixet0")
 script = ExtResource("11_cgbd6")
 gives = Array[ExtResource("7_1dmds")]([ExtResource("12_cgbd6")])
