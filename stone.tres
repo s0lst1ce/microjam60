@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bbfmmj0vrdsxh"]
 
+[ext_resource type="Resource" uid="uid://e5cw066ur8od" path="res://hammer.tres" id="1_gmksn"]
 [ext_resource type="Texture2D" uid="uid://bjcolgowq0hmy" path="res://assets/furniture/stone.png" id="1_h6cl8"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_k7hpl"]
 
@@ -7,4 +8,6 @@
 script = ExtResource("1_k7hpl")
 name = "stone"
 icon = ExtResource("1_h6cl8")
+combines_with = "branch"
+combines_into = ExtResource("1_gmksn")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

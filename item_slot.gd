@@ -35,9 +35,14 @@ func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	return true
 	
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
-	var tmp = item
-	item = data.item
-	data.item=tmp
+	if data.item != null and item !=null and data.item.combines_with == item.name:
+		item= item.combines_into
+		data.item=null
+	else:
+		var tmp = item
+		item = data.item
+		data.item=tmp
+
 	data.icon.show()
 	update_ui()
 	data.update_ui()

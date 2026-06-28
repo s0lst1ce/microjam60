@@ -200,10 +200,10 @@ metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Branch" type="TextureRect" parent="." unique_id=303296348]
 z_index = -1
-offset_left = 1001.00006
-offset_top = 212.0
-offset_right = 1146.0
-offset_bottom = 324.0
+offset_left = 1002.0
+offset_top = 217.0
+offset_right = 1147.0
+offset_bottom = 329.0
 scale = Vector2(1.8393967, 1.8393967)
 texture = ExtResource("26_o03v2")
 script = ExtResource("27_o03v2")
