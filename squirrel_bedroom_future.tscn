@@ -4,15 +4,13 @@
 [ext_resource type="Script" uid="uid://cmf5yu1u43ksh" path="res://squirrel_bedroom_future.gd" id="1_36ym5"]
 [ext_resource type="Texture2D" uid="uid://b3d8uaen5us5p" path="res://assets/squirrel_bedroom_future.png" id="1_cxose"]
 [ext_resource type="Texture2D" uid="uid://dxcjc5qqpqwrv" path="res://assets/furniture/squirrel/holographic_desk.png" id="2_cxose"]
+[ext_resource type="PackedScene" uid="uid://dftctx4swwbo4" path="res://squirrel_trapdoor.tscn" id="4_erogm"]
 [ext_resource type="Texture2D" uid="uid://drbbqo4aey3h5" path="res://assets/furniture/squirrel/nightstand.png" id="5_40pui"]
 [ext_resource type="Texture2D" uid="uid://bnj5m7keemlr8" path="res://assets/furniture/squirrel/blue_acorn.png" id="6_vg34b"]
 [ext_resource type="Texture2D" uid="uid://qkeedr50ngpg" path="res://assets/furniture/squirrel/glass_desk.png" id="7_40pui"]
-[ext_resource type="Texture2D" uid="uid://bgh3p725ed3kj" path="res://assets/furniture/squirrel/squirrel_trapdoor.png" id="8_ytm2t"]
-[ext_resource type="BitMap" uid="uid://buo2nraimhwdl" path="res://assets/furniture/squirrel/squirrel_trapdoor_mask.png" id="9_2v8ij"]
 [ext_resource type="Texture2D" uid="uid://bnketuitjv1ne" path="res://assets/furniture/squirrel/lever_on.png" id="9_cd48p"]
 [ext_resource type="Texture2D" uid="uid://dt2cbmmvkyqgx" path="res://assets/lights/round_diffuse.webp" id="9_m1feq"]
 [ext_resource type="Script" uid="uid://chl3aln5tlkjq" path="res://lever.gd" id="10_2v8ij"]
-[ext_resource type="Script" uid="uid://dlq74oo45tuq" path="res://squirrel_trapdoor.gd" id="10_n8k7j"]
 [ext_resource type="Texture2D" uid="uid://d2bnjv87jofr5" path="res://assets/furniture/squirrel/acorn_chest.png" id="14_igwac"]
 [ext_resource type="Script" uid="uid://by4ek3qcvj5kb" path="res://acorn_chest.gd" id="15_mvwnw"]
 [ext_resource type="Texture2D" uid="uid://cpujq4jaxhau" path="res://assets/furniture/squirrel/adult_plant.png" id="16_erogm"]
@@ -48,25 +46,18 @@ start_position = Vector2(1476, 906)
 end_position = Vector2(1287, 980)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
-visible = false
 z_index = -4
 texture = ExtResource("1_07pv5")
 centered = false
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=347276214]
+visible = false
 z_index = -4
 y_sort_enabled = true
 texture = ExtResource("1_cxose")
 centered = false
 
-[node name="SquirrelTrapdoor" type="TextureButton" parent="." unique_id=2086972353]
-offset_left = 1666.0
-offset_top = 588.0
-offset_right = 1895.0
-offset_bottom = 832.0
-texture_normal = ExtResource("8_ytm2t")
-texture_click_mask = ExtResource("9_2v8ij")
-script = ExtResource("10_n8k7j")
+[node name="SquirrelTrapdoor" parent="." unique_id=1509096163 instance=ExtResource("4_erogm")]
 
 [node name="Furnitures" type="Node2D" parent="." unique_id=386312926]
 
@@ -125,6 +116,7 @@ metadata/_custom_type_script = "uid://cg47jubodtsch"
 y_sort_enabled = true
 
 [node name="Button" type="TextureRect" parent="Furnitures" unique_id=1879860397]
+visible = false
 z_index = -1
 offset_left = 464.0
 offset_top = 823.0
@@ -136,7 +128,7 @@ script = ExtResource("19_fm0vc")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="Plant" type="Sprite2D" parent="Furnitures" unique_id=916053684]
-position = Vector2(476, 1047)
+position = Vector2(524, 1016)
 texture = ExtResource("16_erogm")
 offset = Vector2(0, -200)
 flip_h = true
@@ -144,5 +136,3 @@ script = ExtResource("17_wdasx")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=864111957]
 position = Vector2(1662, 887)
-
-[connection signal="pressed" from="SquirrelTrapdoor" to="SquirrelTrapdoor" method="_on_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://csw7yh5y8b13i"]
+
+[ext_resource type="Texture2D" uid="uid://cevitqpxtibf1" path="res://assets/furniture/squirrel/boiling_water.png" id="1_djqit"]
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_i8i6g"]
+
+[resource]
+script = ExtResource("1_i8i6g")
+name = "boiling_water"
+icon = ExtResource("1_djqit")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"

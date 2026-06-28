@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b16ied5hj8xf" path="res://room.gd" id="1_jvbvo"]
 [ext_resource type="Texture2D" uid="uid://cugwnpivyj1kk" path="res://assets/present_background.png" id="3_hcmq2"]
 [ext_resource type="Texture2D" uid="uid://da4edho3han4w" path="res://assets/furniture/metal_tree.png" id="4_17hk7"]
+[ext_resource type="Script" uid="uid://c3cw205rc84vg" path="res://tree.gd" id="4_amelh"]
 [ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_hcmq2"]
 [ext_resource type="Script" uid="uid://dya346yy6b1xx" path="res://tv.gd" id="6_y1ubb"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_1dmds"]
@@ -72,6 +73,7 @@ position = Vector2(899, 724)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("4_17hk7")
 offset = Vector2(0, -150)
+script = ExtResource("4_amelh")
 
 [node name="Table" type="Sprite2D" parent="." unique_id=1189978962]
 y_sort_enabled = true
@@ -89,15 +91,15 @@ offset = Vector2(0, -170)
 
 [node name="TV" type="Sprite2D" parent="." unique_id=1179546216]
 z_index = -1
-position = Vector2(1404, 176)
+position = Vector2(1404, 246.5)
 texture = ExtResource("6_hcmq2")
 script = ExtResource("6_y1ubb")
 
 [node name="Box" type="TextureRect" parent="." unique_id=139562569]
 offset_left = 1680.0
-offset_top = 276.0
+offset_top = 375.0
 offset_right = 1812.0
-offset_bottom = 365.0
+offset_bottom = 464.0
 scale = Vector2(1.4630883, 1.4630883)
 texture = ExtResource("7_hcmq2")
 script = ExtResource("8_jmdqa")
@@ -168,18 +170,18 @@ metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
 [node name="TvColoredButton1" type="TextureRect" parent="." unique_id=935330415]
 offset_left = 1252.0
-offset_top = 210.0
+offset_top = 280.5
 offset_right = 1302.0
-offset_bottom = 260.0
+offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
 [node name="TvColoredButton2" type="TextureRect" parent="." unique_id=1052362826]
 offset_left = 1506.0
-offset_top = 210.0
+offset_top = 280.5
 offset_right = 1556.0
-offset_bottom = 260.0
+offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 1
@@ -187,9 +189,9 @@ metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
 [node name="TvColoredButton3" type="TextureRect" parent="." unique_id=370414999]
 offset_left = 1424.0
-offset_top = 210.0
+offset_top = 280.5
 offset_right = 1474.0
-offset_bottom = 260.0
+offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 2
@@ -197,9 +199,9 @@ metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
 [node name="TvColoredButton4" type="TextureRect" parent="." unique_id=368298179]
 offset_left = 1337.0
-offset_top = 210.0
+offset_top = 280.5
 offset_right = 1387.0
-offset_bottom = 260.0
+offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 3

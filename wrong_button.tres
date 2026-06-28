@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://clleofj5o6fvt"]
+
+[ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_f7k7w"]
+[ext_resource type="Texture2D" uid="uid://bvq61cr8hl5gu" path="res://assets/furniture/shirt_button_wrong.png" id="1_ptx2q"]
+
+[resource]
+script = ExtResource("1_f7k7w")
+name = "wrong_button"
+icon = ExtResource("1_ptx2q")
+metadata/_custom_type_script = "uid://i5ms0ackvnbo"

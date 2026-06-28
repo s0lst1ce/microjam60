@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dftctx4swwbo4"]
+
+[ext_resource type="Texture2D" uid="uid://bgh3p725ed3kj" path="res://assets/furniture/squirrel/squirrel_trapdoor.png" id="1_tqmu5"]
+[ext_resource type="BitMap" uid="uid://buo2nraimhwdl" path="res://assets/furniture/squirrel/squirrel_trapdoor_mask.png" id="2_1l8xx"]
+[ext_resource type="Script" uid="uid://dlq74oo45tuq" path="res://squirrel_trapdoor.gd" id="3_w53ce"]
+
+[node name="SquirrelTrapdoor" type="TextureButton" unique_id=1509096163]
+offset_left = 1666.0
+offset_top = 588.0
+offset_right = 1895.0
+offset_bottom = 832.0
+texture_normal = ExtResource("1_tqmu5")
+texture_click_mask = ExtResource("2_1l8xx")
+script = ExtResource("3_w53ce")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -2,31 +2,55 @@
 
 [ext_resource type="Script" uid="uid://b16ied5hj8xf" path="res://room.gd" id="1_5dnle"]
 [ext_resource type="Texture2D" uid="uid://iymyfc3c5g7t" path="res://assets/squirrel_bedroom_retro.png" id="1_sk41q"]
-[ext_resource type="Script" uid="uid://cg47jubodtsch" path="res://furniture.gd" id="3_b1ugs"]
-[ext_resource type="Texture2D" uid="uid://cauhx4rxceaup" path="res://assets/furniture/tv.png" id="6_rf8m7"]
-[ext_resource type="Texture2D" uid="uid://ceg33qegr2a7c" path="res://assets/furniture/sofa.png" id="7_ikruc"]
-[ext_resource type="Texture2D" uid="uid://dp510swl55d50" path="res://assets/furniture/present_rug.png" id="8_qyr4s"]
+[ext_resource type="Texture2D" uid="uid://byixe23ve2e68" path="res://assets/furniture/squirrel/pipe.png" id="4_ogx78"]
+[ext_resource type="Script" uid="uid://bx4wjxvh1o66w" path="res://faucet.gd" id="5_ttckp"]
+[ext_resource type="Texture2D" uid="uid://46vg1wvvnamc" path="res://assets/furniture/squirrel/plant_baby.png" id="6_5dnle"]
+[ext_resource type="Script" uid="uid://bgdlkuhwngk1r" path="res://plant_retro.gd" id="7_5dnle"]
+[ext_resource type="Texture2D" uid="uid://cpyun8ux40k2r" path="res://assets/furniture/squirrel/scale.png" id="8_p12ah"]
+[ext_resource type="Script" uid="uid://cdlabmxasocvh" path="res://scale.gd" id="9_b1ugs"]
 [ext_resource type="Texture2D" uid="uid://b7x02tjambmpm" path="res://assets/furniture/squirrel/bed.png" id="9_p12ah"]
+[ext_resource type="Texture2D" uid="uid://gjwna8kwrx64" path="res://assets/furniture/squirrel/cathodic_tv.png" id="10_b1ugs"]
+[ext_resource type="Texture2D" uid="uid://xcv732cmgdba" path="res://assets/furniture/squirrel/stool.png" id="11_eacw4"]
+[ext_resource type="Texture2D" uid="uid://3jjjtn2w7qow" path="res://assets/furniture/squirrel/shelf.png" id="12_016ah"]
+[ext_resource type="Texture2D" uid="uid://dij2qtyya66x6" path="res://assets/furniture/squirrel/desk.png" id="13_rf8m7"]
+[ext_resource type="Texture2D" uid="uid://cfwtjxru3awsf" path="res://assets/furniture/squirrel/acorn_carpet.png" id="14_ikruc"]
+[ext_resource type="PackedScene" uid="uid://dftctx4swwbo4" path="res://squirrel_trapdoor.tscn" id="15_qyr4s"]
+[ext_resource type="Texture2D" uid="uid://c6f353ol287q1" path="res://assets/furniture/squirrel/slippers.png" id="16_4leww"]
+[ext_resource type="Texture2D" uid="uid://b4hkh4rxbomeg" path="res://assets/furniture/squirrel/wash.png" id="17_ls15y"]
+[ext_resource type="Texture2D" uid="uid://b805c8itej15j" path="res://assets/furniture/squirrel/swing.png" id="18_obarq"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
-vertices = PackedVector2Array(1173.8672, 770.1797, 1824.7969, 766.97656, 1845.3984, 767.3906, 1842.5938, 906.28906, 1153.1406, 861.28906, 1462.1328, 745.28125, 1354.6094, 641.3906, 1112.7891, 664.71875, 25.15625, 612.28906, 1357.6172, 613.2422, 947.4531, 638.7031, 1085.6016, 895.71094, 779.89844, 671.27344, 732.3906, 753.1094, 700.65625, 820.8125, 26.828125, 924.6875, 764.5625, 881.59375, 864.3906, 901.9922)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 1, 0), PackedInt32Array(6, 5, 0, 7), PackedInt32Array(8, 9, 6, 10), PackedInt32Array(11, 4, 3), PackedInt32Array(6, 7, 10), PackedInt32Array(8, 10, 12), PackedInt32Array(8, 12, 13), PackedInt32Array(8, 13, 14, 15), PackedInt32Array(15, 14, 16), PackedInt32Array(15, 16, 17), PackedInt32Array(3, 15, 17), PackedInt32Array(3, 17, 11)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 582.2651, 1391, 583.2638, 1386, 630, 1475, 716, 1826, 737, 1876, 738, 1872, 936, -3, 955)])
-agent_radius = 30.0
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_qs5bg"]
+vertices = PackedVector2Array(277.2578, 951.03906, 244.75781, 965.9531, 261.8672, 924.1172, 971.1172, 725.1797, 1002.34375, 693.0078, 1154.0078, 688.46875, 1149.6094, 736.9219, 937.64844, 887.71094, 264.27344, 888.0781, 449.96875, 910.5625, 372.28125, 939.8203, 493.82813, 936.6406, 525.71094, 950.72656, 499.70313, 947.3203, 551.7578, 1031.8672, 916.2031, 737.77344, 1240.1094, 825.1719, 1326.0703, 842.89844, 1303.0313, 1054.6563, 873.90625, 945.78125, 446.65625, 1026.2266, 159.78906, 972.1875, 233.47656, 981.0078, 253.8125, 1024.9922, 49.96875, 1054.6563, 739.15625, 1005.21094, 774.65625, 946.7578, 696.6797, 1028.6484, 302.9922, 1039.8438)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 7), PackedInt32Array(0, 2, 8, 9, 10), PackedInt32Array(11, 10, 9), PackedInt32Array(11, 9, 12), PackedInt32Array(13, 11, 12, 14), PackedInt32Array(7, 15, 3), PackedInt32Array(7, 16, 17, 18, 19), PackedInt32Array(20, 13, 14), PackedInt32Array(7, 6, 16), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(25, 26, 19, 18), PackedInt32Array(27, 25, 18), PackedInt32Array(14, 27, 18, 24, 28), PackedInt32Array(24, 23, 28), PackedInt32Array(14, 28, 20)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(157, 961.786, 20, 1064.6563, 1312, 1064.6563, 1337, 834.9461, 1245, 815.9701, 1160, 733.0747, 1165, 678.14404, 998, 683.13776, 966, 716.0961, 905, 730.0785, 927, 883.88434, 870, 935.8188, 769, 936.81757, 732, 997.74066, 694, 1018.71423, 559, 1021.71045, 534, 943.8087, 453, 900.8629, 255, 876.8932, 252, 921.8365, 232, 970.7747)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_obarq"]
+vertices = PackedVector2Array(1469.6406, 836.90625, 1648.1328, 804.6719, 1843.6406, 970.64844, 1615.7813, 969.7422, 1449.8125, 875.53906, 1596.7734, 1066.6406, 1415.7969, 1066.6406, 1412.1563, 884.71094)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 6, 7, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1463, 827.95496, 1443, 866.90576, 1402, 876.8932, 1406, 1076.6411, 1605, 1076.6411, 1624, 979.76337, 1871, 980.7621, 1651, 793.9978)])
 
 [node name="SquirrelBedroomRetro" type="Node2D" unique_id=878593051 node_paths=PackedStringArray("spawn_point")]
+y_sort_enabled = true
 script = ExtResource("1_5dnle")
 spawn_point = NodePath("Marker2D")
 metadata/_custom_type_script = "uid://b16ied5hj8xf"
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1534004411]
+[node name="FloorMesh" type="NavigationRegion2D" parent="." unique_id=1534004411]
 position = Vector2(3, 16)
 scale = Vector2(1, 1.0012622)
-navigation_polygon = SubResource("NavigationPolygon_lquwl")
+navigation_polygon = SubResource("NavigationPolygon_qs5bg")
 
-[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D" unique_id=1976332460]
-position = Vector2(63, -50.935707)
-polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 904.8579, 804, 922.8352, 1015, 916.8428, 1064, 891.87427, 1079, 825.9575, 1031, 743.06213, 885, 720.0911)
+[node name="Polygon2D" type="Polygon2D" parent="FloorMesh" unique_id=1907664751]
+polygon = PackedVector2Array(261, 1016.7167, 304, 1029.7003, 441, 1016.7167, 488, 946.80493, 373, 949.80115, 280, 960.7873, 243, 977.76587)
+
+[node name="DeskMesh" type="NavigationRegion2D" parent="." unique_id=2135618351]
+position = Vector2(3, 16)
+scale = Vector2(1, 1.0012622)
+navigation_polygon = SubResource("NavigationPolygon_obarq")
+
+[node name="NavigationLink2D" type="NavigationLink2D" parent="." unique_id=827627762]
+start_position = Vector2(1431, 953)
+end_position = Vector2(1296, 1003)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
 z_index = -4
@@ -34,27 +58,89 @@ y_sort_enabled = true
 texture = ExtResource("1_sk41q")
 centered = false
 
-[node name="Tv" type="Sprite2D" parent="." unique_id=1305802874]
-position = Vector2(1532, 227)
-texture = ExtResource("6_rf8m7")
-
-[node name="Furniture" type="TextureRect" parent="." unique_id=673681475]
-offset_left = 1125.0
-offset_top = 569.0
-offset_right = 1888.0
-offset_bottom = 1051.0
-scale = Vector2(1.1689372, 1.1689372)
-texture = ExtResource("7_ikruc")
-script = ExtResource("3_b1ugs")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
-
-[node name="PresentRug" type="Sprite2D" parent="." unique_id=1771224099]
-position = Vector2(375, 758)
-texture = ExtResource("8_qyr4s")
-
 [node name="Bed" type="Sprite2D" parent="." unique_id=1745079463]
-position = Vector2(708, 761)
+z_index = -1
+position = Vector2(596, 696)
 texture = ExtResource("9_p12ah")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1381039150]
-position = Vector2(307, 1002)
+position = Vector2(1608, 880)
+
+[node name="Faucet" type="TextureRect" parent="." unique_id=617312435]
+offset_left = 144.0
+offset_top = 810.0
+offset_right = 258.0
+offset_bottom = 975.0
+texture = ExtResource("4_ogx78")
+script = ExtResource("5_ttckp")
+interacts_with = Array[String](["wrench", "glass", "kettle"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Plant" type="TextureRect" parent="." unique_id=563790555]
+offset_left = 524.0
+offset_top = 593.0
+offset_right = 780.0
+offset_bottom = 1016.0
+texture = ExtResource("6_5dnle")
+flip_h = true
+script = ExtResource("7_5dnle")
+interacts_with = Array[String](["scissors"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="Scale" type="TextureRect" parent="." unique_id=1203327726]
+y_sort_enabled = true
+offset_left = 1627.0001
+offset_top = 884.0
+offset_right = 1952.0001
+offset_bottom = 1105.0
+scale = Vector2(0.84475607, 0.84475607)
+texture = ExtResource("8_p12ah")
+script = ExtResource("9_b1ugs")
+interacts_with = Array[String](["wrong_button"])
+metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="CathodicTv" type="Sprite2D" parent="." unique_id=1071545458]
+y_sort_enabled = true
+position = Vector2(1079, 578)
+scale = Vector2(0.86432153, 0.86432153)
+texture = ExtResource("10_b1ugs")
+
+[node name="Stool" type="Sprite2D" parent="." unique_id=989851258]
+y_sort_enabled = true
+position = Vector2(913, 657)
+texture = ExtResource("11_eacw4")
+
+[node name="Shelf" type="Sprite2D" parent="." unique_id=1008635077]
+y_sort_enabled = true
+position = Vector2(305, 527)
+texture = ExtResource("12_016ah")
+
+[node name="Desk" type="Sprite2D" parent="." unique_id=1673239635]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(1601, 737)
+texture = ExtResource("13_rf8m7")
+
+[node name="Carpet" type="Sprite2D" parent="." unique_id=1185590140]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(1097, 785)
+texture = ExtResource("14_ikruc")
+
+[node name="SquirrelTrapdoor" parent="." unique_id=1509096163 instance=ExtResource("15_qyr4s")]
+
+[node name="Slippers" type="Sprite2D" parent="." unique_id=293127633]
+y_sort_enabled = true
+position = Vector2(920, 744)
+texture = ExtResource("16_4leww")
+
+[node name="WashBasin" type="Sprite2D" parent="." unique_id=259589900]
+y_sort_enabled = true
+position = Vector2(361, 987)
+texture = ExtResource("17_ls15y")
+
+[node name="Swing" type="Sprite2D" parent="." unique_id=212605340]
+y_sort_enabled = true
+position = Vector2(1327, 540.00006)
+scale = Vector2(0.81088614, 0.81088614)
+texture = ExtResource("18_obarq")
