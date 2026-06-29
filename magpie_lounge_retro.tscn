@@ -123,11 +123,16 @@ scale = Vector2(0.93560576, 0.93560576)
 texture = ExtResource("9_q64ew")
 script = ExtResource("10_ycws2")
 interacts_with = Array[String](["branch"])
-gives = Array[ExtResource("7_8xf7p")]([ExtResource("11_12yyj")])
+gives = Array[ExtResource("7_8xf7p")]([ExtResource("11_12yyj"), ExtResource("11_12yyj")])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="EmptyGlass" type="Sprite2D" parent="Shelf" unique_id=825988706]
 position = Vector2(224.4534, 347.36853)
+scale = Vector2(0.15067384, 0.15067384)
+texture = ExtResource("12_ffxr0")
+
+[node name="EmptyGlass2" type="Sprite2D" parent="Shelf" unique_id=79255050]
+position = Vector2(256.5183, 262.9314)
 scale = Vector2(0.15067384, 0.15067384)
 texture = ExtResource("12_ffxr0")
 
