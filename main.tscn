@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bjhjoqfra1cc"]
 
 [ext_resource type="Script" uid="uid://b706afh1dogoc" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="VideoStream" uid="uid://dodwm3nb18vpf" path="res://assets/cutscenes/intro.ogv" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://ddwd8jbhsxnli" path="res://player.tscn" id="5_dg77c"]
+[ext_resource type="Script" uid="uid://dpw6vobb8m7tt" path="res://intro_video.gd" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://1dqe7cr127ry" path="res://gui.tscn" id="6_272bh"]
 
 [node name="Main" type="Node2D" unique_id=393918813]
@@ -9,6 +11,18 @@ y_sort_enabled = true
 script = ExtResource("1_lquwl")
 
 [node name="GUI" parent="." unique_id=1497885613 instance=ExtResource("6_272bh")]
+visible = false
 
 [node name="Player" parent="." unique_id=665237645 instance=ExtResource("5_dg77c")]
+visible = false
 position = Vector2(581, 770)
+
+[node name="IntroVideo" type="VideoStreamPlayer" parent="." unique_id=876138731]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(48.006077, 26.976665)
+stream = ExtResource("4_1bvp3")
+expand = true
+script = ExtResource("5_lquwl")
+
+[connection signal="finished" from="IntroVideo" to="." method="_on_intro_video_finished"]
