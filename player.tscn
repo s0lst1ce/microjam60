@@ -7,6 +7,9 @@
 radius = 83.0
 height = 190.0
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_onrkg"]
+diffuse_texture = ExtResource("2_onrkg")
+
 [sub_resource type="Animation" id="Animation_i3pqv"]
 length = 0.001
 tracks/0/type = "value"
@@ -77,14 +80,13 @@ shape = SubResource("CapsuleShape2D_ct8o0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=562831065]
 position = Vector2(-4, 19)
-texture = ExtResource("2_onrkg")
+texture = SubResource("CanvasTexture_onrkg")
 offset = Vector2(0, -120)
 hframes = 11
 frame = 8
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1382074011]
 radius = 50.0
-debug_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=971405586]
 libraries/ = SubResource("AnimationLibrary_sweqy")
