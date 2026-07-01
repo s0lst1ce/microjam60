@@ -27,7 +27,6 @@ func is_tv_valid() -> bool:
 func _process(delta: float) -> void:
 	if is_metal_tree_valid():
 		ItemExchange.add_item.emit("wrench")
-		ItemExchange.add_item.emit("wrench")
 
 
 var tv_on = false
