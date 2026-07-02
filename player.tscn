@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfwceqmjtm6qy" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://yir2yo5cf6cw" path="res://assets/radish/spritesheet.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cx5vnmeu3rr5k" path="res://assets/radish/spritesheet_n.png" id="3_i3pqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct8o0"]
 radius = 83.0
@@ -9,6 +10,7 @@ height = 190.0
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_onrkg"]
 diffuse_texture = ExtResource("2_onrkg")
+normal_texture = ExtResource("3_i3pqv")
 
 [sub_resource type="Animation" id="Animation_i3pqv"]
 length = 0.001
@@ -83,7 +85,7 @@ position = Vector2(-4, 19)
 texture = SubResource("CanvasTexture_onrkg")
 offset = Vector2(0, -120)
 hframes = 11
-frame = 10
+frame = 8
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1382074011]
 radius = 50.0

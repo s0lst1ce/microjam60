@@ -276,16 +276,12 @@ position = Vector2(735, 334)
 scale = Vector2(0.6165855, 0.6165855)
 texture = ExtResource("31_5bv0w")
 
-[node name="AmbiantLight" type="DirectionalLight2D" parent="." unique_id=1163871503]
-enabled = false
-color = Color(0.91764706, 0.37254903, 0, 1)
-energy = 0.1
-
 [node name="WindowSun" type="PointLight2D" parent="." unique_id=250033004]
 position = Vector2(933, 651)
 rotation = 0.21675342
 scale = Vector2(1.0663879, 0.9290824)
 color = Color(1, 0.7019608, 0.3647059, 1)
+shadow_enabled = true
 texture = ExtResource("32_5bv0w")
 
 [node name="DiscoLight" type="PointLight2D" parent="." unique_id=380973743]
@@ -295,6 +291,7 @@ scale = Vector2(2.231227, 0.6290595)
 skew = 0.9302605
 color = Color(0.9351788, 0.55974364, 1, 1)
 energy = 0.4
+shadow_enabled = true
 texture = ExtResource("33_gn2s8")
 
 [node name="DiscoLight2" type="PointLight2D" parent="." unique_id=1140977965]
@@ -303,6 +300,7 @@ rotation = 1.2762206
 scale = Vector2(2.4477398, 0.35228932)
 color = Color(0.39380345, 0.8206207, 0.69501317, 1)
 energy = 0.4
+shadow_enabled = true
 texture = ExtResource("33_gn2s8")
 
 [node name="DiscoLight3" type="PointLight2D" parent="." unique_id=53148269]
@@ -311,8 +309,12 @@ rotation = 2.3402922
 scale = Vector2(2.4477398, 0.35228932)
 color = Color(0.29589006, 0.86613876, 7.70092e-07, 1)
 energy = 0.4
+shadow_enabled = true
 texture = ExtResource("33_gn2s8")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1114939692]
 occluder = SubResource("OccluderPolygon2D_wgcn5")
 sdf_collision = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=907462785]
+color = Color(0.9699662, 0.9699662, 0.9699662, 1)
