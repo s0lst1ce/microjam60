@@ -21,13 +21,6 @@ func is_tv_valid() -> bool:
 		return true
 	else:
 		return false
-	
-
-
-func _process(delta: float) -> void:
-	if is_metal_tree_valid():
-		ItemExchange.add_item.emit("wrench")
-
 
 var tv_on = false
 var bedroom_flushed = false

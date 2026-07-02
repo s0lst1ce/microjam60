@@ -83,7 +83,7 @@ position = Vector2(-4, 19)
 texture = SubResource("CanvasTexture_onrkg")
 offset = Vector2(0, -120)
 hframes = 11
-frame = 8
+frame = 10
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1382074011]
 radius = 50.0

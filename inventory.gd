@@ -3,13 +3,14 @@ extends Panel
 @onready var grid_container: GridContainer = $"./MarginContainer/GridContainer"
 
 const HAND_CLOSED = preload("res://assets/cursors/hand_closed.svg")
+const HAND_OPEN = preload("res://assets/cursors/hand_open.svg")
 const HAND_POINT = preload("res://assets/cursors/hand_point.svg")
 
 
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(HAND_POINT, Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(HAND_CLOSED, Input.CURSOR_FORBIDDEN)
-	Input.set_custom_mouse_cursor(HAND_CLOSED, Input.CURSOR_CAN_DROP)
+	Input.set_custom_mouse_cursor(HAND_POINT, Input.CURSOR_CAN_DROP)
 	Input.set_custom_mouse_cursor(HAND_CLOSED, Input.CURSOR_DRAG)
 	
 	ItemExchange.add_item.connect(_on_add_item)
@@ -30,6 +31,7 @@ func _notification(what: int) -> void:
 func _on_add_item(item: ItemData):
 	print("adding ", item)
 	for slot in grid_container.get_children():
+		print(slot.item)
 		if slot.item == null:
 			slot.item = item
 			slot.update_ui()

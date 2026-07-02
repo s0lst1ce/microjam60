@@ -140,33 +140,31 @@ metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="B1" type="TextureRect" parent="." unique_id=1194697213]
 y_sort_enabled = true
-offset_left = 854.0
-offset_top = 752.0
-offset_right = 928.0
-offset_bottom = 824.0
+offset_left = 873.0
+offset_top = 759.0
+offset_right = 913.0
+offset_bottom = 820.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
 [node name="B2" type="TextureRect" parent="." unique_id=1446656405]
-z_index = 1
 y_sort_enabled = true
-offset_left = 905.0
-offset_top = 750.0
-offset_right = 979.0
-offset_bottom = 822.0
+offset_left = 924.0
+offset_top = 757.0
+offset_right = 964.0
+offset_bottom = 818.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 1
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
 [node name="B3" type="TextureRect" parent="." unique_id=1272023520]
-z_index = 1
 y_sort_enabled = true
-offset_left = 960.0
-offset_top = 741.0
-offset_right = 1034.0
-offset_bottom = 813.0
+offset_left = 979.0
+offset_top = 748.0
+offset_right = 1019.0
+offset_bottom = 809.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 2

@@ -15,6 +15,7 @@ extends Node2D
 
 func _ready() -> void:
 	intro.play()
+	_on_intro_video_finished()
 
 func _on_intro_video_finished() -> void:
 	intro.queue_free()
@@ -23,7 +24,6 @@ func _on_intro_video_finished() -> void:
 	period_button.switch_period.connect(_on_switch_period)
 	SceneSwitching.goto_room.connect(_on_change_room)
 	self.add_child(scenes[current_room][current_period])
-
 
 func change_scene(room: String, period: int) -> void:
 	self.remove_child(scenes[current_room][current_period])
@@ -37,10 +37,7 @@ func _on_switch_period():
 func _on_change_room(room: String) -> void:
 	change_scene(room, current_period)
 	var pos = scenes[current_room][current_period].spawn_point.position
-	print("here")
-	print(player, pos)
 	player.position = pos
-	print(player.movement_target_position)
 	player.movement_target_position = player.position
 	player.set_movement_target(player.position)
 
