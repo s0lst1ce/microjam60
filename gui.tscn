@@ -20,17 +20,18 @@ texture_click_mask = ExtResource("3_67jta")
 script = ExtResource("4_0wv8u")
 
 [node name="Inventory" type="Panel" parent="." unique_id=1081666084]
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -176.0
-offset_top = 475.0
-offset_right = 269.0
-offset_bottom = 535.5
+anchor_bottom = 1.0
+offset_left = -337.0
+offset_top = -119.0
+offset_right = 108.0
+offset_bottom = -58.5
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+scale = Vector2(1.9128776, 1.9128776)
 script = ExtResource("4_p8208")
 
 [node name="MarginContainer" type="MarginContainer" parent="Inventory" unique_id=373120309]
