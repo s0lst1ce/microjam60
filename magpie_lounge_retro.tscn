@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://7wyv3ci1q0lo" path="res://assets/magpie_lounge_retro.png" id="3_avk6x"]
 [ext_resource type="Texture2D" uid="uid://cn26q8qv60uib" path="res://assets/furniture/tapis.png" id="4_b1uor"]
 [ext_resource type="Texture2D" uid="uid://beqentmv27ok" path="res://assets/furniture/arbre.png" id="5_jexw7"]
+[ext_resource type="Texture2D" uid="uid://cjxvkpokmfw" path="res://assets/furniture/arbre_n.png" id="7_3i1ww"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="7_8xf7p"]
 [ext_resource type="Texture2D" uid="uid://bue77map4m8ij" path="res://assets/furniture/armoire.png" id="9_q64ew"]
 [ext_resource type="Script" uid="uid://bho5k2mts73f7" path="res://shelf.gd" id="10_ycws2"]
@@ -39,6 +40,14 @@ vertices = PackedVector2Array(1585.0703, 889.5, 1565.7188, 958.46875, 1560.2266,
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(7, 8, 9, 3, 6, 0, 10), PackedInt32Array(0, 2, 10), PackedInt32Array(7, 10, 11, 12), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 18, 4), PackedInt32Array(19, 20, 21), PackedInt32Array(22, 4, 19, 21, 23, 24), PackedInt32Array(12, 11, 25, 26), PackedInt32Array(13, 15, 27, 28), PackedInt32Array(29, 23, 28, 27, 30), PackedInt32Array(18, 5, 4), PackedInt32Array(23, 31, 26, 25, 24), PackedInt32Array(22, 16, 4), PackedInt32Array(32, 31, 23), PackedInt32Array(29, 32, 23), PackedInt32Array(33, 30, 27), PackedInt32Array(33, 27, 34, 35), PackedInt32Array(36, 35, 34, 37, 38), PackedInt32Array(7, 36, 38, 39), PackedInt32Array(8, 40, 9), PackedInt32Array(7, 39, 8)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(48, 600.2424, 765, 601.2411, 934, 597.24615, 1084, 609.231, 1230, 639.1932, 1405, 669.1554, 1560, 663.16296, 1621, 639.1932, 1845, 619.2184, 1876, 738, 1885, 1084.631, 41, 1087.6272)])
 agent_radius = 30.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jnykj"]
+diffuse_texture = ExtResource("5_jexw7")
+normal_texture = ExtResource("7_3i1ww")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lr8sq"]
+diffuse_texture = ExtResource("21_gn2s8")
+specular_texture = ExtResource("21_gn2s8")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wgcn5"]
 polygon = PackedVector2Array(1604, 679, 1604, 645, 1786, 627, 1834, 627, 1871, 637, 1890, 660, 1889, 682)
@@ -102,7 +111,7 @@ clip_children = 2
 y_sort_enabled = true
 position = Vector2(921.00006, 807)
 scale = Vector2(1.9, 1.9)
-texture = ExtResource("5_jexw7")
+texture = SubResource("CanvasTexture_jnykj")
 offset = Vector2(0, -200)
 
 [node name="Shelf" type="TextureRect" parent="." unique_id=1150966161]
@@ -193,7 +202,7 @@ offset_top = 71.99999
 offset_right = 715.0
 offset_bottom = 266.0
 scale = Vector2(1.4683394, 1.4683394)
-texture = ExtResource("21_gn2s8")
+texture = SubResource("CanvasTexture_lr8sq")
 script = ExtResource("22_o03v2")
 interacts_with = Array[String](["boiling_water", "record_player"])
 metadata/_custom_type_script = "uid://cg47jubodtsch"
@@ -277,12 +286,14 @@ scale = Vector2(0.6165855, 0.6165855)
 texture = ExtResource("31_5bv0w")
 
 [node name="WindowSun" type="PointLight2D" parent="." unique_id=250033004]
-position = Vector2(933, 651)
+position = Vector2(990.00006, 670)
 rotation = 0.21675342
-scale = Vector2(1.0663879, 0.9290824)
+scale = Vector2(0.2215628, 0.19303492)
 color = Color(1, 0.7019608, 0.3647059, 1)
 shadow_enabled = true
 texture = ExtResource("32_5bv0w")
+texture_scale = 5.07
+height = 100.0
 
 [node name="DiscoLight" type="PointLight2D" parent="." unique_id=380973743]
 position = Vector2(1307, 1454)
@@ -293,6 +304,7 @@ color = Color(0.9351788, 0.55974364, 1, 1)
 energy = 0.4
 shadow_enabled = true
 texture = ExtResource("33_gn2s8")
+height = 100.0
 
 [node name="DiscoLight2" type="PointLight2D" parent="." unique_id=1140977965]
 position = Vector2(1960, 1604.9999)
@@ -302,6 +314,7 @@ color = Color(0.39380345, 0.8206207, 0.69501317, 1)
 energy = 0.4
 shadow_enabled = true
 texture = ExtResource("33_gn2s8")
+height = 100.0
 
 [node name="DiscoLight3" type="PointLight2D" parent="." unique_id=53148269]
 position = Vector2(84.00009, 1119.0001)
@@ -311,6 +324,7 @@ color = Color(0.29589006, 0.86613876, 7.70092e-07, 1)
 energy = 0.4
 shadow_enabled = true
 texture = ExtResource("33_gn2s8")
+height = 100.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1114939692]
 occluder = SubResource("OccluderPolygon2D_wgcn5")

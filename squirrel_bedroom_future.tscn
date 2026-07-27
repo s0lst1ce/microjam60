@@ -23,9 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://c7le32xhlgk5r" path="res://assets/furniture/faucet.png" id="19_rrkqb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_n8k7j"]
-vertices = PackedVector2Array(1858.3516, 1083.75, 1416.5469, 1067.0313, 1427.5391, 873.2031, 1639.25, 830.90625)
+vertices = PackedVector2Array(1858.3984, 1083.8125, 1441.0391, 1068.9922, 1441.9609, 871.0781, 1639.2578, 830.9297)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1418, 864.9083, 1406, 1076.6411, 1881, 1094.6184, 1643, 819.965)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1432, 862.9108, 1431, 1078.6385, 1881, 1094.6184, 1643, 819.965)])
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_36ym5"]
 vertices = PackedVector2Array(1317.2266, 1088.8828, 749.1406, 1082, 749.14844, 1082, 573.8828, 1079.2813, 614.0703, 1021.22656, 703.1406, 1025.1484, 1323.7813, 684.1094, 1405.0313, 765.46875, 1439.8281, 810.21875, 1323.1797, 841.2578, 1275.6328, 726.2422, 1404.1094, 663.8125, 946.2031, 685.0469, 957.2422, 767.1172, 862.46094, 763.4375, 874.5703, 678.7031, 892.8672, 651.60156, 755.53906, 985.84375, 843.3281, 841.46875, 963.21094, 851.2969, 991.4531, 828.1875, 1181.3672, 746.3594, 1113.2734, 722.9531, 995.65625, 793.1406, 1059.75, 683.0469)
