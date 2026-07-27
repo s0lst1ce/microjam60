@@ -34,6 +34,7 @@ func _on_add_item(item: ItemData):
 		print(slot.item)
 		if slot.item == null:
 			slot.item = item
+			slot.item_highlight.visible = true
 			slot.update_ui()
 			return
 	assert(false)

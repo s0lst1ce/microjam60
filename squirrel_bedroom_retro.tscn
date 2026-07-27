@@ -27,9 +27,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(
 outlines = Array[PackedVector2Array]([PackedVector2Array(157, 961.786, 20, 1064.6563, 1312, 1064.6563, 1337, 834.9461, 1245, 815.9701, 1160, 733.0747, 1165, 678.14404, 998, 683.13776, 966, 716.0961, 905, 730.0785, 927, 883.88434, 870, 935.8188, 769, 936.81757, 732, 997.74066, 694, 1018.71423, 559, 1021.71045, 534, 943.8087, 453, 900.8629, 255, 876.8932, 252, 921.8365, 232, 970.7747)])
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_obarq"]
-vertices = PackedVector2Array(1469.6406, 836.90625, 1648.1328, 804.6719, 1843.6406, 970.64844, 1615.7813, 969.7422, 1449.8125, 875.53906, 1596.7734, 1066.6406, 1415.7969, 1066.6406, 1412.1563, 884.71094)
+vertices = PackedVector2Array(1469.6406, 836.90625, 1648.1016, 804.6797, 1828.0781, 958.8828, 1609.3125, 959.7969, 1450.1875, 874.8125, 1581.2891, 1064.7266, 1445.3594, 1066.5078, 1433.4375, 881.4922)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 6, 7, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1463, 827.95496, 1443, 866.90576, 1402, 876.8932, 1406, 1076.6411, 1605, 1076.6411, 1624, 979.76337, 1871, 980.7621, 1651, 793.9978)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1463, 827.95496, 1443, 866.90576, 1423, 874.8957, 1436, 1076.6411, 1589, 1074.6436, 1617, 969.77594, 1855, 968.7772, 1651, 793.9978)])
 
 [node name="SquirrelBedroomRetro" type="Node2D" unique_id=878593051 node_paths=PackedStringArray("spawn_point")]
 y_sort_enabled = true
@@ -47,12 +47,14 @@ navigation_polygon = SubResource("NavigationPolygon_qs5bg")
 polygon = PackedVector2Array(261, 1016.7167, 304, 1029.7003, 441, 1016.7167, 488, 946.80493, 373, 949.80115, 280, 960.7873, 243, 977.76587)
 
 [node name="DeskMesh" type="NavigationRegion2D" parent="." unique_id=2135618351]
+visible = false
 position = Vector2(3, 16)
 scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_obarq")
 
 [node name="NavigationLink2D" type="NavigationLink2D" parent="." unique_id=827627762]
-start_position = Vector2(1431, 953)
+visible = false
+start_position = Vector2(1472, 946)
 end_position = Vector2(1296, 1003)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
