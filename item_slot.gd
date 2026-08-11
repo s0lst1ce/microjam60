@@ -5,6 +5,7 @@ extends Panel
 @export var item: ItemData
 
 func _ready() -> void:
+	connect("mouse_entered", _on_mouse_entered)
 	update_ui()
 	
 func update_ui():
@@ -47,7 +48,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	data.icon.show()
 	update_ui()
 	data.update_ui()
-	print("Dropped ", item, data.item)
+	#print("Dropped ", item, data.item)
 
 func _on_mouse_entered() -> void:
 	item_highlight.visible=false
