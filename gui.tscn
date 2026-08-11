@@ -232,5 +232,4 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [connection signal="pressed" from="PeriodButton" to="PeriodButton" method="_on_pressed"]
-[connection signal="mouse_entered" from="Inventory/MarginContainer/GridContainer/ItemSlot" to="Inventory/MarginContainer/GridContainer/ItemSlot" method="_on_mouse_entered"]
 [connection signal="focus_entered" from="Inventory/MarginContainer/GridContainer/ItemSlot8" to="Inventory" method="_on_item_slot_8_focus_entered"]
