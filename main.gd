@@ -15,8 +15,8 @@ extends Node2D
 
 func _ready() -> void:
 	pass
-	#intro.play()
-	_on_intro_video_finished()
+	intro.play()
+	#_on_intro_video_finished()
 
 func _on_intro_video_finished() -> void:
 	intro.queue_free()
