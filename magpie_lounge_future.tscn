@@ -51,6 +51,7 @@ metadata/_custom_type_script = "uid://b16ied5hj8xf"
 position = Vector2(690, 670)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1534004411]
+visible = false
 position = Vector2(3, 16)
 scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
@@ -61,6 +62,7 @@ position = Vector2(63, -50.935707)
 polygon = PackedVector2Array(736, 749.05457, 696, 817.9676, 674, 864.9083, 716, 904.8579, 804, 922.8352, 1015, 916.8428, 1064, 891.87427, 1079, 825.9575, 1031, 743.06213, 885, 720.0911)
 
 [node name="Corner" type="NavigationRegion2D" parent="." unique_id=1114467395]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_3bft5")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1809958094]
@@ -99,7 +101,7 @@ position = Vector2(1404, 246.5)
 texture = ExtResource("6_hcmq2")
 script = ExtResource("6_y1ubb")
 
-[node name="Box" type="TextureRect" parent="." unique_id=139562569]
+[node name="Box" type="TextureRect" parent="." unique_id=139562569 node_paths=PackedStringArray("walk_to")]
 offset_left = 1680.0
 offset_top = 375.0
 offset_right = 1812.0
@@ -108,26 +110,40 @@ scale = Vector2(1.4630883, 1.4630883)
 texture = ExtResource("7_hcmq2")
 script = ExtResource("8_jmdqa")
 interacts_with = Array[String](["hammer"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="WalkTo" type="Polygon2D" parent="Box" unique_id=1740768421]
+visible = false
+position = Vector2(82.01829, 194.10995)
+polygon = PackedVector2Array(-42.3761, -5.4678955, -39.64209, 9.568787, 70.39905, 7.518341, 69.715576, -8.885315)
 
 [node name="Rug" type="Sprite2D" parent="." unique_id=219231531]
 z_index = -1
 position = Vector2(341, 816)
 texture = ExtResource("9_5ngnd")
 
-[node name="Key" type="TextureRect" parent="." unique_id=973562741]
+[node name="Key" type="TextureRect" parent="." unique_id=973562741 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
-offset_left = 1813.0
-offset_top = 649.0
-offset_right = 1868.0
-offset_bottom = 697.0
+offset_left = 1819.0
+offset_top = 661.0
+offset_right = 1874.0
+offset_bottom = 709.0
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("10_ixet0")
 script = ExtResource("11_cgbd6")
 gives = Array[ExtResource("7_1dmds")]([ExtResource("12_cgbd6")])
+walk_to = NodePath("KeyWalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="TreeLock" type="TextureRect" parent="." unique_id=504355687]
+[node name="KeyWalkTo" type="Polygon2D" parent="Key" unique_id=1470536246]
+visible = false
+z_index = -1
+position = Vector2(28.333332, 25.833334)
+color = Color(0.17398584, 0.6357377, 0.3213243, 1)
+polygon = PackedVector2Array(-34.166626, 3.333374, -24.166626, 22.5, -7.5, 25.833374, 8.333374, 6.666687, 30.833374, -21.666626, 7.5, -29.166626, -15, -12.5)
+
+[node name="TreeLock" type="TextureRect" parent="." unique_id=504355687 node_paths=PackedStringArray("walk_to")]
 offset_left = 847.99994
 offset_top = 728.0
 offset_right = 1061.0
@@ -136,9 +152,16 @@ scale = Vector2(1.179058, 1.179058)
 texture = ExtResource("14_3lhys")
 script = ExtResource("15_1dmds")
 interacts_with = Array[String](["candle_key"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="B1" type="TextureRect" parent="." unique_id=1194697213]
+[node name="WalkTo" type="Polygon2D" parent="TreeLock" unique_id=804095841]
+visible = false
+position = Vector2(96.68742, 187.43779)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-27.14032, -14.418274, 28.836548, -15.266418, 31.380981, 22.899658, -43.254883, 19.50708)
+
+[node name="B1" type="TextureRect" parent="." unique_id=1194697213 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
 offset_left = 873.0
 offset_top = 759.0
@@ -146,9 +169,10 @@ offset_right = 913.0
 offset_bottom = 820.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
+walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
-[node name="B2" type="TextureRect" parent="." unique_id=1446656405]
+[node name="B2" type="TextureRect" parent="." unique_id=1446656405 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
 offset_left = 924.0
 offset_top = 757.0
@@ -157,9 +181,10 @@ offset_bottom = 818.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 1
+walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
-[node name="B3" type="TextureRect" parent="." unique_id=1272023520]
+[node name="B3" type="TextureRect" parent="." unique_id=1272023520 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
 offset_left = 979.0
 offset_top = 748.0
@@ -168,18 +193,20 @@ offset_bottom = 809.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 2
+walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
-[node name="TvColoredButton1" type="TextureRect" parent="." unique_id=935330415]
+[node name="TvColoredButton1" type="TextureRect" parent="." unique_id=935330415 node_paths=PackedStringArray("walk_to")]
 offset_left = 1252.0
 offset_top = 280.5
 offset_right = 1302.0
 offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
+walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
-[node name="TvColoredButton2" type="TextureRect" parent="." unique_id=1052362826]
+[node name="TvColoredButton2" type="TextureRect" parent="." unique_id=1052362826 node_paths=PackedStringArray("walk_to")]
 offset_left = 1339.0
 offset_top = 280.5
 offset_right = 1389.0
@@ -187,9 +214,10 @@ offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 1
+walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
-[node name="TvColoredButton3" type="TextureRect" parent="." unique_id=370414999]
+[node name="TvColoredButton3" type="TextureRect" parent="." unique_id=370414999 node_paths=PackedStringArray("walk_to")]
 offset_left = 1424.0
 offset_top = 280.5
 offset_right = 1474.0
@@ -197,9 +225,10 @@ offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 2
+walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
-[node name="TvColoredButton4" type="TextureRect" parent="." unique_id=368298179]
+[node name="TvColoredButton4" type="TextureRect" parent="." unique_id=368298179 node_paths=PackedStringArray("walk_to")]
 offset_left = 1510.0
 offset_top = 280.5
 offset_right = 1560.0
@@ -207,11 +236,20 @@ offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 3
+walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
-[node name="Trapdoor" parent="." unique_id=1185460373 instance=ExtResource("20_vfokk")]
+[node name="Trapdoor" parent="." unique_id=1185460373 node_paths=PackedStringArray("walk_to") instance=ExtResource("20_vfokk")]
+walk_to = NodePath("TrapdoorWalkTo")
 
-[node name="ShirtButtonLock" type="TextureRect" parent="." unique_id=1221835761]
+[node name="TrapdoorWalkTo" type="Polygon2D" parent="Trapdoor" unique_id=1276537257]
+visible = false
+position = Vector2(138.49573, 224.55136)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-96.81256, -20.16925, 88.74487, -21.513855, 83.366394, 17.480042, -96.81256, 14.7907715)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="ShirtButtonLock" type="TextureRect" parent="." unique_id=1221835761 node_paths=PackedStringArray("walk_to")]
 z_index = -1
 offset_left = 534.0
 offset_top = 344.0
@@ -220,6 +258,7 @@ offset_bottom = 486.0
 texture = ExtResource("21_wmeqv")
 script = ExtResource("22_uukn5")
 interacts_with = Array[String](["shirt_button_blue", "shirt_button_orange", "shirt_button_purple"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="ShirtButtonBlue" type="Sprite2D" parent="ShirtButtonLock" unique_id=247487217]
@@ -255,6 +294,12 @@ position = Vector2(44, 53)
 scale = Vector2(0.08008706, 0.08008706)
 texture = ExtResource("26_nc0it")
 
+[node name="WalkTo" type="Polygon2D" parent="ShirtButtonLock" unique_id=783463450]
+visible = false
+position = Vector2(36.00003, 314)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-36, -6, 41, -8, 43, 9, -38, 9)
+
 [node name="StainPurple" type="Sprite2D" parent="." unique_id=832598802]
 z_index = -1
 position = Vector2(1754, 515)
@@ -263,3 +308,15 @@ texture = ExtResource("29_vr1ws")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=680930034]
 color = Color(0.8707795, 0.99999994, 0.99961644, 1)
 energy = 0.1
+
+[node name="TreeButtonWalkTo" type="Polygon2D" parent="." unique_id=1895379048]
+visible = false
+position = Vector2(780, 919)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-28, -35, 48, -11, 39, 21, -51, 4)
+
+[node name="TvButtonWalkTo" type="Polygon2D" parent="." unique_id=455485313]
+visible = false
+position = Vector2(1224, 661)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-30, -14, 32, -14, 32, 2, -29, 3)

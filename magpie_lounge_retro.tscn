@@ -114,7 +114,7 @@ scale = Vector2(1.9, 1.9)
 texture = SubResource("CanvasTexture_jnykj")
 offset = Vector2(0, -200)
 
-[node name="Shelf" type="TextureRect" parent="." unique_id=1150966161]
+[node name="Shelf" type="TextureRect" parent="." unique_id=1150966161 node_paths=PackedStringArray("walk_to")]
 z_index = -2
 y_sort_enabled = true
 anchors_preset = 7
@@ -132,6 +132,7 @@ scale = Vector2(0.93560576, 0.93560576)
 texture = ExtResource("9_q64ew")
 script = ExtResource("10_ycws2")
 gives = Array[ExtResource("7_8xf7p")]([ExtResource("11_12yyj"), ExtResource("11_12yyj")])
+walk_to = NodePath("ShelfWalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="EmptyGlass" type="Sprite2D" parent="Shelf" unique_id=825988706]
@@ -144,7 +145,14 @@ position = Vector2(256.5183, 262.9314)
 scale = Vector2(0.15067384, 0.15067384)
 texture = ExtResource("12_ffxr0")
 
-[node name="Chest" type="TextureRect" parent="." unique_id=1288371296]
+[node name="ShelfWalkTo" type="Polygon2D" parent="Shelf" unique_id=476764178]
+visible = false
+position = Vector2(230.86649, 544.03265)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-154.97974, -38.477783, 142.15393, -42.75305, 142.15393, 27.789429, -154.97974, 7.4817505)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="Chest" type="TextureRect" parent="." unique_id=1288371296 node_paths=PackedStringArray("walk_to")]
 z_index = -1
 offset_left = 1079.0
 offset_top = 417.0
@@ -153,9 +161,17 @@ offset_bottom = 685.0
 texture = ExtResource("12_grk56")
 script = ExtResource("13_e6id1")
 interacts_with = Array[String](["key"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="RecordPlayer" type="TextureRect" parent="." unique_id=1891958161]
+[node name="WalkTo" type="Polygon2D" parent="Chest" unique_id=1534368530]
+visible = false
+position = Vector2(239, 299.99997)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-93, -41, 88, -14, 91, 22, -91, 9)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="RecordPlayer" type="TextureRect" parent="." unique_id=1891958161 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
 offset_left = 369.00003
 offset_top = 691.00006
@@ -165,6 +181,7 @@ scale = Vector2(0.568691, 0.568691)
 texture = ExtResource("12_3ylqn")
 script = ExtResource("16_4g5ik")
 gives = Array[ExtResource("7_8xf7p")]([ExtResource("16_oyog5")])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="RecordPlayer" type="NavigationObstacle2D" parent="RecordPlayer" unique_id=1085676417]
@@ -172,7 +189,14 @@ position = Vector2(160.01654, 392.12842)
 radius = 68.34
 affect_navigation_mesh = true
 
-[node name="Candle" type="TextureRect" parent="." unique_id=1435767971]
+[node name="WalkTo" type="Polygon2D" parent="RecordPlayer" unique_id=416790059]
+visible = false
+position = Vector2(160.01656, 392.12845)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-151.22449, -58.027954, -21.101074, -93.19653, 218.04462, -98.4718, 152.98291, 94.954834, 54.51117, 126.60657, -73.85382, 116.05603, -189.90979, 58.027954)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="Candle" type="TextureRect" parent="." unique_id=1435767971 node_paths=PackedStringArray("walk_to")]
 z_index = 1
 y_sort_enabled = true
 offset_left = 1407.0
@@ -183,9 +207,17 @@ scale = Vector2(0.78384566, 0.78384566)
 texture = ExtResource("14_324kn")
 script = ExtResource("13_324kn")
 interacts_with = Array[String](["lighter"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="Tube" type="TextureRect" parent="." unique_id=869724473]
+[node name="WalkTo" type="Polygon2D" parent="Candle" unique_id=1416203391]
+visible = false
+position = Vector2(62.512318, 195.19148)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-94.40637, -25.515137, 89.30322, -28.06665, 103.33667, 44.65161, -91.85486, 40.82434)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="Tube" type="TextureRect" parent="." unique_id=869724473 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
 offset_left = 79.0
 offset_top = 802.0
@@ -194,9 +226,17 @@ offset_bottom = 1038.0
 texture = ExtResource("18_q64ew")
 script = ExtResource("19_ycws2")
 interacts_with = Array[String](["glass_water"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="Mirror" type="TextureRect" parent="." unique_id=1438350389]
+[node name="WalkTo" type="Polygon2D" parent="Tube" unique_id=953945027]
+visible = false
+position = Vector2(146, 153.99997)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-40, -28, 31, -14, 32, 30, -5, 36, -60, 11)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="Mirror" type="TextureRect" parent="." unique_id=1438350389 node_paths=PackedStringArray("walk_to")]
 offset_left = 560.0
 offset_top = 71.99999
 offset_right = 715.0
@@ -205,7 +245,16 @@ scale = Vector2(1.4683394, 1.4683394)
 texture = SubResource("CanvasTexture_lr8sq")
 script = ExtResource("22_o03v2")
 interacts_with = Array[String](["boiling_water", "record_player"])
+walk_to = NodePath("../TrapAndMirrorWalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="TrapAndMirrorWalkTo" type="Polygon2D" parent="." unique_id=331183196]
+visible = false
+position = Vector2(662, 670)
+scale = Vector2(1.4683394, 1.4683394)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-68.10416, -27.241669, 71.50937, -23.155396, 81.725006, 13.620819, -67.423096, 10.8966675)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
 [node name="LargeDisco" type="Sprite2D" parent="." unique_id=1927290306]
 position = Vector2(1455, 61)
@@ -217,9 +266,10 @@ position = Vector2(628, 38)
 scale = Vector2(1.4457209, 1.4457209)
 texture = ExtResource("23_ffxr0")
 
-[node name="Trapdoor" parent="." unique_id=1185460373 instance=ExtResource("24_aaei6")]
+[node name="Trapdoor" parent="." unique_id=1185460373 node_paths=PackedStringArray("walk_to") instance=ExtResource("24_aaei6")]
+walk_to = NodePath("../TrapAndMirrorWalkTo")
 
-[node name="Branch" type="TextureRect" parent="." unique_id=303296348]
+[node name="Branch" type="TextureRect" parent="." unique_id=303296348 node_paths=PackedStringArray("walk_to")]
 z_index = -1
 offset_left = 1002.0
 offset_top = 217.0
@@ -229,7 +279,15 @@ scale = Vector2(1.8393967, 1.8393967)
 texture = ExtResource("26_o03v2")
 script = ExtResource("27_o03v2")
 interacts_with = Array[String](["saw"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="WalkTo" type="Polygon2D" parent="Branch" unique_id=1981438502]
+visible = false
+position = Vector2(52.734665, 246.82005)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-28.270142, -13.5914, 42.405212, -0.54364014, 23.377258, 26.09552, -46.754456, 6.5238953)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=1865211093]
 position = Vector2(673, 696)

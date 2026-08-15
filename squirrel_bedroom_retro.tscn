@@ -71,7 +71,7 @@ texture = ExtResource("9_p12ah")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1381039150]
 position = Vector2(1608, 880)
 
-[node name="Faucet" type="TextureRect" parent="." unique_id=617312435]
+[node name="Faucet" type="TextureRect" parent="." unique_id=617312435 node_paths=PackedStringArray("walk_to")]
 offset_left = 144.0
 offset_top = 810.0
 offset_right = 258.0
@@ -79,9 +79,17 @@ offset_bottom = 975.0
 texture = ExtResource("4_ogx78")
 script = ExtResource("5_ttckp")
 interacts_with = Array[String](["wrench", "glass", "kettle"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="Plant" type="TextureRect" parent="." unique_id=563790555]
+[node name="WalkTo" type="Polygon2D" parent="Faucet" unique_id=2029393369]
+visible = false
+position = Vector2(48, 196.99997)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-37, -22, 28, -16, 30, 16, -38, 15)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="Plant" type="TextureRect" parent="." unique_id=563790555 node_paths=PackedStringArray("walk_to")]
 offset_left = 524.0
 offset_top = 593.0
 offset_right = 780.0
@@ -90,9 +98,17 @@ texture = ExtResource("6_5dnle")
 flip_h = true
 script = ExtResource("7_5dnle")
 interacts_with = Array[String](["scissors"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
-[node name="Scale" type="TextureRect" parent="." unique_id=1203327726]
+[node name="WalkTo" type="Polygon2D" parent="Plant" unique_id=107083355]
+visible = false
+position = Vector2(112, 373.99997)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-179, -36, 175, -5, 151, 75, 73, 104, -110, 105, -135, 55)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="Scale" type="TextureRect" parent="." unique_id=1203327726 node_paths=PackedStringArray("walk_to")]
 z_index = 1
 y_sort_enabled = true
 offset_left = 1627.0001
@@ -103,7 +119,15 @@ scale = Vector2(0.84475607, 0.84475607)
 texture = ExtResource("8_p12ah")
 script = ExtResource("9_b1ugs")
 interacts_with = Array[String](["wrong_button"])
+walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
+
+[node name="WalkTo" type="Polygon2D" parent="Scale" unique_id=1303736037]
+visible = false
+position = Vector2(66.29114, 98.25324)
+color = Color(0.37226015, 0.7193662, 0.41869548, 1)
+polygon = PackedVector2Array(-82.864136, -15.389038, 88, -14, 88.78296, 18.94043, -72.210205, 18.94043)
+uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
 [node name="CathodicTv" type="Sprite2D" parent="." unique_id=1071545458]
 y_sort_enabled = true

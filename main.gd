@@ -14,7 +14,6 @@ extends Node2D
 }
 
 func _ready() -> void:
-	pass
 	intro.play()
 	#_on_intro_video_finished()
 
