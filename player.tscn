@@ -79,9 +79,10 @@ movement_speed = 200.0
 visible = false
 position = Vector2(-1, -85)
 shape = SubResource("CapsuleShape2D_ct8o0")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=562831065]
-position = Vector2(-4, 19)
+position = Vector2(-16, 23)
 texture = SubResource("CanvasTexture_onrkg")
 offset = Vector2(0, -120)
 hframes = 11

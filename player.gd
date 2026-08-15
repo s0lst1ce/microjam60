@@ -2,13 +2,12 @@ extends CharacterBody2D
 
 @export var movement_speed: float = 250
 var movement_target_position: Vector2
-var furniture_target_position: Vector2
-var target_furniture
+var target_furniture: Furniture
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
-
+@onready var interacting_item_data = null
 
 func _ready():
 	# These values need to be adjusted for the actor's speed
@@ -20,8 +19,9 @@ func _ready():
 	# Make sure to not await during _ready.
 	actor_setup.call_deferred()
 	animation.play("walk")
-	
-	ItemExchange.can_give.connect(_on_can_give)
+
+	ItemExchange.walk_to.connect(_on_interact_furniture)
+	ItemExchange.prepare_use_item.connect(_on_use_item)
 
 func actor_setup():
 	# Wait for the first physics frame so the NavigationServer can sync.
@@ -31,6 +31,7 @@ func actor_setup():
 	set_movement_target(movement_target_position)
 
 func set_movement_target(movement_target: Vector2):
+	print("pathing player to ", movement_target)
 	animation.play("walk")
 	movement_target_position = movement_target
 	navigation_agent.target_position = movement_target
@@ -53,25 +54,25 @@ func _physics_process(_delta):
 	else:
 		_on_navigation_agent_2d_velocity_computed(new_velocity)
 
-	#velocity = current_agent_position.direction_to(next_path_position) * movement_speed
-
-
-func _on_can_give(furniture):
-	target_furniture = furniture
-	furniture_target_position = get_global_mouse_position()
-
 func _on_navigation_agent_2d_navigation_finished() -> void:
-	print("finished nav")
-	print(target_furniture, movement_target_position, furniture_target_position)
-	if furniture_target_position != movement_target_position:
-		print("actually didn't go for ", target_furniture)
-		target_furniture = null
-	elif target_furniture != null and len(target_furniture.gives) > 0:
-		print("taking item")
-		for i in range(len(target_furniture.gives)):
-			ItemExchange.add_item.emit(target_furniture.gives.pop_front())
-	animation.play("idle")
+	print("currently at: ", global_position)
+	if target_furniture != null:
+		if !Geometry2D.is_point_in_polygon(global_position-target_furniture.walk_to.global_position, target_furniture.walk_to.polygon):
+			print("actually didn't go for ", target_furniture)
+			target_furniture = null
+			interacting_item_data = null
 
+		elif interacting_item_data != null:
+			target_furniture._interact_with(interacting_item_data.item)
+			interacting_item_data.item = null
+			interacting_item_data.update_ui()
+			interacting_item_data = null
+
+		else:
+			print("empty-handed interaction with ", target_furniture)
+			target_furniture.empty_handed_interaction()
+
+	animation.play("idle")
 
 func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 	if safe_velocity.x < 0:
@@ -80,3 +81,11 @@ func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 		sprite.flip_h = false
 	velocity = safe_velocity * movement_speed
 	move_and_slide()
+
+func _on_interact_furniture(pos: Vector2, furniture: Furniture):
+	set_movement_target(pos)
+	target_furniture = furniture
+
+func _on_use_item(data: Variant):
+	print("on our way to use ", data.item)
+	interacting_item_data = data
