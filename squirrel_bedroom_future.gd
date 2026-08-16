@@ -10,7 +10,7 @@ func _ready() -> void:
 	furnitures.set_process(false)
 	link.enabled=false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Enigmas.bedroom_flushed and normal_room != background.texture:
 		unflood()
 

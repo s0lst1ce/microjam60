@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://dbvmjjmhamol4" path="res://assets/furniture/squirrel/stain_orange.png" id="31_5bv0w"]
 [ext_resource type="Texture2D" uid="uid://tnjstovudoh8" path="res://assets/lights/many_rays.png" id="32_5bv0w"]
 [ext_resource type="Texture2D" uid="uid://cmw2u7nlbu7pu" path="res://assets/lights/small_cone_grayscale.png" id="33_gn2s8"]
+[ext_resource type="AudioStream" uid="uid://q3wmhk3m1gsk" path="res://assets/audio/music/vinyl_jazz.mp3" id="35_ybnvr"]
+[ext_resource type="Script" uid="uid://ddyn8rdnsm4lh" path="res://music_magpie_retro.gd" id="36_ynnog"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lquwl"]
 vertices = PackedVector2Array(1585.0703, 889.5, 1565.7188, 958.46875, 1560.2266, 945.1328, 1846.1016, 742.2422, 1854.2109, 1054.6797, 1759.5781, 978.2031, 1706.7813, 885.9375, 1173.8672, 770.1797, 1566.2422, 692.9375, 1822.3672, 651.35156, 1524.2109, 875.8594, 1367.4609, 875.8594, 1153.1406, 861.28906, 138.35938, 939.0625, 72.65625, 971.8594, 77.57031, 630.28125, 1586.3672, 1008.5469, 1582.1484, 998.3203, 1662.6484, 1001.52344, 71.42969, 1057.5781, 72.046875, 1014.6875, 139.42188, 1034.8672, 1501.3281, 1041.8594, 218.75781, 1014.28125, 1402.0938, 1039.5781, 1318.8281, 1001.2031, 1085.6016, 895.71094, 765.3281, 631.2422, 221.14844, 970.4922, 700.65625, 820.8125, 732.3906, 753.1094, 864.3906, 901.9922, 764.5625, 881.59375, 779.89844, 671.27344, 933.1797, 627.27344, 947.4531, 638.7031, 1112.7891, 664.71875, 1079.7109, 638.96875, 1224.4531, 668.6875, 1403.0313, 699.2578, 1627.9531, 668.6875)
@@ -391,3 +393,9 @@ sdf_collision = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=907462785]
 color = Color(0.9699662, 0.9699662, 0.9699662, 1)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1861202172]
+stream = ExtResource("35_ybnvr")
+bus = &"Ambiance"
+script = ExtResource("36_ynnog")
+metadata/_custom_type_script = "uid://dd5x1lq01kjfu"

@@ -39,7 +39,7 @@ func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	if data.item != null and item !=null and data.item.combines_with == item.name:
 		if item.combines_into.combine_sound != null:
-			ItemExchange.play_sfx.emit(item.combines_into.combine_sound)
+			Conductor.play_sfx.emit(item.combines_into.combine_sound)
 		item = item.combines_into
 		data.item=null
 	else:

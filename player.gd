@@ -23,7 +23,7 @@ func _ready():
 
 	ItemExchange.walk_to.connect(_on_interact_furniture)
 	ItemExchange.prepare_use_item.connect(_on_use_item)
-	ItemExchange.play_sfx.connect(_on_play_sfx)
+	Conductor.play_sfx.connect(_on_play_sfx)
 
 func actor_setup():
 	# Wait for the first physics frame so the NavigationServer can sync.

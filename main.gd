@@ -6,12 +6,12 @@ extends Node2D
 @onready var period_button = $GUI/PeriodButton
 @onready var player = $Player
 @onready var intro = $IntroVideo
-#@onready var outro =  $OutroVideo
 
 @onready var scenes = {
 	"magpie": [preload("res://magpie_lounge_retro.tscn").instantiate(), preload("res://magpie_lounge_future.tscn").instantiate()],
 	"squirrel": [preload("res://squirrel_bedroom_retro.tscn").instantiate(), preload("res://squirrel_bedroom_future.tscn").instantiate()]
 }
+
 
 func _ready() -> void:
 	intro.play()
@@ -24,6 +24,7 @@ func _on_intro_video_finished() -> void:
 	period_button.switch_period.connect(_on_switch_period)
 	SceneSwitching.goto_room.connect(_on_change_room)
 	self.add_child(scenes[current_room][current_period])
+
 
 func change_scene(room: String, period: int) -> void:
 	self.remove_child(scenes[current_room][current_period])

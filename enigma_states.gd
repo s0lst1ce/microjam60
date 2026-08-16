@@ -8,7 +8,7 @@ var tv_buttons = [ColorState.RED, ColorState.RED, ColorState.RED, ColorState.RED
 var tv_reward_taken = false
 
 func next_color(color: ColorState) -> ColorState:
-	return (color+1)%4
+	return (color+1)%4 as ColorState
 
 func is_metal_tree_valid() -> bool:
 	if metal_buttons[0] == ColorState.ORANGE and metal_buttons[1] == ColorState.PURPLE and metal_buttons[2] == ColorState.PURPLE:
@@ -25,6 +25,6 @@ func is_tv_valid() -> bool:
 var tv_on = false
 var bedroom_flushed = false
 var plant_dead = false
-
+var picked_vinyl = false
 
 var has_won = false
