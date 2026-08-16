@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://djjsrswk71rrq" path="res://assets/furniture/candle_key.png" id="1_8fkii"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_mnxwl"]
+[ext_resource type="AudioStream" uid="uid://n2qipjage0cr" path="res://assets/audio/sfx/tree_lock.wav" id="3_am31l"]
 
 [resource]
 script = ExtResource("1_mnxwl")
 name = "candle_key"
 icon = ExtResource("1_8fkii")
+use_sound = ExtResource("3_am31l")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

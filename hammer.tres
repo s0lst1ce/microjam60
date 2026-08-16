@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_1e8vh"]
 [ext_resource type="Texture2D" uid="uid://btduca2a6hj43" path="res://assets/furniture/hammer.png" id="1_1kwqi"]
+[ext_resource type="AudioStream" uid="uid://dy81dua78etjv" path="res://assets/audio/sfx/hammer_creation.mp3" id="1_xubnq"]
+[ext_resource type="AudioStream" uid="uid://c8tj1dn550ceh" path="res://assets/audio/sfx/breaking_box.mp3" id="4_664eu"]
 
 [resource]
 script = ExtResource("1_1e8vh")
 name = "hammer"
 icon = ExtResource("1_1kwqi")
+use_sound = ExtResource("4_664eu")
+combine_sound = ExtResource("1_xubnq")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

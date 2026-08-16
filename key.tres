@@ -2,9 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://bkirao7fvj7l4" path="res://assets/furniture/key.png" id="1_3qx4b"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_vaatp"]
+[ext_resource type="AudioStream" uid="uid://cq516dx4mql6m" path="res://assets/audio/sfx/key_pickup.mp3" id="2_x7a7p"]
+[ext_resource type="AudioStream" uid="uid://cu20itwxcgmpj" path="res://assets/audio/sfx/key_lock.wav" id="4_x7a7p"]
 
 [resource]
 script = ExtResource("1_vaatp")
 name = "key"
 icon = ExtResource("1_3qx4b")
+pickup_sound = ExtResource("2_x7a7p")
+use_sound = ExtResource("4_x7a7p")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://b8sr6hgc2c2d2" path="res://assets/furniture/scissors.png" id="1_7lnnl"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_xt3mt"]
+[ext_resource type="AudioStream" uid="uid://dy66ukncy22sm" path="res://assets/audio/sfx/scissors_cut.wav" id="3_ivqav"]
 
 [resource]
 script = ExtResource("1_xt3mt")
 name = "scissors"
 icon = ExtResource("1_7lnnl")
+use_sound = ExtResource("3_ivqav")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

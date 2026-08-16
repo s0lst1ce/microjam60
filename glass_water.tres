@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://mgjl3ucevfk7" path="res://assets/furniture/glass_water.png" id="1_d3j5e"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_gkf4u"]
+[ext_resource type="AudioStream" uid="uid://bf2oq7gn5vv3y" path="res://assets/audio/sfx/pouring_water_into_tube.wav" id="3_sumne"]
 
 [resource]
 script = ExtResource("1_gkf4u")
 name = "glass_water"
 icon = ExtResource("1_d3j5e")
+use_sound = ExtResource("3_sumne")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

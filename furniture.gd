@@ -3,7 +3,7 @@ extends TextureRect
 class_name Furniture
 @export var interacts_with: Array[String]
 @export var gives: Array[ItemData] = []
-
+@export var click_sound: AudioStream
 @export var walk_to: Polygon2D
 
 func _ready() -> void:
@@ -38,11 +38,15 @@ func empty_handed_interaction():
 		if len(gives) > 0:
 			print("giving items")
 			for item in gives:
+				if item.pickup_sound != null:
+					ItemExchange.play_sfx.emit(item.pickup_sound)
 				ItemExchange.add_item.emit(item)
 			gives.clear()
 
 		else:
 			print("empty-hand interaction")
+			if click_sound != null:
+				ItemExchange.play_sfx.emit(click_sound)
 			_on_click()
 
 func _on_click() -> void:

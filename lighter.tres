@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://ddmvijyghlpkl" path="res://assets/furniture/lighter.png" id="1_83fld"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_cw5sb"]
+[ext_resource type="AudioStream" uid="uid://p4stqxxj26jr" path="res://assets/audio/sfx/lighter.mp3" id="3_onmou"]
 
 [resource]
 script = ExtResource("1_cw5sb")
 name = "lighter"
 icon = ExtResource("1_83fld")
+use_sound = ExtResource("3_onmou")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

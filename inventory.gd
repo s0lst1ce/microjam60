@@ -31,7 +31,6 @@ func _notification(what: int) -> void:
 func _on_add_item(item: ItemData):
 	print("adding ", item)
 	for slot in grid_container.get_children():
-		print(slot.item)
 		if slot.item == null:
 			slot.item = item
 			slot.item_highlight.visible = true

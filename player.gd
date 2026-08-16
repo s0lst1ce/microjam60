@@ -8,6 +8,7 @@ var target_furniture: Furniture
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var interacting_item_data = null
+@onready var sfx = $SoundEffects
 
 func _ready():
 	# These values need to be adjusted for the actor's speed
@@ -22,6 +23,7 @@ func _ready():
 
 	ItemExchange.walk_to.connect(_on_interact_furniture)
 	ItemExchange.prepare_use_item.connect(_on_use_item)
+	ItemExchange.play_sfx.connect(_on_play_sfx)
 
 func actor_setup():
 	# Wait for the first physics frame so the NavigationServer can sync.
@@ -63,6 +65,8 @@ func _on_navigation_agent_2d_navigation_finished() -> void:
 			interacting_item_data = null
 
 		elif interacting_item_data != null:
+			sfx.stream = interacting_item_data.item.use_sound
+			sfx.play()
 			target_furniture._interact_with(interacting_item_data.item)
 			interacting_item_data.item = null
 			interacting_item_data.update_ui()
@@ -89,3 +93,7 @@ func _on_interact_furniture(pos: Vector2, furniture: Furniture):
 func _on_use_item(data: Variant):
 	print("on our way to use ", data.item)
 	interacting_item_data = data
+
+func _on_play_sfx(stream: AudioStream):
+	sfx.stream = stream
+	sfx.play()
