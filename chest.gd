@@ -2,7 +2,7 @@ extends Furniture
 
 @onready var opened = preload("res://assets/furniture/opened_chest.png")
 
-func _interact_with(item: ItemData) -> void:
+func _interact_with(_item: ItemData) -> void:
 	texture = opened
 	ItemExchange.add_item.emit(preload("res://stone.tres"))
 	ItemExchange.add_item.emit(preload("res://saw.tres"))

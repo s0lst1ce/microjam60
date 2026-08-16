@@ -4,7 +4,7 @@ extends Furniture
 @onready var glass2 = $EmptyGlass2
 var has_glass=true
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if len(gives) == 0 && has_glass:
 		has_glass=false
 		self.remove_child(glass)

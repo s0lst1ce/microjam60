@@ -39,14 +39,14 @@ func empty_handed_interaction():
 			print("giving items")
 			for item in gives:
 				if item.pickup_sound != null:
-					ItemExchange.play_sfx.emit(item.pickup_sound)
+					Conductor.play_sfx.emit(item.pickup_sound)
 				ItemExchange.add_item.emit(item)
 			gives.clear()
 
 		else:
 			print("empty-hand interaction")
 			if click_sound != null:
-				ItemExchange.play_sfx.emit(click_sound)
+				Conductor.play_sfx.emit(click_sound)
 			_on_click()
 
 func _on_click() -> void:

@@ -9,7 +9,7 @@ func _ready() -> void:
 		button.hide()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Enigmas.tv_on and turned_on_texture != texture:
 		texture = turned_on_texture
 		for button in buttons:

@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://6copxbsauhu3" path="res://plant_future.gd" id="17_wdasx"]
 [ext_resource type="Script" uid="uid://d08mwmmp77dgk" path="res://plant_button.gd" id="19_fm0vc"]
 [ext_resource type="Texture2D" uid="uid://c7le32xhlgk5r" path="res://assets/furniture/faucet.png" id="19_rrkqb"]
+[ext_resource type="Script" uid="uid://drstc5h6gw7xp" path="res://music_squirrel_future.gd" id="23_sv1cm"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_n8k7j"]
 vertices = PackedVector2Array(1858.3984, 1083.8125, 1441.0391, 1068.9922, 1441.9609, 871.0781, 1639.2578, 830.9297)
@@ -193,5 +194,10 @@ texture = ExtResource("19_rrkqb")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=864111957]
 position = Vector2(1662, 887)
+
+[node name="AmbiantMusic" type="AudioStreamPlayer" parent="." unique_id=370440499]
+volume_db = -10.035
+script = ExtResource("23_sv1cm")
+metadata/_custom_type_script = "uid://dd5x1lq01kjfu"
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
