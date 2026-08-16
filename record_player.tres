@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_od5qm"]
 [ext_resource type="Texture2D" uid="uid://do4ox4a10pg02" path="res://assets/furniture/record_player.png" id="1_pl6k3"]
+[ext_resource type="AudioStream" uid="uid://6ep8r1aym3w6" path="res://assets/audio/sfx/vinyl_stop.mp3" id="2_ciman"]
+[ext_resource type="AudioStream" uid="uid://jw184kurwdvh" path="res://assets/audio/sfx/breaking_mirror.mp3" id="4_kgakn"]
 
 [resource]
 script = ExtResource("1_od5qm")
 name = "record_player"
 icon = ExtResource("1_pl6k3")
+pickup_sound = ExtResource("2_ciman")
+use_sound = ExtResource("4_kgakn")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

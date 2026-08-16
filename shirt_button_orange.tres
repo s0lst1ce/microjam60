@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bacu4n548akdg" path="res://assets/furniture/shirt_button_orange.png" id="1_tehr7"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="2_cmgjg"]
+[ext_resource type="AudioStream" uid="uid://c8u8llbw00k88" path="res://assets/audio/sfx/insert_button.wav" id="3_cmgjg"]
 
 [resource]
 script = ExtResource("2_cmgjg")
 name = "shirt_button_orange"
 icon = ExtResource("1_tehr7")
+use_sound = ExtResource("3_cmgjg")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

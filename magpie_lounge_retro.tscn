@@ -185,6 +185,7 @@ walk_to = NodePath("WalkTo")
 metadata/_custom_type_script = "uid://cg47jubodtsch"
 
 [node name="RecordPlayer" type="NavigationObstacle2D" parent="RecordPlayer" unique_id=1085676417]
+visible = false
 position = Vector2(160.01654, 392.12842)
 radius = 68.34
 affect_navigation_mesh = true

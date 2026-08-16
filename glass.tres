@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dxijnpmiw2e61" path="res://assets/furniture/glass.png" id="1_2dsai"]
 [ext_resource type="Resource" uid="uid://d0bcawjk06sql" path="res://kettle.tres" id="1_8mdlr"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_mrxgi"]
+[ext_resource type="AudioStream" uid="uid://w6dbif8umb73" path="res://assets/audio/sfx/picking_glass.wav" id="3_cty71"]
+[ext_resource type="AudioStream" uid="uid://dkukgldpev255" path="res://assets/audio/sfx/filling_glass.wav" id="5_l0wcf"]
 
 [resource]
 script = ExtResource("1_mrxgi")
@@ -10,4 +12,6 @@ name = "glass"
 icon = ExtResource("1_2dsai")
 combines_with = "resistance"
 combines_into = ExtResource("1_8mdlr")
+pickup_sound = ExtResource("3_cty71")
+use_sound = ExtResource("5_l0wcf")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

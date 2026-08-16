@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_28hq4"]
 [ext_resource type="Texture2D" uid="uid://dkwo8sirvt4ho" path="res://assets/furniture/kettle.png" id="1_dhiel"]
+[ext_resource type="AudioStream" uid="uid://cd86p7jgts2gf" path="res://assets/audio/sfx/soldering.wav" id="1_eoklg"]
+[ext_resource type="AudioStream" uid="uid://fca5iqeptnbm" path="res://assets/audio/sfx/boiling_water.wav" id="3_by6yg"]
 
 [resource]
 script = ExtResource("1_28hq4")
 name = "kettle"
 icon = ExtResource("1_dhiel")
+use_sound = ExtResource("3_by6yg")
+combine_sound = ExtResource("1_eoklg")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

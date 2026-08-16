@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://b11322kghxvfi" path="res://assets/furniture/wrench.png" id="1_poltf"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_ynear"]
+[ext_resource type="AudioStream" uid="uid://btufw6k8omp4n" path="res://assets/audio/sfx/wrench.wav" id="3_2o8rq"]
 
 [resource]
 script = ExtResource("1_ynear")
 name = "wrench"
 icon = ExtResource("1_poltf")
+use_sound = ExtResource("3_2o8rq")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

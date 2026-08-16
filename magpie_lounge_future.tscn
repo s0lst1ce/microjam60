@@ -21,9 +21,11 @@
 [ext_resource type="Script" uid="uid://pmaepj25cj4p" path="res://metal_colored_button.gd" id="17_y1ubb"]
 [ext_resource type="Texture2D" uid="uid://delhydami2h1l" path="res://assets/furniture/pillow_button_red.png" id="18_aai37"]
 [ext_resource type="Script" uid="uid://bkm1dmqxvno4w" path="res://tv_colored_button.gd" id="18_o4wqt"]
+[ext_resource type="AudioStream" uid="uid://cbyf7w8cvnr7w" path="res://assets/audio/sfx/tree_button.wav" id="20_l2csv"]
 [ext_resource type="PackedScene" uid="uid://lv1oos2wy5qw" path="res://trapdoor.tscn" id="20_vfokk"]
 [ext_resource type="Texture2D" uid="uid://dgpwab2h3tspk" path="res://assets/furniture/button_slot.png" id="21_wmeqv"]
 [ext_resource type="Script" uid="uid://oun6ykeutmbf" path="res://shirt_button_lock.gd" id="22_uukn5"]
+[ext_resource type="AudioStream" uid="uid://d1gjbcq8xqadr" path="res://assets/audio/sfx/tv_button.wav" id="23_d8oju"]
 [ext_resource type="Texture2D" uid="uid://dgqagp30lhwdi" path="res://assets/furniture/shirt_button_blue.png" id="23_uukn5"]
 [ext_resource type="Texture2D" uid="uid://bacu4n548akdg" path="res://assets/furniture/shirt_button_orange.png" id="24_nc0it"]
 [ext_resource type="Texture2D" uid="uid://bur6p04eyfws6" path="res://assets/furniture/shirt_button_purple.png" id="25_jvbvo"]
@@ -169,6 +171,7 @@ offset_right = 913.0
 offset_bottom = 820.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
+click_sound = ExtResource("20_l2csv")
 walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
@@ -181,6 +184,7 @@ offset_bottom = 818.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 1
+click_sound = ExtResource("20_l2csv")
 walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
@@ -193,6 +197,7 @@ offset_bottom = 809.0
 texture = ExtResource("16_y1ubb")
 script = ExtResource("17_y1ubb")
 order = 2
+click_sound = ExtResource("20_l2csv")
 walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
@@ -203,6 +208,7 @@ offset_right = 1302.0
 offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
+click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
@@ -214,6 +220,7 @@ offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 1
+click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
@@ -225,6 +232,7 @@ offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 2
+click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
@@ -236,6 +244,7 @@ offset_bottom = 330.5
 texture = ExtResource("18_aai37")
 script = ExtResource("18_o4wqt")
 order = 3
+click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 

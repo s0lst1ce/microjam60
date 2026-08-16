@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://cfx0fp7syhi6y" path="res://assets/furniture/tube_key.png" id="1_4f7qd"]
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_eyvdu"]
+[ext_resource type="AudioStream" uid="uid://dnodk6jac6t0e" path="res://assets/audio/sfx/acorn_chest_open.wav" id="3_a7qkn"]
 
 [resource]
 script = ExtResource("1_eyvdu")
 name = "tube_key"
 icon = ExtResource("1_4f7qd")
+use_sound = ExtResource("3_a7qkn")
 metadata/_custom_type_script = "uid://i5ms0ackvnbo"

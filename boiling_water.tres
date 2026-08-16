@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://i5ms0ackvnbo" path="res://item_data.gd" id="1_i8i6g"]
 
 [resource]
+resource_name = "Boiling Water"
 script = ExtResource("1_i8i6g")
 name = "boiling_water"
 icon = ExtResource("1_djqit")
