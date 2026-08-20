@@ -25,7 +25,6 @@ func _on_intro_video_finished() -> void:
 	SceneSwitching.goto_room.connect(_on_change_room)
 	self.add_child(scenes[current_room][current_period])
 
-
 func change_scene(room: String, period: int) -> void:
 	self.remove_child(scenes[current_room][current_period])
 	current_room = room
