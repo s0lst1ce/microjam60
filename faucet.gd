@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var repaired = preload("res://assets/furniture/faucet.png")
 @onready var filled_once = false

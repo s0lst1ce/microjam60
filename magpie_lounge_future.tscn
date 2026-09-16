@@ -18,12 +18,12 @@
 [ext_resource type="Texture2D" uid="uid://bfrmwpfk2yl3x" path="res://assets/furniture/tree_lock.png" id="14_3lhys"]
 [ext_resource type="Script" uid="uid://bibb1wvfe3sci" path="res://tree_lock.gd" id="15_1dmds"]
 [ext_resource type="Texture2D" uid="uid://byb71awr2abmg" path="res://assets/furniture/red_button.png" id="16_y1ubb"]
-[ext_resource type="Script" uid="uid://pmaepj25cj4p" path="res://metal_colored_button.gd" id="17_y1ubb"]
 [ext_resource type="Texture2D" uid="uid://delhydami2h1l" path="res://assets/furniture/pillow_button_red.png" id="18_aai37"]
-[ext_resource type="Script" uid="uid://bkm1dmqxvno4w" path="res://tv_colored_button.gd" id="18_o4wqt"]
+[ext_resource type="Script" uid="uid://pmaepj25cj4p" path="res://metal_colored_button.gd" id="19_l2csv"]
 [ext_resource type="AudioStream" uid="uid://cbyf7w8cvnr7w" path="res://assets/audio/sfx/tree_button.wav" id="20_l2csv"]
 [ext_resource type="PackedScene" uid="uid://lv1oos2wy5qw" path="res://trapdoor.tscn" id="20_vfokk"]
 [ext_resource type="Texture2D" uid="uid://dgpwab2h3tspk" path="res://assets/furniture/button_slot.png" id="21_wmeqv"]
+[ext_resource type="Script" uid="uid://bkm1dmqxvno4w" path="res://tv_colored_button.gd" id="22_l2csv"]
 [ext_resource type="Script" uid="uid://oun6ykeutmbf" path="res://shirt_button_lock.gd" id="22_uukn5"]
 [ext_resource type="AudioStream" uid="uid://d1gjbcq8xqadr" path="res://assets/audio/sfx/tv_button.wav" id="23_d8oju"]
 [ext_resource type="Texture2D" uid="uid://dgqagp30lhwdi" path="res://assets/furniture/shirt_button_blue.png" id="23_uukn5"]
@@ -44,6 +44,27 @@ vertices = PackedVector2Array(1864.6797, 751.22656, 1738.1484, 652.3125, 1863.14
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1710, 643, 1875, 772, 1873, 639)])
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bft5"]
+size = Vector2(130.43103, 86.42062)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgcn5"]
+size = Vector2(45.416595, 44.16667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yn442"]
+size = Vector2(206.94484, 86.50986)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wm6sv"]
+size = Vector2(41, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbggf"]
+size = Vector2(48, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3v5o"]
+size = Vector2(197.65901, 141.185)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_01gq1"]
+size = Vector2(57, 125)
+
 [node name="MagpieLoungeFuture" type="Node2D" unique_id=643645692 node_paths=PackedStringArray("spawn_point")]
 y_sort_enabled = true
 script = ExtResource("1_jvbvo")
@@ -54,7 +75,6 @@ metadata/_custom_type_script = "uid://b16ied5hj8xf"
 position = Vector2(690, 670)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1534004411]
-visible = false
 position = Vector2(3, 16)
 scale = Vector2(1, 1.0012622)
 navigation_polygon = SubResource("NavigationPolygon_lquwl")
@@ -104,211 +124,287 @@ position = Vector2(1404, 246.5)
 texture = ExtResource("6_hcmq2")
 script = ExtResource("6_y1ubb")
 
-[node name="Box" type="TextureRect" parent="." unique_id=139562569 node_paths=PackedStringArray("walk_to")]
-offset_left = 1680.0
-offset_top = 375.0
-offset_right = 1812.0
-offset_bottom = 464.0
-scale = Vector2(1.4630883, 1.4630883)
+[node name="Box" type="Sprite2D" parent="." unique_id=470284849 node_paths=PackedStringArray("walk_to")]
+position = Vector2(1759, 443)
+scale = Vector2(1.249702, 1.249702)
 texture = ExtResource("7_hcmq2")
 script = ExtResource("8_jmdqa")
 interacts_with = Array[String](["hammer"])
+gives = null
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="WalkTo" type="Polygon2D" parent="Box" unique_id=1740768421]
 visible = false
-position = Vector2(82.01829, 194.10995)
+position = Vector2(6.401532, 172.84122)
 polygon = PackedVector2Array(-42.3761, -5.4678955, -39.64209, 9.568787, 70.39905, 7.518341, 69.715576, -8.885315)
+
+[node name="Area2D" type="Area2D" parent="Box" unique_id=1879890241]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box/Area2D" unique_id=667595340]
+position = Vector2(0.40014648, -0.8002014)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_3bft5")
 
 [node name="Rug" type="Sprite2D" parent="." unique_id=219231531]
 z_index = -1
 position = Vector2(341, 816)
 texture = ExtResource("9_5ngnd")
 
-[node name="Key" type="TextureRect" parent="." unique_id=973562741 node_paths=PackedStringArray("walk_to")]
+[node name="Key" type="Sprite2D" parent="." unique_id=1989004802 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
-offset_left = 1819.0
-offset_top = 661.0
-offset_right = 1874.0
-offset_bottom = 709.0
+position = Vector2(1853, 688)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("10_ixet0")
 script = ExtResource("11_cgbd6")
+interacts_with = null
 gives = Array[ExtResource("7_1dmds")]([ExtResource("12_cgbd6")])
 walk_to = NodePath("KeyWalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="KeyWalkTo" type="Polygon2D" parent="Key" unique_id=1470536246]
 visible = false
 z_index = -1
-position = Vector2(28.333332, 25.833334)
+position = Vector2(0, 0.83333397)
 color = Color(0.17398584, 0.6357377, 0.3213243, 1)
 polygon = PackedVector2Array(-34.166626, 3.333374, -24.166626, 22.5, -7.5, 25.833374, 8.333374, 6.666687, 30.833374, -21.666626, 7.5, -29.166626, -15, -12.5)
 
-[node name="TreeLock" type="TextureRect" parent="." unique_id=504355687 node_paths=PackedStringArray("walk_to")]
-offset_left = 847.99994
-offset_top = 728.0
-offset_right = 1061.0
-offset_bottom = 814.0
+[node name="Area2D" type="Area2D" parent="Key" unique_id=843532321]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key/Area2D" unique_id=173330209]
+position = Vector2(-0.20837402, 2.083313)
+shape = SubResource("RectangleShape2D_wgcn5")
+
+[node name="TreeLock" type="Sprite2D" parent="." unique_id=1687108446 node_paths=PackedStringArray("walk_to")]
+position = Vector2(974, 778.99994)
 scale = Vector2(1.179058, 1.179058)
 texture = ExtResource("14_3lhys")
 script = ExtResource("15_1dmds")
 interacts_with = Array[String](["candle_key"])
+gives = null
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="WalkTo" type="Polygon2D" parent="TreeLock" unique_id=804095841]
 visible = false
-position = Vector2(96.68742, 187.43779)
+position = Vector2(-17.810831, 134.00536)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-27.14032, -14.418274, 28.836548, -15.266418, 31.380981, 22.899658, -43.254883, 19.50708)
 
-[node name="B1" type="TextureRect" parent="." unique_id=1194697213 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="TreeLock" unique_id=475207616]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLock/Area2D" unique_id=2140819260]
+position = Vector2(3.392517, -0.84802246)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_yn442")
+
+[node name="B1" type="Sprite2D" parent="." unique_id=1171303462 node_paths=PackedStringArray("walk_to")]
+physics_interpolation_mode = 2
 y_sort_enabled = true
-offset_left = 873.0
-offset_top = 759.0
-offset_right = 913.0
-offset_bottom = 820.0
+position = Vector2(895, 789)
 texture = ExtResource("16_y1ubb")
-script = ExtResource("17_y1ubb")
+script = ExtResource("19_l2csv")
+order = null
+interacts_with = null
+gives = null
 click_sound = ExtResource("20_l2csv")
 walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
-[node name="B2" type="TextureRect" parent="." unique_id=1446656405 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="B1" unique_id=1449009543]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="B1/Area2D" unique_id=1460868746]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_wm6sv")
+
+[node name="B2" type="Sprite2D" parent="." unique_id=544690407 node_paths=PackedStringArray("walk_to")]
+physics_interpolation_mode = 2
 y_sort_enabled = true
-offset_left = 924.0
-offset_top = 757.0
-offset_right = 964.0
-offset_bottom = 818.0
+position = Vector2(951, 787)
 texture = ExtResource("16_y1ubb")
-script = ExtResource("17_y1ubb")
+script = ExtResource("19_l2csv")
 order = 1
+interacts_with = null
+gives = null
 click_sound = ExtResource("20_l2csv")
 walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
-[node name="B3" type="TextureRect" parent="." unique_id=1272023520 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="B2" unique_id=1893316094]
+position = Vector2(-56, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="B2/Area2D" unique_id=429012258]
+position = Vector2(56, -2)
+shape = SubResource("RectangleShape2D_wm6sv")
+
+[node name="B3" type="Sprite2D" parent="." unique_id=1333476800 node_paths=PackedStringArray("walk_to")]
+physics_interpolation_mode = 2
 y_sort_enabled = true
-offset_left = 979.0
-offset_top = 748.0
-offset_right = 1019.0
-offset_bottom = 809.0
+position = Vector2(1002, 780)
 texture = ExtResource("16_y1ubb")
-script = ExtResource("17_y1ubb")
+script = ExtResource("19_l2csv")
 order = 2
+interacts_with = null
+gives = null
 click_sound = ExtResource("20_l2csv")
 walk_to = NodePath("../TreeButtonWalkTo")
 metadata/_custom_type_script = "uid://pmaepj25cj4p"
 
-[node name="TvColoredButton1" type="TextureRect" parent="." unique_id=935330415 node_paths=PackedStringArray("walk_to")]
-offset_left = 1252.0
-offset_top = 280.5
-offset_right = 1302.0
-offset_bottom = 330.5
+[node name="Area2D" type="Area2D" parent="B3" unique_id=805839978]
+position = Vector2(-107, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="B3/Area2D" unique_id=1758365486]
+position = Vector2(107, -9)
+shape = SubResource("RectangleShape2D_wm6sv")
+
+[node name="TvColoredButton1" type="Sprite2D" parent="." unique_id=1146505001 node_paths=PackedStringArray("walk_to")]
+physics_interpolation_mode = 2
+position = Vector2(1282, 307)
 texture = ExtResource("18_aai37")
-script = ExtResource("18_o4wqt")
+script = ExtResource("22_l2csv")
+order = null
+interacts_with = null
+gives = null
 click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
-[node name="TvColoredButton2" type="TextureRect" parent="." unique_id=1052362826 node_paths=PackedStringArray("walk_to")]
-offset_left = 1339.0
-offset_top = 280.5
-offset_right = 1389.0
-offset_bottom = 330.5
+[node name="Area2D" type="Area2D" parent="TvColoredButton1" unique_id=49056820]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TvColoredButton1/Area2D" unique_id=1028856439]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_hbggf")
+
+[node name="TvColoredButton2" type="Sprite2D" parent="." unique_id=470162040 node_paths=PackedStringArray("walk_to")]
+physics_interpolation_mode = 2
+position = Vector2(1367, 308)
 texture = ExtResource("18_aai37")
-script = ExtResource("18_o4wqt")
+script = ExtResource("22_l2csv")
 order = 1
+interacts_with = null
+gives = null
 click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
-[node name="TvColoredButton3" type="TextureRect" parent="." unique_id=370414999 node_paths=PackedStringArray("walk_to")]
-offset_left = 1424.0
-offset_top = 280.5
-offset_right = 1474.0
-offset_bottom = 330.5
+[node name="Area2D" type="Area2D" parent="TvColoredButton2" unique_id=1071404697]
+position = Vector2(1, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TvColoredButton2/Area2D" unique_id=2011435428]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_hbggf")
+
+[node name="TvColoredButton3" type="Sprite2D" parent="." unique_id=674387970 node_paths=PackedStringArray("walk_to")]
+physics_interpolation_mode = 2
+position = Vector2(1456, 308)
 texture = ExtResource("18_aai37")
-script = ExtResource("18_o4wqt")
+script = ExtResource("22_l2csv")
 order = 2
+interacts_with = null
+gives = null
 click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
 
-[node name="TvColoredButton4" type="TextureRect" parent="." unique_id=368298179 node_paths=PackedStringArray("walk_to")]
-offset_left = 1510.0
-offset_top = 280.5
-offset_right = 1560.0
-offset_bottom = 330.5
+[node name="Area2D" type="Area2D" parent="TvColoredButton3" unique_id=44738885]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TvColoredButton3/Area2D" unique_id=412372759]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_hbggf")
+
+[node name="TvColoredButton4" type="Sprite2D" parent="." unique_id=218203977 node_paths=PackedStringArray("walk_to")]
+physics_interpolation_mode = 2
+position = Vector2(1540, 307)
 texture = ExtResource("18_aai37")
-script = ExtResource("18_o4wqt")
+script = ExtResource("22_l2csv")
 order = 3
+interacts_with = null
+gives = null
 click_sound = ExtResource("23_d8oju")
 walk_to = NodePath("../TvButtonWalkTo")
 metadata/_custom_type_script = "uid://bkm1dmqxvno4w"
+
+[node name="Area2D" type="Area2D" parent="TvColoredButton4" unique_id=861454434]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TvColoredButton4/Area2D" unique_id=2125943687]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_hbggf")
 
 [node name="Trapdoor" parent="." unique_id=1185460373 node_paths=PackedStringArray("walk_to") instance=ExtResource("20_vfokk")]
+position = Vector2(689, 564)
+gives = null
 walk_to = NodePath("TrapdoorWalkTo")
 
 [node name="TrapdoorWalkTo" type="Polygon2D" parent="Trapdoor" unique_id=1276537257]
 visible = false
-position = Vector2(138.49573, 224.55136)
+position = Vector2(1.3446045, 142.5296)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-96.81256, -20.16925, 88.74487, -21.513855, 83.366394, 17.480042, -96.81256, 14.7907715)
 uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
-[node name="ShirtButtonLock" type="TextureRect" parent="." unique_id=1221835761 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="Trapdoor" unique_id=1009895461]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trapdoor/Area2D" unique_id=1861200164]
+position = Vector2(-0.67230225, -0.67230225)
+shape = SubResource("RectangleShape2D_u3v5o")
+
+[node name="ShirtButtonLock" type="Sprite2D" parent="." unique_id=1706921338 node_paths=PackedStringArray("walk_to")]
 z_index = -1
-offset_left = 534.0
-offset_top = 344.0
-offset_right = 617.0
-offset_bottom = 486.0
+position = Vector2(591, 391)
 texture = ExtResource("21_wmeqv")
 script = ExtResource("22_uukn5")
 interacts_with = Array[String](["shirt_button_blue", "shirt_button_orange", "shirt_button_purple"])
+gives = null
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="ShirtButtonBlue" type="Sprite2D" parent="ShirtButtonLock" unique_id=247487217]
 visible = false
-position = Vector2(45, 53)
+position = Vector2(3.2511635, -17.748863)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("23_uukn5")
 
 [node name="ShirtButtonOrange" type="Sprite2D" parent="ShirtButtonLock" unique_id=1016633624]
 visible = false
-position = Vector2(48, 77)
+position = Vector2(6.2511635, 6.251137)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("24_nc0it")
 
 [node name="ShirtButtonPurple" type="Sprite2D" parent="ShirtButtonLock" unique_id=1931648730]
 visible = false
-position = Vector2(50, 99)
+position = Vector2(8.2511635, 28.251137)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("25_jvbvo")
 
 [node name="Orange" type="PointLight2D" parent="ShirtButtonLock" unique_id=756557496]
-position = Vector2(48, 77)
+visible = false
+position = Vector2(6.2511597, 6.251129)
 scale = Vector2(0.08752347, 0.08752347)
 texture = ExtResource("26_nc0it")
 
 [node name="Purple" type="PointLight2D" parent="ShirtButtonLock" unique_id=2146437649]
-position = Vector2(49, 100)
+visible = false
+position = Vector2(7.2511597, 29.25113)
 scale = Vector2(0.092451975, 0.092451975)
 texture = ExtResource("26_nc0it")
 
 [node name="Blue" type="PointLight2D" parent="ShirtButtonLock" unique_id=2067759356]
-position = Vector2(44, 53)
+visible = false
+position = Vector2(2.2511635, -17.748863)
 scale = Vector2(0.08008706, 0.08008706)
 texture = ExtResource("26_nc0it")
 
 [node name="WalkTo" type="Polygon2D" parent="ShirtButtonLock" unique_id=783463450]
 visible = false
-position = Vector2(36.00003, 314)
+position = Vector2(3.0000305, 272)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-36, -6, 41, -8, 43, 9, -38, 9)
+
+[node name="Area2D" type="Area2D" parent="ShirtButtonLock" unique_id=2133566602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShirtButtonLock/Area2D" unique_id=1865398676]
+position = Vector2(4.5, 4.5)
+shape = SubResource("RectangleShape2D_01gq1")
 
 [node name="StainPurple" type="Sprite2D" parent="." unique_id=832598802]
 z_index = -1
@@ -321,7 +417,7 @@ energy = 0.1
 
 [node name="TreeButtonWalkTo" type="Polygon2D" parent="." unique_id=1895379048]
 visible = false
-position = Vector2(780, 919)
+position = Vector2(755, 913)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-28, -35, 48, -11, 39, 21, -51, 4)
 

@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var glass = $EmptyGlass
 @onready var glass2 = $EmptyGlass2
@@ -9,4 +9,3 @@ func _process(_delta: float) -> void:
 		has_glass=false
 		self.remove_child(glass)
 		self.remove_child(glass2)
-		

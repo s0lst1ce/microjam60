@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var at_equilibrium = preload("res://assets/furniture/squirrel/scale_equilibrium.png")
 

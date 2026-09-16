@@ -3,14 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://da8hfmr7k13w1" path="res://assets/furniture/trapdoor.png" id="1_my15l"]
 [ext_resource type="Script" uid="uid://dwg0ldq7smngb" path="res://trapdoor.gd" id="2_rb8u0"]
 
-[node name="Trapdoor" type="TextureRect" unique_id=1185460373]
+[node name="Trapdoor" type="Sprite2D" unique_id=111785020]
 z_index = -1
-offset_left = 587.0
-offset_top = 503.0
-offset_right = 859.0
-offset_bottom = 669.0
 scale = Vector2(0.74370515, 0.74370515)
 texture = ExtResource("1_my15l")
 script = ExtResource("2_rb8u0")
 interacts_with = Array[String](["screwdriver"])
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"

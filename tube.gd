@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var filled = preload("res://assets/furniture/filled_tube.png")
 

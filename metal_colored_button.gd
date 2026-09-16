@@ -1,4 +1,4 @@
-class_name MetalColoredButton extends Furniture
+class_name MetalColoredButton extends Interactible
 
 @export var order: int
 @onready var red = preload("res://assets/furniture/red_button.png")

@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 @export var movement_speed: float = 250
 var movement_target_position: Vector2
-var target_furniture: Furniture
+var target_furniture: Interactible
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var interacting_item_data = null
 @onready var sfx = $SoundEffects
+@onready var hovered_furniture: Interactible = null
 
 func _ready():
 	# These values need to be adjusted for the actor's speed
@@ -24,6 +25,8 @@ func _ready():
 	ItemExchange.walk_to.connect(_on_interact_furniture)
 	ItemExchange.prepare_use_item.connect(_on_use_item)
 	Conductor.play_sfx.connect(_on_play_sfx)
+	ItemExchange.drop_item.connect(_on_item_dropped)
+	ItemExchange.start_furniture_hover.connect(_on_furniture_enter)
 
 func actor_setup():
 	# Wait for the first physics frame so the NavigationServer can sync.
@@ -86,7 +89,7 @@ func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 	velocity = safe_velocity * movement_speed
 	move_and_slide()
 
-func _on_interact_furniture(pos: Vector2, furniture: Furniture):
+func _on_interact_furniture(pos: Vector2, furniture: Interactible):
 	set_movement_target(pos)
 	target_furniture = furniture
 
@@ -97,3 +100,12 @@ func _on_use_item(data: Variant):
 func _on_play_sfx(stream: AudioStream):
 	sfx.stream = stream
 	sfx.play()
+
+func _on_item_dropped(data: Variant):
+	print(hovered_furniture)
+	if hovered_furniture != null and is_instance_valid(hovered_furniture) and hovered_furniture.get_rect().has_point(get_global_mouse_position()-hovered_furniture.position):
+		print("hey man!")
+		hovered_furniture.catch_item(data)
+	
+func _on_furniture_enter(furniture: Interactible):
+	hovered_furniture = furniture

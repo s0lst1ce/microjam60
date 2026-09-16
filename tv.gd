@@ -5,7 +5,7 @@ extends Sprite2D
 
 func _ready() -> void:
 	for button in buttons:
-		button.set_process(false)
+		button.process_mode = Node.PROCESS_MODE_DISABLED
 		button.hide()
 
 
@@ -13,8 +13,8 @@ func _process(_delta: float) -> void:
 	if Enigmas.tv_on and turned_on_texture != texture:
 		texture = turned_on_texture
 		for button in buttons:
-			button.set_process(true)
+			button.process_mode = Node.PROCESS_MODE_INHERIT
 			button.show()
-	elif Enigmas.is_tv_valid() and !Enigmas.tv_reward_taken:
+	elif !Enigmas.tv_reward_taken and Enigmas.is_tv_valid():
 		Enigmas.tv_reward_taken = true
 		ItemExchange.add_item.emit(preload("res://resistance.tres"))

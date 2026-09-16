@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 func _interact_with(_item: ItemData) -> void:
 	ItemExchange.add_item.emit(preload("res://branch.tres"))

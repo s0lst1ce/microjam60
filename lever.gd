@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var on_texture = preload("res://assets/furniture/squirrel/lever_off.png")
 

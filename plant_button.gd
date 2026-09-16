@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 func _on_click() -> void:
 	if Enigmas.plant_dead:

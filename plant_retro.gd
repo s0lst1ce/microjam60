@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var cut = preload("res://assets/furniture/squirrel/plant_killed.png")
 

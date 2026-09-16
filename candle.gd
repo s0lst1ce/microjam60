@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var molten = preload("res://assets/furniture/candle_molten.png")
 

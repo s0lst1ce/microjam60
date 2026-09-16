@@ -6,7 +6,6 @@ const HAND_CLOSED = preload("res://assets/cursors/hand_closed.svg")
 const HAND_OPEN = preload("res://assets/cursors/hand_open.svg")
 const HAND_POINT = preload("res://assets/cursors/hand_point.svg")
 
-
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(HAND_POINT, Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(HAND_CLOSED, Input.CURSOR_FORBIDDEN)
@@ -25,6 +24,7 @@ func _notification(what: int) -> void:
 		data_bk = get_viewport().gui_get_drag_data()
 	if what == Node.NOTIFICATION_DRAG_END:
 		if data_bk:
+			ItemExchange.drop_item.emit(data_bk)
 			data_bk.icon.show()
 			data_bk = null
 

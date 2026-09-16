@@ -47,9 +47,35 @@ agent_radius = 30.0
 diffuse_texture = ExtResource("5_jexw7")
 normal_texture = ExtResource("7_3i1ww")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bft5"]
+size = Vector2(349.50616, 429.66815)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgcn5"]
+size = Vector2(409, 196)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yn442"]
+size = Vector2(249.69629, 414.98874)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wm6sv"]
+size = Vector2(118.64581, 165.84885)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3bft5"]
+radius = 26.0
+height = 240.0
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_lr8sq"]
 diffuse_texture = ExtResource("21_gn2s8")
 specular_texture = ExtResource("21_gn2s8")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3bft5"]
+radius = 76.3253
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3i1ww"]
+size = Vector2(197.65901, 141.185)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wgcn5"]
+radius = 31.605835
+height = 144.76666
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wgcn5"]
 polygon = PackedVector2Array(1604, 679, 1604, 645, 1786, 627, 1834, 627, 1871, 637, 1890, 660, 1889, 682)
@@ -116,140 +142,155 @@ scale = Vector2(1.9, 1.9)
 texture = SubResource("CanvasTexture_jnykj")
 offset = Vector2(0, -200)
 
-[node name="Shelf" type="TextureRect" parent="." unique_id=1150966161 node_paths=PackedStringArray("walk_to")]
+[node name="Shelf" type="Sprite2D" parent="." unique_id=1279892520 node_paths=PackedStringArray("walk_to")]
 z_index = -2
-y_sort_enabled = true
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 1524.0
-offset_top = 191.99988
-offset_right = 1955.0
-offset_bottom = 724.9999
-grow_horizontal = 2
-grow_vertical = 0
+position = Vector2(1738, 459)
 scale = Vector2(0.93560576, 0.93560576)
 texture = ExtResource("9_q64ew")
 script = ExtResource("10_ycws2")
 gives = Array[ExtResource("7_8xf7p")]([ExtResource("11_12yyj"), ExtResource("11_12yyj")])
 walk_to = NodePath("ShelfWalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="EmptyGlass" type="Sprite2D" parent="Shelf" unique_id=825988706]
-position = Vector2(224.4534, 347.36853)
+position = Vector2(50.234833, 59.854248)
 scale = Vector2(0.15067384, 0.15067384)
 texture = ExtResource("12_ffxr0")
 
 [node name="EmptyGlass2" type="Sprite2D" parent="Shelf" unique_id=79255050]
-position = Vector2(256.5183, 262.9314)
+position = Vector2(79.09315, -83.36844)
 scale = Vector2(0.15067384, 0.15067384)
 texture = ExtResource("12_ffxr0")
 
 [node name="ShelfWalkTo" type="Polygon2D" parent="Shelf" unique_id=476764178]
 visible = false
-position = Vector2(230.86649, 544.03265)
+position = Vector2(11.757111, 268.27536)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-154.97974, -38.477783, 142.15393, -42.75305, 142.15393, 27.789429, -154.97974, 7.4817505)
 uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
-[node name="Chest" type="TextureRect" parent="." unique_id=1288371296 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="Shelf" unique_id=568987341]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelf/Area2D" unique_id=487893165]
+position = Vector2(6.9473877, -28.858337)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_3bft5")
+
+[node name="Chest" type="Sprite2D" parent="." unique_id=1465531894 node_paths=PackedStringArray("walk_to")]
 z_index = -1
-offset_left = 1079.0
-offset_top = 417.0
-offset_right = 1596.0
-offset_bottom = 685.0
+position = Vector2(1333, 556)
 texture = ExtResource("12_grk56")
 script = ExtResource("13_e6id1")
 interacts_with = Array[String](["key"])
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="WalkTo" type="Polygon2D" parent="Chest" unique_id=1534368530]
 visible = false
-position = Vector2(239, 299.99997)
+position = Vector2(-18, 171.99997)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-93, -41, 88, -14, 91, 22, -91, 9)
 uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
-[node name="RecordPlayer" type="TextureRect" parent="." unique_id=1891958161 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="Chest" unique_id=1060789851]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Area2D" unique_id=639951012]
+position = Vector2(40.5, 19)
+shape = SubResource("RectangleShape2D_wgcn5")
+
+[node name="RecordPlayer" type="Sprite2D" parent="." unique_id=873271822 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
-offset_left = 369.00003
-offset_top = 691.00006
-offset_right = 746.0
-offset_bottom = 1185.0
+position = Vector2(562.00006, 977)
 scale = Vector2(0.568691, 0.568691)
 texture = ExtResource("12_3ylqn")
+centered = false
+offset = Vector2(-125, -400)
 script = ExtResource("16_4g5ik")
 gives = Array[ExtResource("7_8xf7p")]([ExtResource("16_oyog5")])
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="RecordPlayer" type="NavigationObstacle2D" parent="RecordPlayer" unique_id=1085676417]
-visible = false
-position = Vector2(160.01654, 392.12842)
+position = Vector2(1.7583771, -65.06183)
 radius = 68.34
 affect_navigation_mesh = true
 
 [node name="WalkTo" type="Polygon2D" parent="RecordPlayer" unique_id=416790059]
 visible = false
-position = Vector2(160.01656, 392.12845)
+position = Vector2(7.033554, -94.9548)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-151.22449, -58.027954, -21.101074, -93.19653, 218.04462, -98.4718, 152.98291, 94.954834, 54.51117, 126.60657, -73.85382, 116.05603, -189.90979, 58.027954)
 uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
-[node name="Candle" type="TextureRect" parent="." unique_id=1435767971 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="RecordPlayer" unique_id=1926445030]
+position = Vector2(24.617935, -196.94348)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecordPlayer/Area2D" unique_id=2007208311]
+position = Vector2(-21.101135, 5.2755127)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_yn442")
+
+[node name="Candle" type="Sprite2D" parent="." unique_id=1796823979 node_paths=PackedStringArray("walk_to")]
 z_index = 1
 y_sort_enabled = true
-offset_left = 1407.0
-offset_top = 718.0
-offset_right = 1552.0
-offset_bottom = 883.0
+position = Vector2(1468.9999, 777.99994)
 scale = Vector2(0.78384566, 0.78384566)
 texture = ExtResource("14_324kn")
 script = ExtResource("13_324kn")
 interacts_with = Array[String](["lighter"])
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="WalkTo" type="Polygon2D" parent="Candle" unique_id=1416203391]
 visible = false
-position = Vector2(62.512318, 195.19148)
+position = Vector2(-2.5513496, 102.06099)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-94.40637, -25.515137, 89.30322, -28.06665, 103.33667, 44.65161, -91.85486, 40.82434)
 uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
-[node name="Tube" type="TextureRect" parent="." unique_id=869724473 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="Candle" unique_id=748345537]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Area2D" unique_id=2038032628]
+position = Vector2(4.465332, -2.5514526)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_wm6sv")
+
+[node name="Tube" type="Sprite2D" parent="." unique_id=1953499414 node_paths=PackedStringArray("walk_to")]
 y_sort_enabled = true
-offset_left = 79.0
-offset_top = 802.0
-offset_right = 208.0
-offset_bottom = 1038.0
+position = Vector2(161, 914)
 texture = ExtResource("18_q64ew")
 script = ExtResource("19_ycws2")
 interacts_with = Array[String](["glass_water"])
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="WalkTo" type="Polygon2D" parent="Tube" unique_id=953945027]
 visible = false
-position = Vector2(146, 153.99997)
+position = Vector2(50, 31.99997)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-40, -28, 31, -14, 32, 30, -5, 36, -60, 11)
 uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
 
-[node name="Mirror" type="TextureRect" parent="." unique_id=1438350389 node_paths=PackedStringArray("walk_to")]
-offset_left = 560.0
-offset_top = 71.99999
-offset_right = 715.0
-offset_bottom = 266.0
+[node name="Area2D" type="Area2D" parent="Tube" unique_id=466443847]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tube/Area2D" unique_id=1475889832]
+position = Vector2(3, -5)
+shape = SubResource("CapsuleShape2D_3bft5")
+
+[node name="Mirror" type="Sprite2D" parent="." unique_id=1435721606 node_paths=PackedStringArray("walk_to")]
+position = Vector2(665, 227)
 scale = Vector2(1.4683394, 1.4683394)
 texture = SubResource("CanvasTexture_lr8sq")
 script = ExtResource("22_o03v2")
 interacts_with = Array[String](["boiling_water", "record_player"])
 walk_to = NodePath("../TrapAndMirrorWalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
+
+[node name="Area2D" type="Area2D" parent="Mirror" unique_id=605563485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" unique_id=1352341080]
+position = Vector2(-0.6810415, 2.724166)
+shape = SubResource("CircleShape2D_3bft5")
 
 [node name="TrapAndMirrorWalkTo" type="Polygon2D" parent="." unique_id=331183196]
 visible = false
@@ -270,27 +311,38 @@ scale = Vector2(1.4457209, 1.4457209)
 texture = ExtResource("23_ffxr0")
 
 [node name="Trapdoor" parent="." unique_id=1185460373 node_paths=PackedStringArray("walk_to") instance=ExtResource("24_aaei6")]
+position = Vector2(709, 562)
 walk_to = NodePath("../TrapAndMirrorWalkTo")
 
-[node name="Branch" type="TextureRect" parent="." unique_id=303296348 node_paths=PackedStringArray("walk_to")]
+[node name="Area2D" type="Area2D" parent="Trapdoor" unique_id=145624440]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trapdoor/Area2D" unique_id=616128081]
+position = Vector2(-0.67230225, -0.67230225)
+shape = SubResource("RectangleShape2D_3i1ww")
+
+[node name="Branch" type="Sprite2D" parent="." unique_id=31636705 node_paths=PackedStringArray("walk_to")]
 z_index = -1
-offset_left = 1002.0
-offset_top = 217.0
-offset_right = 1147.0
-offset_bottom = 329.0
+position = Vector2(1136, 320.00003)
 scale = Vector2(1.8393967, 1.8393967)
 texture = ExtResource("26_o03v2")
 script = ExtResource("27_o03v2")
 interacts_with = Array[String](["saw"])
 walk_to = NodePath("WalkTo")
-metadata/_custom_type_script = "uid://cg47jubodtsch"
+metadata/_custom_type_script = "uid://s47wnsti48y0"
 
 [node name="WalkTo" type="Polygon2D" parent="Branch" unique_id=1981438502]
 visible = false
-position = Vector2(52.734665, 246.82005)
+position = Vector2(-38.599632, 185.93053)
 color = Color(0.37226015, 0.7193662, 0.41869548, 1)
 polygon = PackedVector2Array(-28.270142, -13.5914, 42.405212, -0.54364014, 23.377258, 26.09552, -46.754456, 6.5238953)
 uv = PackedVector2Array(-130.42807, -44.372437, 165.38812, -45.71704, 119.67108, 90.08948, -129.08344, 94.12335)
+
+[node name="Area2D" type="Area2D" parent="Branch" unique_id=1392324196]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Branch/Area2D" unique_id=1175481859]
+position = Vector2(-8.154849, -2.7182992)
+rotation = 0.70386565
+shape = SubResource("CapsuleShape2D_wgcn5")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=1865211093]
 position = Vector2(673, 696)

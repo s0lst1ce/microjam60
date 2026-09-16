@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var condensation = preload("res://assets/furniture/squirrel/mirror_condensation.png")
 @onready var broken = preload("res://assets/furniture/squirrel/mirror_broken.png")

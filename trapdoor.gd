@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 var open = false
 @onready var open_texture = preload("res://assets/furniture/trapdoor_open.png")

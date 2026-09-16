@@ -1,4 +1,4 @@
-class_name TvColoredButton extends Furniture
+class_name TvColoredButton extends Interactible
 
 @export var order: int
 @onready var red = preload("res://assets/furniture/pillow_button_red.png")
@@ -7,6 +7,7 @@ class_name TvColoredButton extends Furniture
 @onready var purple = preload("res://assets/furniture/pillow_button_pink.png")
 
 func _ready() -> void:
+	super ._ready()
 	set_color(Enigmas.ColorState.RED)
 
 func color_to_texture(color: Enigmas.ColorState):

@@ -1,4 +1,4 @@
-extends Furniture
+extends Interactible
 
 @onready var opened = preload("res://assets/furniture/opened_chest.png")
 
